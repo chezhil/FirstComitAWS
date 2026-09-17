@@ -43,6 +43,7 @@ CATEGORIES = (
 SORTS = ("cheapest", "nearest", "rating")
 
 DEFAULT_RADIUS_KM = 2.0
+MAX_RADIUS_KM = 50.0
 
 try:  # pydantic is a strands dependency; guard anyway for the fallback path
     from pydantic import BaseModel, Field
@@ -432,6 +433,9 @@ def _normalize(filters: dict[str, Any]) -> dict[str, Any]:
         radius_km = DEFAULT_RADIUS_KM
     if radius_km <= 0:
         radius_km = DEFAULT_RADIUS_KM
+    # Nobody walks 200km to a xerox shop, and an unbounded radius just makes
+    # the search scan everything ("within 99999 km" parsed literally before).
+    radius_km = min(radius_km, MAX_RADIUS_KM)
 
     max_price = filters.get("max_price")
     if max_price is None:
@@ -459,12 +463,20 @@ def _normalize(filters: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+class _BadRequest(Exception):
+    """Client sent something unparseable; answer 400 rather than 500."""
+
+
 def _read_body(event: dict[str, Any]) -> dict[str, Any]:
     body = event.get("body") or {}
     if isinstance(body, (str, bytes)):
         if not body:
             return {}
-        return json.loads(body if isinstance(body, str) else body.decode("utf-8"))
+        try:
+            parsed = json.loads(body if isinstance(body, str) else body.decode("utf-8"))
+        except (ValueError, UnicodeDecodeError) as exc:
+            raise _BadRequest(f"body is not valid JSON: {exc}") from exc
+        return parsed if isinstance(parsed, dict) else {}
     return body if isinstance(body, dict) else {}
 
 
@@ -486,7 +498,10 @@ def lambda_handler(event: dict[str, Any], context: Any) -> dict[str, Any]:
     try:
         if (event.get("httpMethod") or "POST").upper() == "OPTIONS":
             return _respond(200, {})  # CORS preflight
-        payload = _read_body(event)
+        try:
+            payload = _read_body(event)
+        except _BadRequest as exc:
+            return _respond(400, {"error": str(exc)})
         query = str(payload.get("query") or "").strip()
         if not query:
             return _respond(400, {"error": "missing field: query"})

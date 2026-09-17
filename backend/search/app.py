@@ -40,6 +40,20 @@ _SYNONYMS = {
 def _normalize_keyword(word: str) -> str:
     return _SYNONYMS.get(word.lower().strip(), word.lower().strip())
 
+DEFAULT_RADIUS_KM = 2.0
+MAX_RADIUS_KM = 50.0
+
+
+def _as_float(value, default):
+    """Coerce a wire value to float, falling back rather than raising."""
+    if value is None or isinstance(value, bool):
+        return default
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return default
+
+
 def haversine(lat1, lon1, lat2, lon2):
     R = 6371.0 # Earth radius in km
     dlat = math.radians(lat2 - lat1)
@@ -140,13 +154,39 @@ def lambda_handler(event, context):
     except Exception:
         body = event # fallback for direct invoke
     
+    if not isinstance(body, dict):
+        body = {}
+
     category = body.get("category")
-    radius_km = body.get("radius_km", 2)
-    open_now = body.get("open_now", False)
+    open_now = bool(body.get("open_now", False))
     sort_by = body.get("sort_by")
-    max_price = body.get("max_price")
-    keywords = body.get("keywords", [])
-    user_location = body.get("user_location", {"lat": 12.9716, "lon": 77.5946})
+    keywords = [k for k in (body.get("keywords") or []) if isinstance(k, str) and k.strip()]
+
+    # Everything below arrives straight off the wire. A null, empty or
+    # string-valued user_location used to raise out of the handler (a 502
+    # through API Gateway) rather than answering, and a zero or negative
+    # radius made OpenSearch reject the whole query.
+    radius_km = _as_float(body.get("radius_km"), DEFAULT_RADIUS_KM)
+    if radius_km <= 0:
+        radius_km = DEFAULT_RADIUS_KM
+    radius_km = min(radius_km, MAX_RADIUS_KM)
+
+    max_price = _as_float(body.get("max_price"), None)
+    if max_price is not None and max_price < 0:
+        max_price = None
+
+    loc = body.get("user_location")
+    if not isinstance(loc, dict):
+        loc = {}
+    lat = _as_float(loc.get("lat"), None)
+    lon = _as_float(loc.get("lon"), None)
+    if lat is None or lon is None or not (-90 <= lat <= 90) or not (-180 <= lon <= 180):
+        return {
+            "statusCode": 400,
+            "headers": {"Content-Type": "application/json", "Access-Control-Allow-Origin": "*"},
+            "body": json.dumps({"error": "user_location must have numeric lat/lon"}),
+        }
+    user_location = {"lat": lat, "lon": lon}
     
     endpoint = os.environ.get("OPENSEARCH_ENDPOINT")
     results = []
@@ -243,9 +283,14 @@ def lambda_handler(event, context):
                 if not (query_words & doc_words) and not any(k.lower() in raw_text for k in keywords):
                     continue
         
-        # open_now check
-        is_open = is_currently_open(doc.get("hours", []))
-        if open_now and not is_open:
+        # open_now check. An empty hours list means "always open", which is
+        # right for a 24/7 ATM but wrong for the ~98% of imported places whose
+        # hours simply are not known -- counting those as open made the filter
+        # a no-op. When the user explicitly asks for open places, only return
+        # ones we can actually vouch for.
+        hours_unknown = "hours-unverified" in (doc.get("tags") or [])
+        is_open = False if hours_unknown else is_currently_open(doc.get("hours", []))
+        if open_now and (hours_unknown or not is_open):
             continue
             
         result_item = {

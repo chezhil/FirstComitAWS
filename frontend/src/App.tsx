@@ -48,11 +48,14 @@ function App() {
   // Set when we had to ignore the user's keywords to find anything, so the
   // list can say so rather than silently returning something broader.
   const [relaxedFrom, setRelaxedFrom] = useState<string | null>(null)
+  // Set when nothing could be confirmed open, so we showed everything instead.
+  const [relaxedOpenNow, setRelaxedOpenNow] = useState(false)
 
   const runSearch = useCallback(async (nextFilters: SearchFilters) => {
     setLoading(true)
     setError(null)
     setRelaxedFrom(null)
+    setRelaxedOpenNow(false)
     try {
       let res = await searchListings(nextFilters)
 
@@ -63,6 +66,17 @@ function App() {
         const relaxed = await searchListings({ ...nextFilters, keywords: [] })
         if (relaxed.results.length > 0) {
           setRelaxedFrom(nextFilters.keywords.join(' '))
+          res = relaxed
+        }
+      }
+
+      // Opening hours are unknown for most imported places, so "open now" can
+      // legitimately match nothing. Rather than a dead end, show what is
+      // nearby and be explicit that the hours could not be confirmed.
+      if (res.results.length === 0 && nextFilters.open_now) {
+        const relaxed = await searchListings({ ...nextFilters, open_now: false })
+        if (relaxed.results.length > 0) {
+          setRelaxedOpenNow(true)
           res = relaxed
         }
       }
@@ -188,6 +202,12 @@ function App() {
                 <p className="mb-2 rounded-lg bg-amber-50 px-3 py-2 text-xs text-amber-700">
                   Nothing matched “{relaxedFrom}” exactly — showing everything nearby in
                   this category.
+                </p>
+              )}
+              {relaxedOpenNow && results.length > 0 && (
+                <p className="mb-2 rounded-lg bg-amber-50 px-3 py-2 text-xs text-amber-700">
+                  Opening hours aren’t known for these, so we can’t confirm what’s open
+                  right now — showing everything nearby instead.
                 </p>
               )}
             <ResultsList

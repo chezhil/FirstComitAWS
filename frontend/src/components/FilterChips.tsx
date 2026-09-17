@@ -40,9 +40,13 @@ export function FilterChips({ filters, onChange }: Props) {
         ))}
       </ChipGroup>
 
-      <Chip active={filters.open_now} onClick={() => onChange({ open_now: !filters.open_now })}>
-        {'\u{1F550} Open now'}
-      </Chip>
+      {/* A bare flex child stretches to the full row in the stacked (mobile)
+          layout, so keep the toggle sized to its own content. */}
+      <div className="flex">
+        <Chip active={filters.open_now} onClick={() => onChange({ open_now: !filters.open_now })}>
+          {'\u{1F550} Open now'}
+        </Chip>
+      </div>
     </div>
   )
 }
