@@ -1,0 +1,407 @@
+================================================================================
+AAS-PAAS — 4-WAY BUILD SPLIT FOR VIBECODING
+================================================================================
+How to use this file: each teammate copies ONLY their own "PROMPT N" block
+(everything between the ==== markers for that person) and pastes it as the
+first message to their own AI coding agent. Each block is self-contained —
+it repeats the contract and rules it needs, so nobody has to read the whole
+file. Read the "GROUND RULES" once as a team before anyone starts typing.
+
+PROJECT: Aas-Paas — natural-language search for nearby campus essentials
+(PGs, mess/tiffin, print/xerox shops, ATMs), with "open now" / "cheapest"
+filters. Built for the AWS "First Commit" hackathon (WeMakeDevs x AWS),
+Sept 17-20 2026. Repo: github.com/chezhil/FirstComitAWS. Best UI track
+candidate, so the demo and UI polish matter as much as the backend.
+
+STACK: Strands Agents SDK (query parsing), OpenSearch (geo + fuzzy search),
+AWS SAM (local test with `sam local`, deploy with `sam deploy`).
+
+--------------------------------------------------------------------------------
+GROUND RULES (same for all 4 people — read before starting)
+--------------------------------------------------------------------------------
+1. Touch ONLY your own folder. Never edit another person's files.
+2. The JSON contracts below are frozen. If you think one needs to change,
+   say so in the team chat first — everyone else's code depends on the
+   shapes staying exactly as written.
+3. Work on your own branch: feature/infra, feature/parser, feature/search,
+   feature/frontend. Push early, open a PR into main, don't push to main
+   directly — this is what keeps 4 people's work from clobbering each other.
+4. Build against the contract with sample/mock data. Do NOT wait for
+   someone else's service to be finished before starting your own.
+5. Commit small and often — the repo's commit history needs to visibly
+   track work happening Sept 17-20 (the judges check this).
+6. Every AWS resource you touch should end up in backend/infra/template.yaml
+   (owned by Person 1) — if you need a new permission or resource, ask
+   Person 1 to add it rather than creating it out-of-band in the console.
+
+REPO LAYOUT (create exactly this, nothing outside your own folder):
+
+  Aas-Paas/ (this repo)
+  |-- backend/
+  |   |-- infra/            <- PERSON 1 owns this
+  |   |   |-- template.yaml
+  |   |   |-- seed_data/listings.json
+  |   |   `-- scripts/seed_opensearch.py
+  |   |-- parser/           <- PERSON 2 owns this
+  |   |   |-- app.py
+  |   |   |-- requirements.txt
+  |   |   `-- test_events/*.json
+  |   `-- search/           <- PERSON 3 owns this
+  |       |-- app.py
+  |       |-- requirements.txt
+  |       `-- test_events/*.json
+  |-- frontend/              <- PERSON 4 owns this
+  |-- CONTRACTS.md           <- copy of the contracts below, Person 1 commits it first
+  `-- README.md
+
+--------------------------------------------------------------------------------
+THE CONTRACT (identical copy in every prompt below — this is the source of truth)
+--------------------------------------------------------------------------------
+
+Listing document (what's in OpenSearch / the seed data):
+{
+  "id": "string (uuid)",
+  "name": "string",
+  "category": "pg | mess | tiffin | print_shop | atm | other",
+  "description": "string",
+  "location": { "lat": number, "lon": number },
+  "address": "string",
+  "price": number | null,
+  "price_unit": "per_meal | per_page | per_month | per_copy | null",
+  "hours": [ { "day": "mon|tue|wed|thu|fri|sat|sun", "open": "HH:MM", "close": "HH:MM" } ],
+  "phone": "string | null",
+  "tags": ["string"],
+  "rating": number | null
+}
+(empty "hours" array means 24x7 / unknown — treat as always open)
+
+POST /parse   (Person 2 builds this)
+  Request:  { "query": "any tiffin service open right now that's cheap" }
+  Response: {
+    "category": "pg | mess | tiffin | print_shop | atm | other | null",
+    "radius_km": number,           // default 2 if user didn't mention distance
+    "open_now": boolean,           // true if query implies "now" / "currently open"
+    "sort_by": "cheapest | nearest | rating | null",
+    "max_price": number | null,
+    "keywords": ["string"]         // leftover descriptive terms for fuzzy text match
+  }
+  Note: /parse never returns lat/lon — it can't know the user's real position
+  from text alone. The frontend supplies user_location separately to /search.
+
+POST /search   (Person 3 builds this)
+  Request:  {
+    "category": "tiffin" | null,
+    "radius_km": 2,
+    "open_now": true,
+    "sort_by": "cheapest",
+    "max_price": 100,
+    "keywords": ["cheap tiffin"],
+    "user_location": { "lat": 12.9716, "lon": 77.5946 }   // required, from frontend
+  }
+  Response: {
+    "results": [
+      {
+        "id": "string", "name": "string", "category": "tiffin",
+        "distance_km": 0.4, "price": 60, "price_unit": "per_meal",
+        "is_open_now": true, "address": "string",
+        "location": { "lat": 12.97, "lon": 77.59 },
+        "phone": "string | null", "tags": ["veg"], "rating": 4.2
+      }
+    ],
+    "total": 1
+  }
+
+Frontend flow: user types a query -> POST /parse -> take the filters,
+attach user_location (from browser geolocation, fallback to a campus
+default constant) -> POST /search -> render list + map.
+
+================================================================================
+PROMPT 1 — BACKEND INFRA & DATA  (owns backend/infra/)
+================================================================================
+You're building the AWS infrastructure and seed data for "Aas-Paas", a
+natural-language search app for nearby campus essentials (PGs, mess/tiffin,
+print shops, ATMs), for the AWS "First Commit" hackathon. Stack: AWS SAM,
+OpenSearch, two Lambda functions behind API Gateway. Three other people are
+building the query-parser Lambda, the search Lambda, and the frontend in
+parallel against a frozen contract — your job is the skeleton everyone else
+plugs into, so get this working FIRST.
+
+Work only inside backend/infra/. Branch: feature/infra.
+
+Deliverables:
+1. backend/infra/template.yaml (AWS SAM) defining:
+   - An OpenSearch domain (or OpenSearch Serverless collection) sized for
+     a hackathon (smallest instance type that works, single node — this is
+     a demo, not production).
+   - Two Lambda functions: ParserFunction -> backend/parser/app.py
+     (handler: app.lambda_handler), SearchFunction -> backend/search/app.py
+     (handler: app.lambda_handler).
+   - API Gateway with routes: POST /parse -> ParserFunction,
+     POST /search -> SearchFunction.
+   - IAM role for SearchFunction granting it permission to query the
+     OpenSearch domain.
+   - Pass the OpenSearch endpoint into SearchFunction as an environment
+     variable named OPENSEARCH_ENDPOINT.
+2. Because backend/parser/app.py and backend/search/app.py don't exist yet,
+   create MINIMAL placeholder files at those exact paths with a
+   `lambda_handler(event, context)` function that returns a hardcoded
+   example response matching the /parse and /search contracts below
+   (status 200, JSON body). This unblocks `sam local start-api` for
+   everyone on day 1. Person 2 and Person 3 will overwrite the body of
+   these files later — do not build real logic into them, just enough to
+   return a valid canned response.
+3. backend/infra/seed_data/listings.json — 30 to 50 REAL listings from
+   around our actual campus (PGs, mess/tiffin places, print/xerox shops,
+   ATMs). Use real names/addresses/approximate prices you actually know or
+   can look up — don't invent fictional businesses, judges may spot-check.
+   Each entry must match the "Listing document" schema below exactly.
+4. backend/infra/scripts/seed_opensearch.py — reads listings.json and bulk
+   indexes it into the OpenSearch domain, with an index mapping where
+   `location` is type `geo_point`, `category`/`tags` are `keyword`, and
+   `name`/`description` are `text` (use a standard analyzer so fuzzy/partial
+   matches work, e.g. "printout" should be findable via "print").
+5. Update the root README.md with: how to run `sam local start-api`
+   locally, how to run the seed script, how to `sam build && sam deploy
+   --guided` to ship it live.
+6. Commit CONTRACTS.md at the repo root containing the "THE CONTRACT"
+   section from this prompt file, so it's tracked in git as the shared
+   source of truth.
+
+Listing document schema:
+{
+  "id": "string (uuid)", "name": "string",
+  "category": "pg | mess | tiffin | print_shop | atm | other",
+  "description": "string",
+  "location": { "lat": number, "lon": number }, "address": "string",
+  "price": number | null,
+  "price_unit": "per_meal | per_page | per_month | per_copy | null",
+  "hours": [ { "day": "mon|tue|wed|thu|fri|sat|sun", "open": "HH:MM", "close": "HH:MM" } ],
+  "phone": "string | null", "tags": ["string"], "rating": number | null
+}
+
+/parse response shape (for your placeholder stub):
+{ "category": "tiffin", "radius_km": 2, "open_now": true,
+  "sort_by": "cheapest", "max_price": null, "keywords": ["tiffin"] }
+
+/search response shape (for your placeholder stub):
+{ "results": [ { "id": "demo-1", "name": "Demo Tiffin Center",
+  "category": "tiffin", "distance_km": 0.4, "price": 60,
+  "price_unit": "per_meal", "is_open_now": true, "address": "Demo address",
+  "location": { "lat": 12.97, "lon": 77.59 }, "phone": null,
+  "tags": ["veg"], "rating": 4.2 } ], "total": 1 }
+
+Definition of done: `sam local start-api` runs cleanly; `curl -X POST
+localhost:3000/parse` and `curl -X POST localhost:3000/search` both return
+valid JSON matching the shapes above; the seed script successfully indexes
+listings.json into a real OpenSearch domain once deployed. Push to
+feature/infra and open a PR as soon as the stub API runs locally — don't
+wait for the real data/deploy to open the PR, others need the skeleton now.
+
+================================================================================
+PROMPT 2 — NL QUERY PARSING AGENT  (owns backend/parser/)
+================================================================================
+You're building the natural-language query parser for "Aas-Paas", a campus
+essentials search app, for the AWS "First Commit" hackathon. You're using
+the Strands Agents SDK to turn a free-text query like "any tiffin service
+open right now that's cheap" into structured search filters. Three
+teammates are building the infra skeleton, the OpenSearch search service,
+and the frontend in parallel against a frozen contract.
+
+Work only inside backend/parser/. Branch: feature/parser. Person 1 is
+setting up backend/infra/template.yaml which routes POST /parse to
+backend/parser/app.py with handler `lambda_handler(event, context)` — keep
+that exact file path and function name/signature so the wiring doesn't
+break, and initially there will be a placeholder file there from Person 1
+that you overwrite with real logic (keep the handler signature identical).
+
+Contract you must implement:
+  Input (from the API Gateway event body): { "query": "<free text>" }
+  Output (JSON body, status 200): {
+    "category": "pg | mess | tiffin | print_shop | atm | other | null",
+    "radius_km": number,        // default 2 if the query doesn't mention distance
+    "open_now": boolean,        // true if query implies "now"/"currently open"/"right now"
+    "sort_by": "cheapest | nearest | rating | null",
+    "max_price": number | null, // e.g. "under 50 rupees" -> 50
+    "keywords": ["string"]      // leftover descriptive terms for fuzzy text search
+  }
+  Do NOT return lat/lon — you can't know the user's real position from text
+  alone; the frontend attaches user_location separately later.
+
+Use the Strands Agents SDK to build an agent/tool that does this
+extraction (rather than hand-rolled regex/keyword matching) — that's the
+"AI agent" part of the project and needs to show up in the demo video.
+Handle at minimum these signal words: "open now"/"right now"/"currently
+open" -> open_now:true; "cheap"/"cheapest"/"budget"/"under ₹X" ->
+sort_by:"cheapest" and/or max_price:X; "near"/"nearby"/"within Xkm" ->
+radius_km:X; "best"/"top rated" -> sort_by:"rating". Category words map to
+the enum (e.g. "tiffin"/"mess"/"food" -> tiffin or mess, "PG"/"hostel" ->
+pg, "print"/"xerox"/"photocopy" -> print_shop, "ATM"/"cash" -> atm).
+
+Deliverables:
+1. backend/parser/app.py with `lambda_handler(event, context)`.
+2. backend/parser/requirements.txt (strands-agents-sdk + whatever else you need).
+3. backend/parser/test_events/*.json — at least 5 sample API Gateway event
+   JSON files covering different query phrasings, so `sam local invoke
+   ParserFunction -e backend/parser/test_events/sample1.json` can be run
+   and checked against the contract without needing the rest of the stack.
+
+Definition of done: each test event, run through `sam local invoke`,
+produces output matching the contract shape above with reasonable field
+values for that query. Push to feature/parser and open a PR — test with
+`sam local invoke`, you don't need OpenSearch or the frontend running to
+verify your own work.
+
+================================================================================
+PROMPT 3 — SEARCH SERVICE  (owns backend/search/)
+================================================================================
+You're building the OpenSearch-backed search Lambda for "Aas-Paas", a
+campus essentials search app, for the AWS "First Commit" hackathon. It
+takes structured filters (already parsed from natural language by a
+teammate's Lambda) plus the user's coordinates, and returns ranked nearby
+listings. Three teammates are building the infra skeleton, the NL query
+parser, and the frontend in parallel against a frozen contract.
+
+Work only inside backend/search/. Branch: feature/search. Person 1 is
+setting up backend/infra/template.yaml which routes POST /search to
+backend/search/app.py with handler `lambda_handler(event, context)`, and
+passes the OpenSearch domain endpoint in as the env var
+OPENSEARCH_ENDPOINT — keep that file path/handler name/env var name
+exactly as given. There will initially be a placeholder file there from
+Person 1 that you overwrite with real logic.
+
+Contract you must implement:
+  Input (JSON body): {
+    "category": "tiffin" | null, "radius_km": 2, "open_now": true,
+    "sort_by": "cheapest | nearest | rating | null", "max_price": number | null,
+    "keywords": ["string"],
+    "user_location": { "lat": number, "lon": number }   // always present
+  }
+  Output (JSON body, status 200): {
+    "results": [ {
+      "id": "string", "name": "string", "category": "string",
+      "distance_km": number, "price": number | null,
+      "price_unit": "string | null", "is_open_now": boolean,
+      "address": "string", "location": { "lat": number, "lon": number },
+      "phone": "string | null", "tags": ["string"], "rating": number | null
+    } ], "total": number
+  }
+
+Listing documents in OpenSearch look like this (this is what you're
+querying against — indexed by Person 1's seed script):
+{
+  "id": "string", "name": "string",
+  "category": "pg | mess | tiffin | print_shop | atm | other",
+  "description": "string", "location": { "lat": number, "lon": number },
+  "address": "string", "price": number | null,
+  "price_unit": "per_meal | per_page | per_month | per_copy | null",
+  "hours": [ { "day": "mon..sun", "open": "HH:MM", "close": "HH:MM" } ],
+  "phone": "string | null", "tags": ["string"], "rating": number | null
+}
+(empty "hours" array = always open)
+
+Implementation notes:
+- Query OpenSearch with a geo_distance filter (radius_km around
+  user_location) + a term filter on category if present + a multi_match
+  fuzzy query on keywords across name/description/tags.
+- Given the dataset is tiny (30-50 listings), it's fine — and simpler — to
+  compute `is_open_now` by comparing each candidate's `hours` against the
+  current time in Python AFTER OpenSearch returns candidates, rather than
+  writing an OpenSearch painless script. Filter to only is_open_now==true
+  results when the request's open_now is true.
+- Compute distance_km via OpenSearch's geo distance (or haversine in
+  Python) between user_location and each listing's location.
+- Sort by: price ascending if sort_by=="cheapest", distance_km ascending
+  if sort_by=="nearest" or null (default), rating descending if
+  sort_by=="rating". Apply max_price as a filter when present.
+
+Deliverables:
+1. backend/search/app.py with `lambda_handler(event, context)`, connecting
+   to OpenSearch via the OPENSEARCH_ENDPOINT env var.
+2. backend/search/requirements.txt (opensearch-py or similar).
+3. backend/search/test_events/*.json — at least 5 sample API Gateway event
+   JSON files with different filter combos, for `sam local invoke
+   SearchFunction -e backend/search/test_events/sample1.json`.
+
+You depend on Person 1's OpenSearch domain existing and being seeded to
+test end-to-end — until that's ready, write your query-building logic
+against a small hardcoded local list of 3-4 fake listings so you're not
+blocked, then swap to the real OpenSearch client once Person 1 shares the
+deployed OPENSEARCH_ENDPOINT.
+
+Definition of done: each test event, run through `sam local invoke`,
+produces output matching the contract shape with correct filtering/sorting
+logic. Push to feature/search and open a PR.
+
+================================================================================
+PROMPT 4 — FRONTEND & UX  (owns frontend/)
+================================================================================
+You're building the frontend for "Aas-Paas", a natural-language search app
+for nearby campus essentials (PGs, mess/tiffin, print/xerox shops, ATMs),
+for the AWS "First Commit" hackathon — this project is our Best UI track
+candidate, so polish and demo-ability matter as much as functionality.
+Three teammates are building the AWS backend (infra, NL query parser,
+OpenSearch search) in parallel against a frozen contract.
+
+Work only inside frontend/. Branch: feature/frontend. Use whatever
+framework you're fastest in (React + Vite + Tailwind is a good default for
+speed + a clean look). For the map, use Leaflet + OpenStreetMap tiles —
+free, no API key needed, good enough for a demo.
+
+Flow to build:
+1. A prominent search bar where the user types a free-text query (e.g.
+   "any tiffin service open right now that's cheap").
+2. On submit: POST {API_BASE_URL}/parse with { "query": <text> } to get
+   back structured filters (shape below).
+3. Get the user's coordinates via the browser Geolocation API; if denied
+   or unavailable, fall back to a hardcoded campus default constant
+   (CAMPUS_DEFAULT_LAT / CAMPUS_DEFAULT_LON — placeholder for now, fill in
+   your actual campus coordinates).
+4. POST {API_BASE_URL}/search with the filters from step 2 plus
+   "user_location": { "lat", "lon" } to get back ranked results (shape
+   below).
+5. Render results as BOTH a list (name, category, distance, price,
+   open-now badge, rating) and a map view (pins at each result's
+   location, centered on the user). Clicking a list item highlights/pans
+   to its pin.
+6. Filter chips/toggles for category, "open now", and sort (cheapest /
+   nearest / rating) that let the user refine results without retyping
+   the query — these should just re-trigger /search with modified filters,
+   not /parse again.
+7. Loading and empty/error states (e.g. "no results within Xkm — try a
+   wider radius").
+8. Mobile-responsive — the demo video will likely be shown on a phone-size
+   frame.
+
+Contract (build against this from day 1, don't wait for the backend):
+  POST /parse   { "query": "string" }
+    -> { "category": "pg|mess|tiffin|print_shop|atm|other|null",
+         "radius_km": number, "open_now": boolean,
+         "sort_by": "cheapest|nearest|rating|null",
+         "max_price": number|null, "keywords": ["string"] }
+  POST /search  { category, radius_km, open_now, sort_by, max_price,
+                  keywords, "user_location": { "lat", "lon" } }
+    -> { "results": [ { "id", "name", "category", "distance_km", "price",
+         "price_unit", "is_open_now", "address",
+         "location": { "lat", "lon" }, "phone", "tags": ["string"],
+         "rating" } ], "total": number }
+
+Until the real API is deployed, build against a mock: add a
+USE_MOCKS env flag and a local fixtures file with 5-10 example results
+matching the /search response shape exactly, so your UI work is never
+blocked on the backend team. Read API_BASE_URL from an env var so
+swapping from mocks to the real deployed endpoint (once Person 1 shares
+it) is a one-line change.
+
+Deliverables:
+1. Working frontend/ app: search -> parse -> search -> list+map render,
+   filter chips, loading/error states, mobile-responsive.
+2. A fixtures/mock mode that works with zero backend running, for fast
+   iteration and as a demo-video fallback if live AWS has issues.
+3. Clean visual design — this is the Best UI submission, so spend real
+   time on spacing, typography, empty states, and micro-interactions once
+   the core flow works.
+
+Definition of done: full search flow works end-to-end against the mock
+fixtures; then re-verify against the real deployed API before the final
+demo recording. Push to feature/frontend and open a PR once the mock-mode
+flow works — don't wait for the live backend to get this reviewed.
