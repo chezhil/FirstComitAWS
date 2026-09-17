@@ -35,7 +35,10 @@ if not logger.handlers:
         format="%(levelname)s | %(name)s | %(message)s",
     )
 
-CATEGORIES = ("pg", "mess", "tiffin", "print_shop", "atm", "other")
+CATEGORIES = (
+    "pg", "mess", "tiffin", "food", "bar", "grocery", "print_shop", "atm",
+    "pharmacy", "medical", "gym", "salon", "laundry", "transport", "other",
+)
 SORTS = ("cheapest", "nearest", "rating")
 
 DEFAULT_RADIUS_KM = 2.0
@@ -57,7 +60,8 @@ def _build_output_schema():
         category: Optional[str] = Field(
             default=None,
             description=(
-                "One of: pg, mess, tiffin, print_shop, atm, other. "
+                "One of: pg, mess, tiffin, food, bar, grocery, print_shop, atm, "
+                "pharmacy, medical, gym, salon, laundry, transport, other. "
                 "Set null only if the query does not clearly map to a category."
             ),
         )
@@ -103,10 +107,14 @@ def _build_output_schema():
 _SYSTEM_PROMPT = (
     "You extract structured campus-search filters from a student's short "
     "query. Rules:\n"
-    "- category: exactly one of pg, mess, tiffin, print_shop, atm, other, or "
-    "null when unclear. 'print/xerox/photocopy' -> print_shop. "
-    "'PG/hostel' -> pg. 'ATM/cash/withdraw' -> atm. 'tiffin/dabba' -> tiffin. "
-    "'mess/food/lunch/dinner' -> mess.\n"
+    "- category: exactly one of the following, or null when unclear. "
+    "pg (PG/hostel), mess (mess/canteen), "
+    "tiffin (tiffin/dabba), food (restaurant/cafe/bakery/eating out), "
+    "bar (bar/pub/drinks), grocery (supermarket/kirana), "
+    "print_shop (print/xerox/photocopy/stationery), atm (ATM/cash), "
+    "pharmacy (chemist/medicine), medical (hospital/clinic/doctor), "
+    "gym, salon (barber/haircut/spa), laundry (dhobi/dry clean), "
+    "transport (bus stop/metro), other.\n"
     "- radius_km: default 2.0. Only change it when the user names a distance "
     "('within 1km', 'near 500m').\n"
     "- open_now: true only for 'open now / right now / currently open'.\n"
@@ -202,19 +210,39 @@ _STOPWORDS = {
 }
 
 _CATEGORY_KEYWORDS: list[tuple[str, tuple[str, ...]]] = [
-    ("pg", ("pg", "hostel", "paying guest", "room for rent")),
+    ("pg", ("pg", "hostel", "paying guest", "room for rent", "accommodation")),
     ("tiffin", ("tiffin", "dabba", "home food", "tiffin service")),
-    (
-        "mess",
-        ("mess", "food", "canteen", "dining", "eatery", "lunch", "dinner",
-         "breakfast", "meals", "snacks"),
-    ),
+    ("mess", ("mess", "canteen")),
     (
         "print_shop",
         ("print", "xerox", "photocopy", "photostat", "printing", "printout",
-         "print out", "print shop"),
+         "print out", "print shop", "stationery"),
     ),
-    ("atm", ("atm", "cash", "withdraw", "withdrawal")),
+    ("atm", ("atm", "cash", "withdraw", "withdrawal", "cashpoint")),
+    ("pharmacy", ("pharmacy", "chemist", "medical store", "medicine", "drugstore")),
+    (
+        "medical",
+        ("hospital", "clinic", "doctor", "dentist", "dental", "emergency"),
+    ),
+    ("bar", ("bar", "pub", "beer", "drinks", "brewery")),
+    (
+        "grocery",
+        ("grocery", "supermarket", "kirana", "provisions", "vegetables",
+         "groceries", "convenience store"),
+    ),
+    ("gym", ("gym", "fitness", "workout")),
+    ("salon", ("salon", "barber", "haircut", "parlour", "parlor", "spa", "beauty")),
+    ("laundry", ("laundry", "dhobi", "dry clean", "dry cleaning", "washing")),
+    (
+        "transport",
+        ("bus stop", "bus", "metro", "station", "auto stand"),
+    ),
+    (
+        "food",
+        ("restaurant", "cafe", "coffee", "food", "eat", "dining", "eatery",
+         "lunch", "dinner", "breakfast", "meals", "snacks", "bakery",
+         "ice cream", "hotel"),
+    ),
 ]
 
 _OPEN_NOW_RE = re.compile(

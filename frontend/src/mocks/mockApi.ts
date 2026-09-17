@@ -5,11 +5,20 @@ import { MOCK_LISTINGS } from './fixtures'
 // keyword matching to make the mock-mode demo feel responsive. Never used
 // once VITE_USE_MOCKS=false.
 const CATEGORY_WORDS: Record<Category, string[]> = {
-  tiffin: ['tiffin', 'food', 'meal'],
-  mess: ['mess'],
+  tiffin: ['tiffin', 'dabba'],
+  mess: ['mess', 'canteen'],
   pg: ['pg', 'hostel', 'stay', 'room'],
+  food: ['food', 'restaurant', 'cafe', 'eat', 'meal', 'bakery'],
+  bar: ['bar', 'pub', 'beer'],
+  grocery: ['grocery', 'supermarket', 'kirana'],
   print_shop: ['print', 'xerox', 'photocopy', 'printout'],
   atm: ['atm', 'cash', 'withdraw'],
+  pharmacy: ['pharmacy', 'chemist', 'medicine'],
+  medical: ['hospital', 'clinic', 'doctor', 'dentist'],
+  gym: ['gym', 'fitness'],
+  salon: ['salon', 'barber', 'haircut'],
+  laundry: ['laundry', 'dhobi'],
+  transport: ['bus', 'metro', 'station'],
   other: [],
 }
 

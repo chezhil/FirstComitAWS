@@ -9,7 +9,7 @@ interface Props {
   onWiden?: () => void
 }
 
-const COVERED = ['pg', 'mess', 'tiffin', 'print_shop', 'atm']
+const COVERED = ['pg', 'tiffin', 'food', 'print_shop', 'atm', 'pharmacy', 'grocery']
 
 export function EmptyState({ filters, wideHits, onWiden }: Props) {
   const nothingAnywhere = wideHits === 0

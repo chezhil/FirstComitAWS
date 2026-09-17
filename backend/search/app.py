@@ -25,6 +25,15 @@ _SYNONYMS = {
     "withdraw": "atm", "withdrawal": "atm",
     "dabba": "tiffin", "tiffins": "tiffin",
     "canteen": "mess", "dining": "mess", "eatery": "mess",
+    "chemist": "pharmacy", "medicine": "pharmacy", "drugstore": "pharmacy",
+    "kirana": "grocery", "supermarket": "grocery", "provisions": "grocery",
+    "groceries": "grocery",
+    "barber": "salon", "haircut": "salon", "parlour": "salon", "parlor": "salon",
+    "dhobi": "laundry", "washing": "laundry",
+    "fitness": "gym", "workout": "gym",
+    "pub": "bar", "beer": "bar",
+    "clinic": "medical", "doctor": "medical", "hospital": "medical",
+    "restaurant": "food", "cafe": "food", "bakery": "food",
 }
 
 

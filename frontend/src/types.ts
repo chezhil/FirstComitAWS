@@ -1,4 +1,7 @@
-export type Category = 'pg' | 'mess' | 'tiffin' | 'print_shop' | 'atm' | 'other'
+export type Category =
+  | 'pg' | 'mess' | 'tiffin' | 'food' | 'bar' | 'grocery' | 'print_shop'
+  | 'atm' | 'pharmacy' | 'medical' | 'gym' | 'salon' | 'laundry'
+  | 'transport' | 'other'
 
 export type SortBy = 'cheapest' | 'nearest' | 'rating' | null
 

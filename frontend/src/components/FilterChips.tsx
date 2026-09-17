@@ -1,7 +1,10 @@
 import { CATEGORY_LABELS } from '../config'
 import type { Category, SortBy, SearchFilters } from '../types'
 
-const CATEGORIES: Category[] = ['pg', 'mess', 'tiffin', 'print_shop', 'atm', 'other']
+const CATEGORIES: Category[] = [
+  'pg', 'mess', 'tiffin', 'food', 'bar', 'grocery', 'print_shop', 'atm',
+  'pharmacy', 'medical', 'gym', 'salon', 'laundry', 'transport', 'other',
+]
 const SORTS: { value: SortBy; label: string }[] = [
   { value: 'nearest', label: 'Nearest' },
   { value: 'cheapest', label: 'Cheapest' },
@@ -17,7 +20,7 @@ export function FilterChips({ filters, onChange }: Props) {
   if (!filters) return null
 
   return (
-    <div className="flex flex-wrap items-center gap-2 text-sm">
+    <div className="flex flex-col gap-2 text-sm sm:flex-row sm:flex-wrap sm:items-center">
       <ChipGroup label="Category">
         <Chip active={filters.category === null} onClick={() => onChange({ category: null })}>
           All
@@ -46,9 +49,15 @@ export function FilterChips({ filters, onChange }: Props) {
 
 function ChipGroup({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div className="flex items-center gap-1.5">
-      <span className="text-xs font-medium uppercase tracking-wide text-slate-400">{label}</span>
-      <div className="flex flex-wrap gap-1.5">{children}</div>
+    <div className="flex min-w-0 items-center gap-1.5">
+      <span className="shrink-0 text-xs font-medium uppercase tracking-wide text-slate-400">
+        {label}
+      </span>
+      {/* 15 categories overflow a wrapped row, so scroll them sideways
+          instead of letting the filters dominate the page. */}
+      <div className="flex gap-1.5 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        {children}
+      </div>
     </div>
   )
 }

@@ -44,30 +44,62 @@ TAG_CATEGORY = {
     ("shop", "stationery"): "print_shop",
     ("tourism", "guest_house"): "pg",
     ("tourism", "hostel"): "pg",
-    ("amenity", "pharmacy"): "other",
-    ("amenity", "cafe"): "other",
-    ("amenity", "restaurant"): "other",
-    ("amenity", "fast_food"): "other",
-    ("amenity", "food_court"): "other",
+    ("amenity", "restaurant"): "food",
+    ("amenity", "fast_food"): "food",
+    ("amenity", "cafe"): "food",
+    ("amenity", "food_court"): "food",
+    ("shop", "bakery"): "food",
+    ("amenity", "ice_cream"): "food",
+    ("amenity", "bar"): "bar",
+    ("amenity", "pub"): "bar",
+    ("shop", "supermarket"): "grocery",
+    ("shop", "convenience"): "grocery",
+    ("shop", "greengrocer"): "grocery",
+    ("amenity", "pharmacy"): "pharmacy",
+    ("amenity", "hospital"): "medical",
+    ("amenity", "clinic"): "medical",
+    ("amenity", "doctors"): "medical",
+    ("amenity", "dentist"): "medical",
+    ("leisure", "fitness_centre"): "gym",
+    ("shop", "hairdresser"): "salon",
+    ("shop", "beauty"): "salon",
+    ("shop", "laundry"): "laundry",
+    ("shop", "dry_cleaning"): "laundry",
+    ("highway", "bus_stop"): "transport",
+    ("railway", "station"): "transport",
+    ("amenity", "library"): "other",
+    ("amenity", "cinema"): "other",
+    ("amenity", "post_office"): "other",
+    ("amenity", "fuel"): "other",
+    ("shop", "books"): "other",
+    ("shop", "mobile_phone"): "other",
 }
 
 DEFAULT_SELECTORS = [
-    '["amenity"="atm"]',
-    '["amenity"="bank"]',
-    '["shop"="copyshop"]',
-    '["shop"="printing"]',
-    '["shop"="stationery"]',
-    '["tourism"="guest_house"]',
-    '["tourism"="hostel"]',
+    '["amenity"="atm"]', '["amenity"="bank"]',
+    '["shop"="copyshop"]', '["shop"="printing"]', '["shop"="stationery"]',
+    '["tourism"="guest_house"]', '["tourism"="hostel"]',
+    '["amenity"="restaurant"]', '["amenity"="fast_food"]', '["amenity"="cafe"]',
+    '["amenity"="food_court"]', '["shop"="bakery"]', '["amenity"="ice_cream"]',
+    '["amenity"="bar"]', '["amenity"="pub"]',
+    '["shop"="supermarket"]', '["shop"="convenience"]', '["shop"="greengrocer"]',
     '["amenity"="pharmacy"]',
+    '["amenity"="hospital"]', '["amenity"="clinic"]', '["amenity"="doctors"]',
+    '["amenity"="dentist"]',
+    '["leisure"="fitness_centre"]',
+    '["shop"="hairdresser"]', '["shop"="beauty"]',
+    '["shop"="laundry"]', '["shop"="dry_cleaning"]',
+    '["highway"="bus_stop"]', '["railway"="station"]',
+    '["amenity"="library"]', '["amenity"="cinema"]', '["amenity"="post_office"]',
+    '["amenity"="fuel"]', '["shop"="books"]', '["shop"="mobile_phone"]',
 ]
 
-EATERY_SELECTORS = [
-    '["amenity"="cafe"]',
-    '["amenity"="restaurant"]',
-    '["amenity"="fast_food"]',
-    '["amenity"="food_court"]',
-]
+EATERY_SELECTORS: list[str] = []  # eateries are part of the default set now
+
+CATEGORY_ORDER = (
+    "pg", "mess", "tiffin", "food", "bar", "grocery", "print_shop", "atm",
+    "pharmacy", "medical", "gym", "salon", "laundry", "transport", "other",
+)
 
 DAYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 _OSM_DAY = {"mo": "mon", "tu": "tue", "we": "wed", "th": "thu", "fr": "fri", "sa": "sat", "su": "sun"}
@@ -267,7 +299,7 @@ def main() -> None:
 
     print(f"\nWrote {len(listings)} listings to {args.out}")
     print(f"{'category':12} {'count':>6}")
-    for cat in ("pg", "mess", "tiffin", "print_shop", "atm", "other"):
+    for cat in CATEGORY_ORDER:
         print(f"{cat:12} {by_cat.get(cat, 0):>6}")
 
     print(f"\nStill needs a human:")
