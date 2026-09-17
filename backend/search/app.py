@@ -10,6 +10,27 @@ except ImportError:
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
+# Mirrors the "campus_synonym_filter" in backend/infra/scripts/seed_opensearch.py.
+# Plain fuzziness (edit-distance) can't bridge "photocopy" <-> "print shop" --
+# they share no characters -- so both the real OpenSearch query and this
+# mock-data fallback normalize known synonyms to the same canonical word
+# before matching.
+_SYNONYMS = {
+    "printout": "print", "print out": "print", "printing": "print",
+    "photocopy": "print", "photostat": "print", "xerox": "print",
+    "copier": "print", "copiers": "print", "copying": "print",
+    "hostel": "pg", "hostels": "pg", "paying guest": "pg",
+    "accommodation": "pg", "lodging": "pg",
+    "cash": "atm", "cashpoint": "atm", "cash point": "atm",
+    "withdraw": "atm", "withdrawal": "atm",
+    "dabba": "tiffin", "tiffins": "tiffin",
+    "canteen": "mess", "dining": "mess", "eatery": "mess",
+}
+
+
+def _normalize_keyword(word: str) -> str:
+    return _SYNONYMS.get(word.lower().strip(), word.lower().strip())
+
 def haversine(lat1, lon1, lat2, lon2):
     R = 6371.0 # Earth radius in km
     dlat = math.radians(lat2 - lat1)
@@ -156,8 +177,21 @@ def lambda_handler(event, context):
             query["bool"]["must"].append({
                 "multi_match": {
                     "query": " ".join(keywords),
-                    "fields": ["name", "description", "tags"],
-                    "fuzziness": "AUTO"
+                    "fields": ["name", "description", "tags.text"],
+                    # AUTO's default low threshold (3) still lets very short
+                    # canonical tokens like "atm" take 1 edit, which matches
+                    # the common word "at" (insert one char) and pulls in
+                    # unrelated mess/tiffin listings whose description
+                    # happens to contain "at". Raising the threshold to 5
+                    # keeps 1-edit typo tolerance for real words (tiffin,
+                    # print, etc.) while leaving short tokens exact-only.
+                    "fuzziness": "AUTO:5,8",
+                    # Require the first 2 characters to match so fuzziness
+                    # only fixes typos (tifin->tiffin) and doesn't drift onto
+                    # an unrelated word that happens to be 1 edit away, e.g.
+                    # "print" (from the photocopy->print synonym) fuzzy-
+                    # matching "Point" in "Laundry Point" without this guard.
+                    "prefix_length": 2
                 }
             })
             
@@ -192,10 +226,12 @@ def lambda_handler(event, context):
                 continue
             if max_price is not None and doc.get("price") is not None and doc["price"] > max_price:
                 continue
-            # basic keyword match for mock
+            # basic keyword match for mock, synonym-normalized (see _SYNONYMS)
             if keywords:
-                text = (doc.get("name", "") + " " + doc.get("description", "") + " " + " ".join(doc.get("tags", []))).lower()
-                if not any(k.lower() in text for k in keywords):
+                raw_text = (doc.get("name", "") + " " + doc.get("description", "") + " " + " ".join(doc.get("tags", []))).lower()
+                doc_words = {_normalize_keyword(w) for w in raw_text.split()}
+                query_words = {_normalize_keyword(k) for k in keywords}
+                if not (query_words & doc_words) and not any(k.lower() in raw_text for k in keywords):
                     continue
         
         # open_now check

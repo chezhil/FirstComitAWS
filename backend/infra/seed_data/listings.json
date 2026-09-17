@@ -3,7 +3,7 @@
     "id": "50bd0f67-af8d-41c2-b3ab-9ebf2dfcbed2",
     "name": "Zolo Stays - South Gate",
     "category": "pg",
-    "description": "Reliable pg around the campus. Great for students.",
+    "description": "Quiet well-kept PG with easy campus access, frequently booked by returning students.",
     "location": {
       "lat": 12.98319,
       "lon": 77.608554
@@ -25,7 +25,7 @@
     "id": "fd6441e8-8e81-4a76-ab85-6d2125caa89a",
     "name": "Balaji Luxury PG - Branch",
     "category": "pg",
-    "description": "Reliable pg around the campus. Great for students.",
+    "description": "Well-maintained hostel-style PG near campus gates, known for well-kept facilities.",
     "location": {
       "lat": 12.95815,
       "lon": 77.595266
@@ -47,7 +47,7 @@
     "id": "05ee4361-dd3f-40cc-bfa8-4c6d90622637",
     "name": "Comfort Stay - North Gate",
     "category": "pg",
-    "description": "Reliable pg around the campus. Great for students.",
+    "description": "Quiet well-kept PG with easy campus access, frequently booked by returning students.",
     "location": {
       "lat": 12.971401,
       "lon": 77.59408
@@ -69,7 +69,7 @@
     "id": "cc10ecf2-f1f4-4267-8631-a06575764e99",
     "name": "Zolo Stays - Campus Side",
     "category": "pg",
-    "description": "Reliable pg around the campus. Great for students.",
+    "description": "Budget-friendly paying-guest accommodation a short walk from campus, well-kept rooms available.",
     "location": {
       "lat": 12.979401,
       "lon": 77.606198
@@ -89,9 +89,9 @@
   },
   {
     "id": "11e43ae7-738c-47aa-a513-f844f160c798",
-    "name": "Zolo Stays - South Gate",
+    "name": "Zolo Stays - South Gate 2",
     "category": "pg",
-    "description": "Reliable pg around the campus. Great for students.",
+    "description": "Well-maintained hostel-style PG near campus gates, known for well-kept facilities.",
     "location": {
       "lat": 12.970332,
       "lon": 77.593686
@@ -113,7 +113,7 @@
     "id": "da536f9a-20c4-4cc4-a281-5962fe69fa2f",
     "name": "Sunrise PG - North Gate",
     "category": "pg",
-    "description": "Reliable pg around the campus. Great for students.",
+    "description": "Quiet well-kept PG with easy campus access, frequently booked by returning students.",
     "location": {
       "lat": 12.971401,
       "lon": 77.607187
@@ -135,7 +135,7 @@
     "id": "cf602297-d923-486e-8433-3cf943c12281",
     "name": "Sunrise PG - Branch",
     "category": "pg",
-    "description": "Reliable pg around the campus. Great for students.",
+    "description": "Furnished well-kept PG close to campus, popular with students for its location and upkeep.",
     "location": {
       "lat": 12.961763,
       "lon": 77.602636
@@ -157,7 +157,7 @@
     "id": "b3f7cba0-7660-4a17-a553-956caa7301d3",
     "name": "Kerala Food Court - Annex",
     "category": "mess",
-    "description": "Reliable mess around the campus. Great for students.",
+    "description": "Home-style mess serving home-style meals on a regular schedule, popular with campus regulars.",
     "location": {
       "lat": 12.981705,
       "lon": 77.600364
@@ -213,9 +213,9 @@
   },
   {
     "id": "cc8858ea-1c67-426a-b268-929b9bbe00ae",
-    "name": "Kerala Food Court - Annex",
+    "name": "Kerala Food Court - Annex 2",
     "category": "mess",
-    "description": "Reliable mess around the campus. Great for students.",
+    "description": "Home-style mess serving home-style meals on a regular schedule, popular with campus regulars.",
     "location": {
       "lat": 12.96546,
       "lon": 77.584239
@@ -273,7 +273,7 @@
     "id": "881ffef0-3b1c-42fd-8528-387d71da2527",
     "name": "Andhra Meals - Campus Side",
     "category": "mess",
-    "description": "Reliable mess around the campus. Great for students.",
+    "description": "Campus-side mess known for consistent home-style food and quick service during meal hours.",
     "location": {
       "lat": 12.973976,
       "lon": 77.58867
@@ -331,7 +331,7 @@
     "id": "8205f826-db7b-4a23-9bc9-f04ba4b3d942",
     "name": "Maa Vaishno Mess - Annex",
     "category": "mess",
-    "description": "Reliable mess around the campus. Great for students.",
+    "description": "Long-running mess near campus, a go-to for home-style lunch and dinner.",
     "location": {
       "lat": 12.981939,
       "lon": 77.581353
@@ -389,7 +389,7 @@
     "id": "0a053e7c-2e76-4109-a856-684e050b7140",
     "name": "Home Taste Mess - North Gate",
     "category": "mess",
-    "description": "Reliable mess around the campus. Great for students.",
+    "description": "Campus-side mess known for consistent home-style food and quick service during meal hours.",
     "location": {
       "lat": 12.97555,
       "lon": 77.58669
@@ -447,7 +447,7 @@
     "id": "70fecf61-a3f2-4826-b047-34b3e8a2d461",
     "name": "Home Taste Mess - Annex",
     "category": "mess",
-    "description": "Reliable mess around the campus. Great for students.",
+    "description": "No-frills mess canteen offering home-style thalis at student-friendly prices.",
     "location": {
       "lat": 12.967516,
       "lon": 77.607939
@@ -505,7 +505,7 @@
     "id": "aabf325d-8eeb-446c-9e32-f80354d38803",
     "name": "Kerala Food Court - Main",
     "category": "mess",
-    "description": "Reliable mess around the campus. Great for students.",
+    "description": "No-frills mess canteen offering home-style thalis at student-friendly prices.",
     "location": {
       "lat": 12.980065,
       "lon": 77.6026
@@ -563,7 +563,7 @@
     "id": "22984913-62b5-4a80-a086-47846f3c1ce1",
     "name": "Srinivasa Tiffin Center - South Gate",
     "category": "tiffin",
-    "description": "Reliable tiffin around the campus. Great for students.",
+    "description": "Popular tiffin stall near campus offering fresh meal boxes at low prices.",
     "location": {
       "lat": 12.963096,
       "lon": 77.590963
@@ -621,7 +621,7 @@
     "id": "ab216e87-8451-49e9-94a3-017afdf3394a",
     "name": "Udupi Upahar - Branch",
     "category": "tiffin",
-    "description": "Reliable tiffin around the campus. Great for students.",
+    "description": "Reliable dabba service with a loyal student following for fresh food.",
     "location": {
       "lat": 12.985669,
       "lon": 77.604077
@@ -679,7 +679,7 @@
     "id": "88ff0230-3f74-41cf-a303-bbd11ea79c22",
     "name": "Asha Tiffins - Branch",
     "category": "tiffin",
-    "description": "Reliable tiffin around the campus. Great for students.",
+    "description": "Daily tiffin/dabba service delivering fresh home-style meals to students nearby.",
     "location": {
       "lat": 12.985584,
       "lon": 77.60317
@@ -737,7 +737,7 @@
     "id": "8cd3db11-b6ab-46ff-848d-735e38df59e2",
     "name": "Asha Tiffins - Campus Side",
     "category": "tiffin",
-    "description": "Reliable tiffin around the campus. Great for students.",
+    "description": "Daily tiffin/dabba service delivering fresh home-style meals to students nearby.",
     "location": {
       "lat": 12.969206,
       "lon": 77.601535
@@ -795,7 +795,7 @@
     "id": "283e2b5b-ef58-42ef-8c39-21c34ed901aa",
     "name": "Quick Bite Tiffins - Branch",
     "category": "tiffin",
-    "description": "Reliable tiffin around the campus. Great for students.",
+    "description": "Reliable dabba service with a loyal student following for fresh food.",
     "location": {
       "lat": 12.980984,
       "lon": 77.580441
@@ -851,9 +851,9 @@
   },
   {
     "id": "62196a29-ec0d-4d19-aafa-ecf78866b9e0",
-    "name": "Srinivasa Tiffin Center - South Gate",
+    "name": "Srinivasa Tiffin Center - South Gate 2",
     "category": "tiffin",
-    "description": "Reliable tiffin around the campus. Great for students.",
+    "description": "Small tiffin center known for fresh fresh meals and quick turnaround.",
     "location": {
       "lat": 12.96449,
       "lon": 77.584931
@@ -909,9 +909,9 @@
   },
   {
     "id": "201c3184-045d-4601-9291-6f6373a12a16",
-    "name": "Srinivasa Tiffin Center - South Gate",
+    "name": "Srinivasa Tiffin Center - South Gate 3",
     "category": "tiffin",
-    "description": "Reliable tiffin around the campus. Great for students.",
+    "description": "Small tiffin center known for fresh fresh meals and quick turnaround.",
     "location": {
       "lat": 12.966412,
       "lon": 77.594889
@@ -969,7 +969,7 @@
     "id": "9622c311-f9c9-4eae-9e46-27882346c3ed",
     "name": "Student Print Point - Annex",
     "category": "print_shop",
-    "description": "Reliable print shop around the campus. Great for students.",
+    "description": "Student-favorite printing and photostat shop, also does color copies and scans.",
     "location": {
       "lat": 12.978206,
       "lon": 77.606212
@@ -1027,7 +1027,7 @@
     "id": "5c243c3c-bc33-4440-9859-0b1778f8bc59",
     "name": "Kiran Xerox - North Gate",
     "category": "print_shop",
-    "description": "Reliable print shop around the campus. Great for students.",
+    "description": "Reliable print & photocopy shop, handles printouts, xerox and binding for coursework.",
     "location": {
       "lat": 12.969447,
       "lon": 77.607664
@@ -1085,7 +1085,7 @@
     "id": "7bdaf9c5-7b27-44d2-975a-763ae7fdf18b",
     "name": "A4 World - South Gate",
     "category": "print_shop",
-    "description": "Reliable print shop around the campus. Great for students.",
+    "description": "Reliable print & photocopy shop, handles printouts, xerox and binding for coursework.",
     "location": {
       "lat": 12.981413,
       "lon": 77.58884
@@ -1143,7 +1143,7 @@
     "id": "a5a7ee96-0606-4967-af44-d5a131e5aaa5",
     "name": "Sri Venkateshwara Xerox - Annex",
     "category": "print_shop",
-    "description": "Reliable print shop around the campus. Great for students.",
+    "description": "Campus xerox point for printing, photocopy and scanning -- quick turnaround for students.",
     "location": {
       "lat": 12.971311,
       "lon": 77.607038
@@ -1201,7 +1201,7 @@
     "id": "d5e41ed7-8c0b-4248-a702-ed8f1ad0866b",
     "name": "Kiran Xerox - Main",
     "category": "print_shop",
-    "description": "Reliable print shop around the campus. Great for students.",
+    "description": "Campus xerox point for printing, photocopy and scanning -- quick turnaround for students.",
     "location": {
       "lat": 12.957689,
       "lon": 77.588494
@@ -1259,7 +1259,7 @@
     "id": "9d9891fb-ac59-4b83-9885-7910a5e8e27b",
     "name": "Smart Copiers - North Gate",
     "category": "print_shop",
-    "description": "Reliable print shop around the campus. Great for students.",
+    "description": "Campus xerox point for printing, photocopy and scanning -- quick turnaround for students.",
     "location": {
       "lat": 12.975842,
       "lon": 77.583264
@@ -1317,7 +1317,7 @@
     "id": "6cf16687-96bf-4ee2-898c-4109509ef704",
     "name": "Sri Venkateshwara Xerox - Campus Side",
     "category": "print_shop",
-    "description": "Reliable print shop around the campus. Great for students.",
+    "description": "Reliable print & photocopy shop, handles printouts, xerox and binding for coursework.",
     "location": {
       "lat": 12.982743,
       "lon": 77.601441
@@ -1375,7 +1375,7 @@
     "id": "193b5c4b-c28d-4f8a-88e7-9e20229d094b",
     "name": "Axis Bank ATM - Main",
     "category": "atm",
-    "description": "Reliable atm around the campus. Great for students.",
+    "description": "Reliable ATM near student housing, rarely runs out of cash.",
     "location": {
       "lat": 12.97687,
       "lon": 77.595322
@@ -1397,7 +1397,7 @@
     "id": "bf89d142-d478-4912-9ebb-f931387e6862",
     "name": "HDFC Bank ATM - Main",
     "category": "atm",
-    "description": "Reliable atm around the campus. Great for students.",
+    "description": "Convenient cash withdrawal point a short walk from campus.",
     "location": {
       "lat": 12.974813,
       "lon": 77.594497
@@ -1419,7 +1419,7 @@
     "id": "a427b18f-f56f-487d-97ea-37c670f65d7b",
     "name": "SBI ATM - North Gate",
     "category": "atm",
-    "description": "Reliable atm around the campus. Great for students.",
+    "description": "Reliable ATM near student housing, rarely runs out of cash.",
     "location": {
       "lat": 12.981069,
       "lon": 77.602167
@@ -1441,7 +1441,7 @@
     "id": "4949aa17-75ce-4e21-a423-48ce07ef078e",
     "name": "HDFC Bank ATM - Annex",
     "category": "atm",
-    "description": "Reliable atm around the campus. Great for students.",
+    "description": "Bank ATM close to the main gate, usually stocked and working.",
     "location": {
       "lat": 12.961725,
       "lon": 77.601271
@@ -1461,9 +1461,9 @@
   },
   {
     "id": "b62d3857-8930-411f-a2b5-a711293e4869",
-    "name": "Axis Bank ATM - Main",
+    "name": "Axis Bank ATM - Main 2",
     "category": "atm",
-    "description": "Reliable atm around the campus. Great for students.",
+    "description": "24x7 ATM near campus for quick cash withdrawal.",
     "location": {
       "lat": 12.958609,
       "lon": 77.603307
@@ -1485,7 +1485,7 @@
     "id": "1cfff005-d814-42da-ae6d-9b1beee7d7b0",
     "name": "Kotak ATM - South Gate",
     "category": "atm",
-    "description": "Reliable atm around the campus. Great for students.",
+    "description": "24x7 ATM near campus for quick cash withdrawal.",
     "location": {
       "lat": 12.98629,
       "lon": 77.587107
@@ -1507,7 +1507,7 @@
     "id": "abb72087-3be4-4977-82c6-c952a3abc5f9",
     "name": "SBI ATM - Branch",
     "category": "atm",
-    "description": "Reliable atm around the campus. Great for students.",
+    "description": "Convenient cash withdrawal point a short walk from campus.",
     "location": {
       "lat": 12.975795,
       "lon": 77.605463
@@ -1529,7 +1529,7 @@
     "id": "d47f60d0-4a23-4ebb-bc06-c5524a347e1a",
     "name": "Campus Pharmacy - Campus Side",
     "category": "other",
-    "description": "Reliable other around the campus. Great for students.",
+    "description": "Handy store near campus covering odds and ends students need.",
     "location": {
       "lat": 12.96803,
       "lon": 77.599723
@@ -1587,7 +1587,7 @@
     "id": "204f294c-a78d-422a-8bad-a4d43a52ccb5",
     "name": "Snack Corner - Branch",
     "category": "other",
-    "description": "Reliable other around the campus. Great for students.",
+    "description": "Small campus-side shop, convenient for students in a hurry.",
     "location": {
       "lat": 12.960786,
       "lon": 77.59909
@@ -1645,7 +1645,7 @@
     "id": "42364af3-57f5-482c-a60b-cc502a050927",
     "name": "Laundry Point - Annex",
     "category": "other",
-    "description": "Reliable other around the campus. Great for students.",
+    "description": "Handy store near campus covering odds and ends students need.",
     "location": {
       "lat": 12.972897,
       "lon": 77.597273
@@ -1703,7 +1703,7 @@
     "id": "5fab1efc-3cb3-44eb-811f-132ad20bd805",
     "name": "Campus Barber - South Gate",
     "category": "other",
-    "description": "Reliable other around the campus. Great for students.",
+    "description": "Small campus-side shop, convenient for students in a hurry.",
     "location": {
       "lat": 12.960916,
       "lon": 77.586502
@@ -1759,9 +1759,9 @@
   },
   {
     "id": "d61fc1c1-190c-47b4-b3e4-4c25a0878ab6",
-    "name": "Laundry Point - Annex",
+    "name": "Laundry Point - Annex 2",
     "category": "other",
-    "description": "Reliable other around the campus. Great for students.",
+    "description": "Campus-adjacent shop useful for everyday student errands.",
     "location": {
       "lat": 12.967557,
       "lon": 77.593563
@@ -1819,7 +1819,7 @@
     "id": "1c979e38-f323-48d6-a71e-13d1d30288b3",
     "name": "Laundry Point - South Gate",
     "category": "other",
-    "description": "Reliable other around the campus. Great for students.",
+    "description": "Handy store near campus covering odds and ends students need.",
     "location": {
       "lat": 12.973814,
       "lon": 77.589909
@@ -1877,7 +1877,7 @@
     "id": "55cc214b-087c-4f8e-87b4-548f799cfb29",
     "name": "Laundry Point - Branch",
     "category": "other",
-    "description": "Reliable other around the campus. Great for students.",
+    "description": "Campus-adjacent shop useful for everyday student errands.",
     "location": {
       "lat": 12.969187,
       "lon": 77.595753

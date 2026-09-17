@@ -39,14 +39,43 @@ def main():
     )
 
     index_name = 'listings'
-    
+
+    # Fuzziness alone (edit-distance / typo correction) can't bridge different
+    # words with the same meaning -- "photocopy" and "print shop" share no
+    # characters, so a fuzzy multi_match never matches them. A synonym filter
+    # normalizes related terms to one canonical token at both index and query
+    # time, so "photocopy"/"xerox"/"printout" all resolve to "print" and
+    # actually match a listing described as a "print shop".
     mapping = {
+        "settings": {
+            "analysis": {
+                "filter": {
+                    "campus_synonym_filter": {
+                        "type": "synonym",
+                        "synonyms": [
+                            "printout, print out, printing, photocopy, photostat, xerox, copier, copiers, copying => print",
+                            "pg, hostel, hostels, paying guest, accommodation, lodging => pg",
+                            "atm, cash, cashpoint, cash point, withdraw, withdrawal => atm",
+                            "tiffin, dabba, tiffins => tiffin",
+                            "mess, canteen, dining, eatery => mess",
+                        ],
+                    }
+                },
+                "analyzer": {
+                    "campus_synonym_analyzer": {
+                        "type": "custom",
+                        "tokenizer": "standard",
+                        "filter": ["lowercase", "campus_synonym_filter"],
+                    }
+                },
+            }
+        },
         "mappings": {
             "properties": {
                 "id": {"type": "keyword"},
-                "name": {"type": "text"},
+                "name": {"type": "text", "analyzer": "campus_synonym_analyzer"},
                 "category": {"type": "keyword"},
-                "description": {"type": "text"},
+                "description": {"type": "text", "analyzer": "campus_synonym_analyzer"},
                 "location": {"type": "geo_point"},
                 "address": {"type": "text"},
                 "price": {"type": "float"},
@@ -60,7 +89,12 @@ def main():
                     }
                 },
                 "phone": {"type": "keyword"},
-                "tags": {"type": "keyword"},
+                "tags": {
+                    "type": "keyword",
+                    "fields": {
+                        "text": {"type": "text", "analyzer": "campus_synonym_analyzer"}
+                    },
+                },
                 "rating": {"type": "float"}
             }
         }
