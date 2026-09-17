@@ -41,6 +41,10 @@ function App() {
   const [hasSearched, setHasSearched] = useState(false)
   const [mobileTab, setMobileTab] = useState<MobileTab>('list')
   const [picking, setPicking] = useState(false)
+  // When a search comes back empty, probe once at a wide radius so the empty
+  // state can tell the difference between 'nothing nearby' and 'we simply
+  // don't have anything like that'.
+  const [wideHits, setWideHits] = useState<number | null>(null)
 
   const runSearch = useCallback(async (nextFilters: SearchFilters) => {
     setLoading(true)
@@ -50,6 +54,18 @@ function App() {
       setResults(res.results)
       setSelectedId(res.results[0]?.id ?? null)
       setSelectionFrom('auto')
+
+      if (res.results.length === 0) {
+        setWideHits(null)
+        try {
+          const wide = await searchListings({ ...nextFilters, radius_km: 50 })
+          setWideHits(wide.total)
+        } catch {
+          setWideHits(null)
+        }
+      } else {
+        setWideHits(null)
+      }
     } catch {
       setError('Could not reach the search service. Please try again.')
     } finally {
@@ -151,7 +167,14 @@ function App() {
           {loading ? (
             <LoadingState />
           ) : hasSearched ? (
-            <ResultsList results={results} selectedId={selectedId} onSelect={selectListing} />
+            <ResultsList
+              results={results}
+              selectedId={selectedId}
+              onSelect={selectListing}
+              filters={filters}
+              wideHits={wideHits}
+              onWiden={filters ? () => handleFilterChange({ radius_km: filters.radius_km * 3 }) : undefined}
+            />
           ) : (
             <div className="flex h-full flex-col items-center justify-center gap-2 px-6 text-center text-slate-400">
               <span className="text-3xl" aria-hidden>

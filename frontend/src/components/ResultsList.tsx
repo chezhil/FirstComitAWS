@@ -1,4 +1,4 @@
-import type { ListingResult } from '../types'
+import type { ListingResult, SearchFilters } from '../types'
 import { ResultCard } from './ResultCard'
 import { EmptyState } from './EmptyState'
 
@@ -6,10 +6,14 @@ interface Props {
   results: ListingResult[]
   selectedId: string | null
   onSelect: (id: string) => void
+  filters: SearchFilters | null
+  wideHits?: number | null
+  onWiden?: () => void
 }
 
-export function ResultsList({ results, selectedId, onSelect }: Props) {
-  if (results.length === 0) return <EmptyState />
+export function ResultsList({ results, selectedId, onSelect, filters, wideHits, onWiden }: Props) {
+  if (results.length === 0)
+    return <EmptyState filters={filters} wideHits={wideHits} onWiden={onWiden} />
 
   return (
     <div className="flex flex-col gap-2">
