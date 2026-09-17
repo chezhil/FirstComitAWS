@@ -26,6 +26,7 @@ import json
 import logging
 import os
 import re
+import threading
 from typing import Any, Optional
 
 logger = logging.getLogger("aaspaas.parser")
@@ -174,6 +175,11 @@ def _create_agent():
 
 _AGENT: Any = None
 _AGENT_ERROR: Optional[str] = None
+# A Strands Agent rejects overlapping calls ("Agent is already processing a
+# request"). One Lambda container only ever handles one request at a time, so
+# this never bites in production, but any threaded host -- a local dev server,
+# a test harness -- would otherwise see parses fail and silently fall back.
+_AGENT_LOCK = threading.Lock()
 
 
 def _get_agent() -> Any:
@@ -395,10 +401,11 @@ def parse_query(query: str) -> dict[str, Any]:
 
     if agent is not None and schema is not None:
         try:
-            result = agent(
-                query + "\n\n" + _SYSTEM_PROMPT,
-                structured_output_model=schema,
-            )
+            with _AGENT_LOCK:
+                result = agent(
+                    query + "\n\n" + _SYSTEM_PROMPT,
+                    structured_output_model=schema,
+                )
             raw = result.structured_output.model_dump()
             logger.info("Parsed via Strands agent -> %s", json.dumps(raw))
             return _normalize(_reconcile_with_rules(query, raw))
