@@ -88,7 +88,10 @@ function App() {
       if (res.results.length === 0) {
         setWideHits(null)
         try {
-          const wide = await searchListings({ ...nextFilters, radius_km: 50, keywords: [] })
+          // Keep the keywords here: this probe answers "do these words match
+          // anything at all, anywhere", which is what separates a query we
+          // simply have nothing nearby for from one we cannot make sense of.
+          const wide = await searchListings({ ...nextFilters, radius_km: 50 })
           setWideHits(wide.total)
         } catch {
           setWideHits(null)
