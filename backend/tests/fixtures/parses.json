@@ -1,0 +1,107 @@
+{
+  "_comment": [
+    "Recorded /parse outputs, so tests never spend Gemini quota.",
+    "source 'gemini' entries are verbatim responses captured from",
+    "gemini-3.6-flash via the Strands agent. source 'expected' entries assert",
+    "the category the parser should reach on its own; they are checked against",
+    "the deterministic heuristic, which needs no network at all.",
+    "Re-record with: PARSE_MODEL_PROVIDER=gemini python record_fixtures.py"
+  ],
+  "recorded": [
+    {
+      "query": "any tiffin service open right now that is cheap",
+      "source": "gemini",
+      "filters": {
+        "category": "tiffin",
+        "radius_km": 2.0,
+        "open_now": true,
+        "sort_by": "cheapest",
+        "max_price": null,
+        "keywords": ["tiffin", "cheap"]
+      }
+    },
+    {
+      "query": "print shop within 1km",
+      "source": "gemini",
+      "filters": {
+        "category": "print_shop",
+        "radius_km": 1.0,
+        "open_now": false,
+        "sort_by": null,
+        "max_price": null,
+        "keywords": ["print", "shop"]
+      }
+    },
+    {
+      "query": "best rated PG nearby",
+      "source": "gemini",
+      "filters": {
+        "category": "pg",
+        "radius_km": 2.0,
+        "open_now": false,
+        "sort_by": "rating",
+        "max_price": null,
+        "keywords": ["pg", "best", "rated"]
+      }
+    },
+    {
+      "query": "cheap xerox under 5 rupees",
+      "source": "gemini",
+      "filters": {
+        "category": "print_shop",
+        "radius_km": 2.0,
+        "open_now": false,
+        "sort_by": "cheapest",
+        "max_price": 5,
+        "keywords": ["xerox", "cheap"]
+      }
+    },
+    {
+      "query": "cheap photocopy place open now",
+      "source": "gemini",
+      "filters": {
+        "category": "print_shop",
+        "radius_km": 2.0,
+        "open_now": true,
+        "sort_by": "cheapest",
+        "max_price": null,
+        "keywords": ["cheap", "photocopy"]
+      }
+    },
+    {
+      "query": "cheap photocopy nearby",
+      "source": "gemini",
+      "filters": {
+        "category": "print_shop",
+        "radius_km": 2.0,
+        "open_now": false,
+        "sort_by": "cheapest",
+        "max_price": null,
+        "keywords": ["print", "photocopy"]
+      }
+    }
+  ],
+  "category_expectations": [
+    { "query": "bar nearby", "category": "bar" },
+    { "query": "gym near me", "category": "gym" },
+    { "query": "haircut", "category": "salon" },
+    { "query": "supermarket", "category": "grocery" },
+    { "query": "hospital", "category": "medical" },
+    { "query": "chemist", "category": "pharmacy" },
+    { "query": "cheap coffee", "category": "food" },
+    { "query": "nearest bus stop", "category": "transport" },
+    { "query": "laundry", "category": "laundry" },
+    { "query": "any tiffin service open right now that is cheap", "category": "tiffin" },
+    { "query": "print shop within 1km", "category": "print_shop" },
+    { "query": "best rated PG nearby", "category": "pg" },
+    { "query": "atm near me", "category": "atm" }
+  ],
+  "synonym_expectations": [
+    { "keyword": "photocopy", "category": "print_shop" },
+    { "keyword": "printout", "category": "print_shop" },
+    { "keyword": "xerox", "category": "print_shop" },
+    { "keyword": "tifin", "category": "tiffin", "allow_also": ["food"] },
+    { "keyword": "hostel", "category": "pg" },
+    { "keyword": "chemist", "category": "pharmacy" }
+  ]
+}

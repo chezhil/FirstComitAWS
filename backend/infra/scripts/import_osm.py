@@ -101,6 +101,15 @@ CATEGORY_ORDER = (
     "pharmacy", "medical", "gym", "salon", "laundry", "transport", "other",
 )
 
+# OSM has no tiffin or mess tag, so these places get filed as plain
+# restaurants -- but Indian naming gives them away ("Mavalli Tiffin Rooms",
+# "Military Hotel", a darshini). Reclassifying on the name recovers real
+# listings for the two categories OSM otherwise cannot supply at all.
+NAME_OVERRIDES = [
+    ("tiffin", re.compile(r"\b(tiffin|tiffins|darshini|darshana|dabba)\b", re.I)),
+    ("mess", re.compile(r"\b(mess|canteen|bhojan|bhavan|military hotel|meals)\b", re.I)),
+]
+
 DAYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 _OSM_DAY = {"mo": "mon", "tu": "tue", "we": "wed", "th": "thu", "fr": "fri", "sa": "sat", "su": "sun"}
 
@@ -215,6 +224,13 @@ def to_listing(el: dict) -> dict | None:
     # A bank only counts as an ATM if it actually has one.
     if tags.get("amenity") == "bank" and tags.get("atm") not in ("yes", "only"):
         return None
+
+    # Recover tiffin/mess places that OSM can only call "restaurant".
+    if category == "food":
+        for target, pattern in NAME_OVERRIDES:
+            if pattern.search(name):
+                category = target
+                break
 
     lat = el.get("lat") or (el.get("center") or {}).get("lat")
     lon = el.get("lon") or (el.get("center") or {}).get("lon")
