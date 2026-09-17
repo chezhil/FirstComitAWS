@@ -45,12 +45,28 @@ function App() {
   // state can tell the difference between 'nothing nearby' and 'we simply
   // don't have anything like that'.
   const [wideHits, setWideHits] = useState<number | null>(null)
+  // Set when we had to ignore the user's keywords to find anything, so the
+  // list can say so rather than silently returning something broader.
+  const [relaxedFrom, setRelaxedFrom] = useState<string | null>(null)
 
   const runSearch = useCallback(async (nextFilters: SearchFilters) => {
     setLoading(true)
     setError(null)
+    setRelaxedFrom(null)
     try {
-      const res = await searchListings(nextFilters)
+      let res = await searchListings(nextFilters)
+
+      // A miss is usually the keywords being too specific ("momos"), not the
+      // category being unsupported. Drop them and show the category instead of
+      // dead-ending on an empty state.
+      if (res.results.length === 0 && nextFilters.keywords.length > 0 && nextFilters.category) {
+        const relaxed = await searchListings({ ...nextFilters, keywords: [] })
+        if (relaxed.results.length > 0) {
+          setRelaxedFrom(nextFilters.keywords.join(' '))
+          res = relaxed
+        }
+      }
+
       setResults(res.results)
       setSelectedId(res.results[0]?.id ?? null)
       setSelectionFrom('auto')
@@ -58,7 +74,7 @@ function App() {
       if (res.results.length === 0) {
         setWideHits(null)
         try {
-          const wide = await searchListings({ ...nextFilters, radius_km: 50 })
+          const wide = await searchListings({ ...nextFilters, radius_km: 50, keywords: [] })
           setWideHits(wide.total)
         } catch {
           setWideHits(null)
@@ -167,6 +183,13 @@ function App() {
           {loading ? (
             <LoadingState />
           ) : hasSearched ? (
+            <>
+              {relaxedFrom && results.length > 0 && (
+                <p className="mb-2 rounded-lg bg-amber-50 px-3 py-2 text-xs text-amber-700">
+                  Nothing matched “{relaxedFrom}” exactly — showing everything nearby in
+                  this category.
+                </p>
+              )}
             <ResultsList
               results={results}
               selectedId={selectedId}
@@ -175,6 +198,7 @@ function App() {
               wideHits={wideHits}
               onWiden={filters ? () => handleFilterChange({ radius_km: filters.radius_km * 3 }) : undefined}
             />
+            </>
           ) : (
             <div className="flex h-full flex-col items-center justify-center gap-2 px-6 text-center text-slate-400">
               <span className="text-3xl" aria-hidden>

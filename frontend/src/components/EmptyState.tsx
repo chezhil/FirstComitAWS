@@ -28,10 +28,10 @@ export function EmptyState({ filters, wideHits, onWiden }: Props) {
 
       {nothingAnywhere ? (
         <>
-          <p className="text-sm font-medium text-slate-700">Aas-Paas doesn&apos;t cover that yet</p>
+          <p className="text-sm font-medium text-slate-700">No matches for that</p>
           <p className="text-xs text-slate-500">
-            Right now it knows about {COVERED.map((c) => CATEGORY_LABELS[c]).join(', ')} around
-            campus.
+            Try {COVERED.map((c) => CATEGORY_LABELS[c].toLowerCase()).join(', ')} — or pick a
+            category below.
           </p>
         </>
       ) : (
