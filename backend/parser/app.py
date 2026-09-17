@@ -238,6 +238,16 @@ _RATING_RE = re.compile(
 )
 _NEAREST_RE = re.compile(r"\b(closest|nearest)\b", re.IGNORECASE)
 
+# Deliberately broad: any hint the user cares about *when* a place is open.
+# Used only to catch a model inventing open_now on a query with no time
+# wording at all, so it stays permissive about phrasings we can't enumerate.
+_TIME_HINT_RE = re.compile(
+    r"\b(now|open|opens|opening|closed?|closing|currently|current|today|"
+    r"tonight|late|early|midnight|noon|morning|evening|night|hour|hours|"
+    r"24x7|24/7|am|pm|time)\b",
+    re.IGNORECASE,
+)
+
 
 def _match_category(text: str) -> Optional[str]:
     for category, needles in _CATEGORY_KEYWORDS:
@@ -308,6 +318,34 @@ def _heuristic_parse(query: str) -> dict[str, Any]:
 # Public API used by the Lambda handler and tests
 # ---------------------------------------------------------------------------
 
+def _reconcile_with_rules(query: str, filters: dict[str, Any]) -> dict[str, Any]:
+    """Correct model output for the two purely lexical signals.
+
+    open_now and sort_by depend only on whether the user used certain words,
+    so the regexes are more trustworthy there than a small model -- which was
+    observed inventing open_now on queries with no time wording, and missing
+    'best rated'. Category and keywords are left to the model, which is what
+    it's actually better at.
+    """
+    if filters.get("open_now") and not _TIME_HINT_RE.search(query):
+        filters["open_now"] = False
+
+    cheap = _CHEAP_RE.search(query)
+    rating = _RATING_RE.search(query)
+    nearest = _NEAREST_RE.search(query)
+
+    if not (cheap or rating or nearest):
+        # No ordering cue in the query at all, so any sort the model picked
+        # was invented (observed: "cheapest" on "print shop within 1km").
+        filters["sort_by"] = None
+    elif filters.get("sort_by") not in SORTS:
+        filters["sort_by"] = (
+            "cheapest" if cheap else "rating" if rating else "nearest"
+        )
+
+    return filters
+
+
 def parse_query(query: str) -> dict[str, Any]:
     """Return structured /parse filters for a free-text query."""
     agent = _get_agent()
@@ -321,7 +359,7 @@ def parse_query(query: str) -> dict[str, Any]:
             )
             raw = result.structured_output.model_dump()
             logger.info("Parsed via Strands agent -> %s", json.dumps(raw))
-            return _normalize(raw)
+            return _normalize(_reconcile_with_rules(query, raw))
         except Exception as exc:  # noqa: BLE001 - agent failure is not fatal
             logger.warning("Strands parse failed (%s); using fallback", exc)
 
