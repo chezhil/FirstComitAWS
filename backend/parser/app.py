@@ -12,8 +12,10 @@ Deployed via AWS SAM (template owned by Person 1 / backend/infra) as
 ParserFunction with handler `app.lambda_handler`.
 
 Env vars:
-  PARSE_MODEL_PROVIDER : "bedrock" (default) | "ollama" | "fallback"
+  PARSE_MODEL_PROVIDER : "bedrock" (default) | "gemini" | "ollama" | "fallback"
   BEDROCK_MODEL_ID     : Bedrock model to use (default claude sonnet 4)
+  GEMINI_API_KEY       : required when provider is "gemini"
+  GEMINI_MODEL         : gemini-3.6-flash
   OLLAMA_HOST          : http://localhost:11434
   OLLAMA_MODEL         : llama3.1
 """
@@ -135,6 +137,18 @@ def _create_agent():
             host=os.environ.get("OLLAMA_HOST", "http://localhost:11434"),
             model_id=os.environ.get("OLLAMA_MODEL", "llama3.1"),
             temperature=0,
+        )
+    elif provider == "gemini":
+        from strands.models.gemini import GeminiModel
+
+        api_key = os.environ.get("GEMINI_API_KEY")
+        if not api_key:
+            raise ValueError("PARSE_MODEL_PROVIDER=gemini but GEMINI_API_KEY is unset")
+
+        kwargs["model"] = GeminiModel(
+            client_args={"api_key": api_key},
+            model_id=os.environ.get("GEMINI_MODEL", "gemini-3.6-flash"),
+            params={"temperature": 0},
         )
     elif provider == "bedrock":
         from strands.models import BedrockModel
