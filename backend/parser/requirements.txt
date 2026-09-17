@@ -1,1 +1,1 @@
-strands-agents[ollama,gemini]>=1.0.0
+strands-agents[ollama,gemini,openai]>=1.0.0

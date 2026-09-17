@@ -12,10 +12,12 @@ Deployed via AWS SAM (template owned by Person 1 / backend/infra) as
 ParserFunction with handler `app.lambda_handler`.
 
 Env vars:
-  PARSE_MODEL_PROVIDER : "bedrock" (default) | "gemini" | "ollama" | "fallback"
+  PARSE_MODEL_PROVIDER : "bedrock" (default) | "groq" | "gemini" | "ollama" | "fallback"
   BEDROCK_MODEL_ID     : Bedrock model to use (default claude sonnet 4)
   GEMINI_API_KEY       : required when provider is "gemini"
   GEMINI_MODEL         : gemini-3.6-flash
+  GROQ_API_KEY         : required when provider is "groq"
+  GROQ_MODEL           : llama-3.3-70b-versatile
   OLLAMA_HOST          : http://localhost:11434
   OLLAMA_MODEL         : llama3.1
 """
@@ -162,6 +164,27 @@ def _create_agent():
             model_id=os.environ.get("GEMINI_MODEL", "gemini-3.6-flash"),
             params={"temperature": 0},
         )
+    elif provider == "groq":
+        # Groq speaks the OpenAI wire format, so the OpenAI provider works
+        # against it with a base_url override. Chosen for a far higher free
+        # tier than Gemini's, which throttles after a few dozen parses.
+        from strands.models.openai import OpenAIModel
+
+        api_key = os.environ.get("GROQ_API_KEY")
+        if not api_key:
+            raise ValueError("PARSE_MODEL_PROVIDER=groq but GROQ_API_KEY is unset")
+
+        kwargs["model"] = OpenAIModel(
+            client_args={
+                "api_key": api_key,
+                "base_url": os.environ.get("GROQ_BASE_URL", "https://api.groq.com/openai/v1"),
+            },
+            # Must be a Groq model that supports tool use, since the parser
+            # relies on structured output. Check Groq's current model list --
+            # they retire ids periodically.
+            model_id=os.environ.get("GROQ_MODEL", "llama-3.3-70b-versatile"),
+            params={"temperature": 0},
+        )
     elif provider == "bedrock":
         from strands.models import BedrockModel
 
@@ -183,6 +206,18 @@ _AGENT_ERROR: Optional[str] = None
 # this never bites in production, but any threaded host -- a local dev server,
 # a test harness -- would otherwise see parses fail and silently fall back.
 _AGENT_LOCK = threading.Lock()
+
+# Queries repeat heavily ("pg", "atm near me", the example chips), and each
+# agent parse costs 1-4 model calls -- enough to exhaust a free tier during a
+# demo. Identical queries are answered from here instead. Warm-instance only;
+# a cold start just re-earns the entries.
+_PARSE_CACHE: dict[str, dict[str, Any]] = {}
+_PARSE_CACHE_MAX = 512
+_CACHE_LOCK = threading.Lock()
+
+
+def _cache_key(query: str) -> str:
+    return " ".join(query.lower().split())
 
 
 def _get_agent() -> Any:
@@ -399,6 +434,23 @@ def _reconcile_with_rules(query: str, filters: dict[str, Any]) -> dict[str, Any]
 
 def parse_query(query: str) -> dict[str, Any]:
     """Return structured /parse filters for a free-text query."""
+    key = _cache_key(query)
+    with _CACHE_LOCK:
+        hit = _PARSE_CACHE.get(key)
+    if hit is not None:
+        logger.info("Parsed from cache -> %s", json.dumps(hit))
+        return dict(hit)
+
+    filters = _parse_uncached(query)
+
+    with _CACHE_LOCK:
+        if len(_PARSE_CACHE) >= _PARSE_CACHE_MAX:
+            _PARSE_CACHE.clear()  # crude but bounded; this is a demo-scale cache
+        _PARSE_CACHE[key] = dict(filters)
+    return filters
+
+
+def _parse_uncached(query: str) -> dict[str, Any]:
     agent = _get_agent()
     schema = _build_output_schema()
 
