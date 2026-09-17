@@ -39,7 +39,7 @@ export async function mockParseQuery(query: string): Promise<ParseResponse> {
   const rating = /\b(best|top rated|top-rated|highly rated)\b/.test(q)
 
   const radiusMatch = q.match(/within\s+(\d+(?:\.\d+)?)\s*km/)
-  const radius_km = radiusMatch ? Number(radiusMatch[1]) : 2
+  const radius_km = radiusMatch ? Number(radiusMatch[1]) : 3
 
   const priceMatch = q.match(/under\s*(?:₹|rs\.?|inr)?\s*(\d+)/)
   const max_price = priceMatch ? Number(priceMatch[1]) : null

@@ -4,9 +4,20 @@ import math
 from datetime import datetime, timezone, timedelta
 
 try:
-    from opensearchpy import OpenSearch, RequestsHttpConnection
+    from opensearchpy import OpenSearch, RequestsHttpConnection, helpers
 except ImportError:
     OpenSearch = None
+    helpers = None
+
+try:
+    import osm_live
+except ImportError:  # pragma: no cover - live fill is optional
+    osm_live = None
+
+# Areas already pulled from OSM this container, keyed to a ~1km grid so a
+# nearby repeat search doesn't refetch. Warm-instance only; losing it on a
+# cold start just means one extra fetch.
+_FILLED_AREAS = set()
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
@@ -19,11 +30,13 @@ _SYNONYMS = {
     "printout": "print", "print out": "print", "printing": "print",
     "photocopy": "print", "photostat": "print", "xerox": "print",
     "copier": "print", "copiers": "print", "copying": "print",
+    "copyshop": "print", "stationery": "print", "stationary": "print",
     "hostel": "pg", "hostels": "pg", "paying guest": "pg",
     "accommodation": "pg", "lodging": "pg",
     "cash": "atm", "cashpoint": "atm", "cash point": "atm",
     "withdraw": "atm", "withdrawal": "atm",
     "dabba": "tiffin", "tiffins": "tiffin",
+    "darshini": "tiffin", "darshana": "tiffin",
     "canteen": "mess", "dining": "mess", "eatery": "mess",
     "chemist": "pharmacy", "medicine": "pharmacy", "drugstore": "pharmacy",
     "kirana": "grocery", "supermarket": "grocery", "provisions": "grocery",
@@ -40,7 +53,7 @@ _SYNONYMS = {
 def _normalize_keyword(word: str) -> str:
     return _SYNONYMS.get(word.lower().strip(), word.lower().strip())
 
-DEFAULT_RADIUS_KM = 2.0
+DEFAULT_RADIUS_KM = 3.0
 MAX_RADIUS_KM = 50.0
 
 
@@ -148,6 +161,35 @@ def get_mock_listings():
         }
     ]
 
+def _live_fill(client, user_location):
+    """Fetch and index the area around a point. True if anything was added."""
+    if osm_live is None or helpers is None:
+        return False
+    if os.environ.get("LIVE_OSM_FILL", "1") not in ("1", "true", "True"):
+        return False
+
+    # ~1km grid: enough that panning slightly reuses the same fetch.
+    key = (round(user_location["lat"], 2), round(user_location["lon"], 2))
+    if key in _FILLED_AREAS:
+        return False
+    _FILLED_AREAS.add(key)
+
+    try:
+        listings = osm_live.fetch_area(user_location["lat"], user_location["lon"])
+        if not listings:
+            return False
+        helpers.bulk(
+            client,
+            [{"_index": "listings", "_id": x["id"], "_source": x} for x in listings],
+            refresh=True,
+        )
+        print(f"live-filled {len(listings)} listings around {key}")
+        return True
+    except Exception as e:  # noqa: BLE001 - a failed top-up must not fail the search
+        print("live fill failed:", e)
+        return False
+
+
 def lambda_handler(event, context):
     try:
         body = json.loads(event.get("body", "{}"))
@@ -250,6 +292,13 @@ def lambda_handler(event, context):
                 index="listings"
             )
             raw_docs = [hit["_source"] for hit in response["hits"]["hits"]]
+
+            # Nothing indexed round here yet? Pull the area from OSM once,
+            # index it, and ask again -- so the app works anywhere, not just
+            # wherever the seed script happened to be pointed.
+            if not raw_docs and _live_fill(client, user_location):
+                response = client.search(body={"query": query, "size": 100}, index="listings")
+                raw_docs = [hit["_source"] for hit in response["hits"]["hits"]]
         except Exception as e:
             print("OpenSearch error:", e)
             raw_docs = get_mock_listings()

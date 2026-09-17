@@ -12,7 +12,7 @@ interface Props {
 const SUGGESTIONS = ['pg', 'tiffin', 'food', 'print_shop', 'atm', 'pharmacy', 'grocery']
 
 export function EmptyState({ filters, wideHits, onWiden }: Props) {
-  const radius = filters?.radius_km ?? 2
+  const radius = filters?.radius_km ?? 3
   const nothingAnywhere = wideHits === 0
   // Nothing matched these words anywhere, and the query didn't land on a
   // category either -- so it wasn't a place search we can answer at all.

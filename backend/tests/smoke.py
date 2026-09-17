@@ -28,7 +28,32 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURES = Path(__file__).parent / "fixtures" / "parses.json"
-HERE = 12.9716, 77.5946  # matches the seeded area
+def _seeded_point():
+    """Search from wherever the data actually is.
+
+    The index is no longer tied to one neighbourhood -- it is re-seeded per
+    campus and topped up live -- so a hardcoded origin silently turns every
+    assertion into "0 results" the moment the seed moves. Anchoring on a real
+    listing also beats the centroid, which lands between clusters (and so in
+    the middle of nowhere) once more than one area has been fetched.
+    """
+    endpoint = os.environ.get("OPENSEARCH_ENDPOINT")
+    if endpoint:
+        try:
+            import urllib.request
+            req = urllib.request.Request(
+                f"{endpoint.rstrip('/')}/listings/_search?size=1",
+                data=b'{"query":{"match_all":{}}}',
+                headers={"Content-Type": "application/json"},
+            )
+            with urllib.request.urlopen(req, timeout=10) as res:
+                hits = json.load(res)["hits"]["hits"]
+            if hits:
+                loc = hits[0]["_source"]["location"]
+                return loc["lat"], loc["lon"]
+        except Exception:
+            pass
+    return 12.9716, 77.5946  # mock-data fallback lives here
 
 RESULT_KEYS = {
     "id", "name", "category", "distance_km", "price", "price_unit",
@@ -47,6 +72,9 @@ def load(name: str, path: Path):
 
 
 os.environ.setdefault("PARSE_MODEL_PROVIDER", "fallback")  # never hit the API
+os.environ.setdefault("LIVE_OSM_FILL", "0")  # tests must not depend on Overpass
+HERE = (12.9716, 77.5946)
+
 parser = load("aaspaas_parser", ROOT / "parser" / "app.py")
 search = load("aaspaas_search", ROOT / "search" / "app.py")
 
@@ -84,6 +112,9 @@ def run_search(filters: dict) -> dict:
 
 
 def main() -> int:
+    global HERE
+    HERE = _seeded_point()
+    print(f"searching from {HERE[0]:.4f}, {HERE[1]:.4f}")
     data = json.loads(FIXTURES.read_text())
     r = Report()
 
@@ -119,7 +150,9 @@ def main() -> int:
     r.section("Synonym search (what fuzziness alone cannot do)")
     for case in data["synonym_expectations"]:
         body = run_search({
-            "category": None, "radius_km": 5, "open_now": False, "sort_by": "nearest",
+            # wide enough to cover the whole seeded area: this asserts which
+            # category a word routes to, not how dense the neighbourhood is
+            "category": None, "radius_km": 25, "open_now": False, "sort_by": "nearest",
             "max_price": None, "keywords": [case["keyword"]],
         })
         cats = {x["category"] for x in body["results"]}

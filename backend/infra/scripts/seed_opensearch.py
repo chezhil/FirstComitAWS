@@ -29,14 +29,25 @@ def main():
     elif 'localhost' not in host and '127.0.0.1' not in host:
         print("Warning: Non-local endpoint but no AWS credentials found. Connections might fail.")
     
+    # Derive the port and scheme from the endpoint instead of assuming an AWS
+    # domain, so this exact script can be run against a local OpenSearch
+    # before it is ever pointed at production.
+    use_ssl = not endpoint.startswith('http://')
+    if ':' in host:
+        host, port_str = host.rsplit(':', 1)
+        port = int(port_str)
+    else:
+        port = 443 if use_ssl else 9200
+
     client = OpenSearch(
-        hosts=[{'host': host, 'port': 443}],
+        hosts=[{'host': host, 'port': port}],
         http_auth=auth,
-        use_ssl=True,
-        verify_certs=True,
+        use_ssl=use_ssl,
+        verify_certs=use_ssl,
         connection_class=RequestsHttpConnection,
         timeout=30
     )
+    print(f"Connecting to {host}:{port} (ssl={use_ssl})")
 
     index_name = 'listings'
 
@@ -53,10 +64,10 @@ def main():
                     "campus_synonym_filter": {
                         "type": "synonym",
                         "synonyms": [
-                            "printout, print out, printing, photocopy, photostat, xerox, copier, copiers, copying => print",
+                            "printout, print out, printing, photocopy, photostat, xerox, copier, copiers, copying, copyshop, stationery, stationary => print",
                             "pg, hostel, hostels, paying guest, accommodation, lodging => pg",
                             "atm, cash, cashpoint, cash point, withdraw, withdrawal => atm",
-                            "tiffin, dabba, tiffins => tiffin",
+                            "tiffin, dabba, tiffins, darshini, darshana => tiffin",
                             "mess, canteen, dining, eatery => mess",
                             "pharmacy, chemist, medicine, drugstore, medicals => pharmacy",
                             "grocery, groceries, kirana, supermarket, provisions => grocery",
@@ -131,7 +142,9 @@ def main():
         for listing in listings
     ]
     
-    success, failed = helpers.bulk(client, actions)
+    # refresh so the data is searchable the moment this returns; without it
+    # a query run straight after seeding sees an empty index.
+    success, failed = helpers.bulk(client, actions, refresh=True)
     print(f"Successfully indexed {success} documents.")
     if failed:
         print(f"Failed to index {failed} documents.")

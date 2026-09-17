@@ -9,8 +9,8 @@ export const USE_MOCKS: boolean =
 
 // TODO(person 4): replace with the campus's actual coordinates.
 export const CAMPUS_DEFAULT_LOCATION = {
-  lat: Number(import.meta.env.VITE_CAMPUS_DEFAULT_LAT) || 12.9716,
-  lon: Number(import.meta.env.VITE_CAMPUS_DEFAULT_LON) || 77.5946,
+  lat: Number(import.meta.env.VITE_CAMPUS_DEFAULT_LAT) || 13.0846,
+  lon: Number(import.meta.env.VITE_CAMPUS_DEFAULT_LON) || 77.6412,
 }
 
 export const CATEGORY_LABELS: Record<string, string> = {

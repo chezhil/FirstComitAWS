@@ -42,7 +42,9 @@ CATEGORIES = (
 )
 SORTS = ("cheapest", "nearest", "rating")
 
-DEFAULT_RADIUS_KM = 2.0
+# 2km left ATMs and print shops returning nothing in less dense areas;
+# 3km covers them without dragging in the next neighbourhood.
+DEFAULT_RADIUS_KM = 3.0
 MAX_RADIUS_KM = 50.0
 
 try:  # pydantic is a strands dependency; guard anyway for the fallback path
@@ -70,7 +72,7 @@ def _build_output_schema():
         radius_km: float = Field(
             default=DEFAULT_RADIUS_KM,
             description=(
-                "Search radius in kilometres. Default 2.0 when the user does "
+                "Search radius in kilometres. Default 3.0 when the user does "
                 "not mention a distance."
             ),
         )
@@ -117,7 +119,7 @@ _SYSTEM_PROMPT = (
     "pharmacy (chemist/medicine), medical (hospital/clinic/doctor), "
     "gym, salon (barber/haircut/spa), laundry (dhobi/dry clean), "
     "transport (bus stop/metro), other.\n"
-    "- radius_km: default 2.0. Only change it when the user names a distance "
+    "- radius_km: default 3.0. Only change it when the user names a distance "
     "('within 1km', 'near 500m').\n"
     "- open_now: true only for 'open now / right now / currently open'.\n"
     "- sort_by: 'cheapest' for cheap/budget, 'nearest' for closest, 'rating' "
