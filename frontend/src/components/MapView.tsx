@@ -2,6 +2,7 @@ import L from 'leaflet'
 import { MapContainer, TileLayer, Marker, Popup, useMap, useMapEvents, Circle } from 'react-leaflet'
 import { useEffect, useRef } from 'react'
 import { CATEGORY_LABELS } from '../config'
+import { directionsUrl, firstPhone } from './ResultCard'
 import type { ListingResult, UserLocation } from '../types'
 
 // Vite doesn't resolve Leaflet's default marker image URLs out of the box;
@@ -114,6 +115,21 @@ export function MapView({
             <p className="text-xs text-slate-500">
               {CATEGORY_LABELS[r.category]} &middot; {r.distance_km.toFixed(1)} km
             </p>
+            <div className="mt-1 flex items-center gap-2">
+              <a
+                href={directionsUrl(userLocation, r.location)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-emerald-700 underline"
+              >
+                Directions
+              </a>
+              {firstPhone(r.phone) && (
+                <a href={`tel:${firstPhone(r.phone)!.dial}`} className="text-slate-600 underline">
+                  Call
+                </a>
+              )}
+            </div>
           </Popup>
         </Marker>
       ))}

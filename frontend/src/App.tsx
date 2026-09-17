@@ -215,6 +215,7 @@ function App() {
               selectedId={selectedId}
               onSelect={selectListing}
               filters={filters}
+              userLocation={location}
               wideHits={wideHits}
               onWiden={filters ? () => handleFilterChange({ radius_km: filters.radius_km * 3 }) : undefined}
             />
