@@ -9,6 +9,7 @@ import { LocationAsk } from './components/LocationAsk'
 import { ResultsList } from './components/ResultsList'
 import { LoadingState } from './components/LoadingState'
 import { MapView } from './components/MapView'
+import type { SelectionOrigin } from './components/MapView'
 import type { ListingResult, SearchFilters, UserLocation } from './types'
 
 type MobileTab = 'list' | 'map'
@@ -27,6 +28,14 @@ function App() {
   const [filters, setFilters] = useState<SearchFilters | null>(null)
   const [results, setResults] = useState<ListingResult[]>([])
   const [selectedId, setSelectedId] = useState<string | null>(null)
+  // Whether the current selection came from a click or from auto-picking
+  // the top result -- the map only chases the former.
+  const [selectionFrom, setSelectionFrom] = useState<SelectionOrigin>('auto')
+
+  const selectListing = useCallback((id: string) => {
+    setSelectedId(id)
+    setSelectionFrom('user')
+  }, [])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [hasSearched, setHasSearched] = useState(false)
@@ -40,6 +49,7 @@ function App() {
       const res = await searchListings(nextFilters)
       setResults(res.results)
       setSelectedId(res.results[0]?.id ?? null)
+      setSelectionFrom('auto')
     } catch {
       setError('Could not reach the search service. Please try again.')
     } finally {
@@ -141,7 +151,7 @@ function App() {
           {loading ? (
             <LoadingState />
           ) : hasSearched ? (
-            <ResultsList results={results} selectedId={selectedId} onSelect={setSelectedId} />
+            <ResultsList results={results} selectedId={selectedId} onSelect={selectListing} />
           ) : (
             <div className="flex h-full flex-col items-center justify-center gap-2 px-6 text-center text-slate-400">
               <span className="text-3xl" aria-hidden>
@@ -158,7 +168,8 @@ function App() {
             userLocation={location}
             results={results}
             selectedId={selectedId}
-            onSelect={setSelectedId}
+            selectionFrom={selectionFrom}
+            onSelect={selectListing}
             visible={mobileTab === 'map'}
             picking={picking}
             onPickLocation={handlePickLocation}

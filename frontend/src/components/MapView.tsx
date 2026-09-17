@@ -32,10 +32,13 @@ const selectedIcon = L.icon({
   className: 'drop-shadow-lg',
 })
 
+export type SelectionOrigin = 'auto' | 'user'
+
 interface Props {
   userLocation: UserLocation
   results: ListingResult[]
   selectedId: string | null
+  selectionFrom?: SelectionOrigin
   onSelect: (id: string) => void
   // Whether this map is currently the visible one (it stays mounted but
   // display:none'd behind the mobile List/Map tab switcher). Leaflet can't
@@ -52,6 +55,7 @@ export function MapView({
   userLocation,
   results,
   selectedId,
+  selectionFrom = 'auto',
   onSelect,
   visible = true,
   picking = false,
@@ -114,7 +118,13 @@ export function MapView({
         </Marker>
       ))}
 
-      <RecenterOnSelect results={results} selectedId={selectedId} userLocation={userLocation} />
+      <RecenterOnSelect
+        results={results}
+        selectedId={selectedId}
+        selectionFrom={selectionFrom}
+        userLocation={userLocation}
+      />
+      <FitToResults results={results} userLocation={userLocation} />
       <FollowUserLocation userLocation={userLocation} />
       <InvalidateSizeOnVisible visible={visible} />
     </MapContainer>
@@ -145,6 +155,38 @@ function ClickToPick({ onPick }: { onPick: (loc: UserLocation) => void }) {
   return null
 }
 
+// When a new set of results arrives, show the search origin together with
+// what was found, rather than jumping to whichever listing happened to be
+// auto-selected first.
+function FitToResults({
+  results,
+  userLocation,
+}: {
+  results: ListingResult[]
+  userLocation: UserLocation
+}) {
+  const map = useMap()
+  const signature = results.map((r) => r.id).join(',')
+
+  useEffect(() => {
+    const size = map.getSize()
+    if (size.x === 0 || size.y === 0) return
+
+    if (results.length === 0) {
+      map.panTo([userLocation.lat, userLocation.lon], { duration: 0.4 })
+      return
+    }
+
+    const bounds = L.latLngBounds([[userLocation.lat, userLocation.lon]])
+    for (const r of results) bounds.extend([r.location.lat, r.location.lon])
+    map.fitBounds(bounds, { padding: [48, 48], maxZoom: 16, animate: true })
+    // userLocation is deliberately excluded: FollowUserLocation owns pin moves
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [signature, map])
+
+  return null
+}
+
 function InvalidateSizeOnVisible({ visible }: { visible: boolean }) {
   const map = useMap()
 
@@ -169,10 +211,12 @@ function InvalidateSizeOnVisible({ visible }: { visible: boolean }) {
 function RecenterOnSelect({
   results,
   selectedId,
+  selectionFrom,
   userLocation,
 }: {
   results: ListingResult[]
   selectedId: string | null
+  selectionFrom: SelectionOrigin
   userLocation: UserLocation
 }) {
   const map = useMap()
@@ -185,6 +229,9 @@ function RecenterOnSelect({
       isFirstRun.current = false
       return
     }
+    // Only chase a listing the user actually picked. Auto-selecting the first
+    // result used to fly the map away from the search pin on every search.
+    if (selectionFrom !== 'user') return
     // Leaflet's flyTo() computes NaN if called before the container has a
     // real, laid-out size (e.g. React 18 StrictMode double-invoking this
     // effect before the browser's first paint) — skip the animated pan in
