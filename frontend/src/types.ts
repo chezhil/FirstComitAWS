@@ -45,3 +45,11 @@ export interface SearchResponse {
   results: ListingResult[]
   total: number
 }
+
+// Optional per-user model override. Blank fields mean "use the server's own
+// configuration", which is how the default key stays server-side.
+export interface ParserSettings {
+  provider: string
+  model: string
+  apiKey: string
+}

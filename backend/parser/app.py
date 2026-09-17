@@ -17,7 +17,7 @@ Env vars:
   GEMINI_API_KEY       : required when provider is "gemini"
   GEMINI_MODEL         : gemini-3.6-flash
   GROQ_API_KEY         : required when provider is "groq"
-  GROQ_MODEL           : llama-3.3-70b-versatile
+  GROQ_MODEL           : openai/gpt-oss-20b
   OLLAMA_HOST          : http://localhost:11434
   OLLAMA_MODEL         : llama3.1
 """
@@ -134,9 +134,14 @@ _SYSTEM_PROMPT = (
 )
 
 
-def _create_agent():
-    """Create a Strands agent for the configured provider (or None)."""
-    provider = os.environ.get("PARSE_MODEL_PROVIDER", "bedrock").strip().lower()
+def _create_agent(provider=None, model=None, api_key=None):
+    """Create a Strands agent for a provider (or None to use the fallback).
+
+    Values default to the server's own configuration; a caller may override
+    them per request so someone can bring their own key and model without
+    the server's key ever reaching the browser.
+    """
+    provider = (provider or os.environ.get("PARSE_MODEL_PROVIDER", "bedrock")).strip().lower()
     if provider == "fallback":
         return None
 
@@ -149,19 +154,19 @@ def _create_agent():
 
         kwargs["model"] = OllamaModel(
             host=os.environ.get("OLLAMA_HOST", "http://localhost:11434"),
-            model_id=os.environ.get("OLLAMA_MODEL", "llama3.1"),
+            model_id=model or os.environ.get("OLLAMA_MODEL", "llama3.1"),
             temperature=0,
         )
     elif provider == "gemini":
         from strands.models.gemini import GeminiModel
 
-        api_key = os.environ.get("GEMINI_API_KEY")
+        api_key = api_key or os.environ.get("GEMINI_API_KEY")
         if not api_key:
             raise ValueError("PARSE_MODEL_PROVIDER=gemini but GEMINI_API_KEY is unset")
 
         kwargs["model"] = GeminiModel(
             client_args={"api_key": api_key},
-            model_id=os.environ.get("GEMINI_MODEL", "gemini-3.6-flash"),
+            model_id=model or os.environ.get("GEMINI_MODEL", "gemini-3.6-flash"),
             params={"temperature": 0},
         )
     elif provider == "groq":
@@ -170,7 +175,7 @@ def _create_agent():
         # tier than Gemini's, which throttles after a few dozen parses.
         from strands.models.openai import OpenAIModel
 
-        api_key = os.environ.get("GROQ_API_KEY")
+        api_key = api_key or os.environ.get("GROQ_API_KEY")
         if not api_key:
             raise ValueError("PARSE_MODEL_PROVIDER=groq but GROQ_API_KEY is unset")
 
@@ -182,14 +187,14 @@ def _create_agent():
             # Must be a Groq model that supports tool use, since the parser
             # relies on structured output. Check Groq's current model list --
             # they retire ids periodically.
-            model_id=os.environ.get("GROQ_MODEL", "llama-3.3-70b-versatile"),
+            model_id=model or os.environ.get("GROQ_MODEL", "openai/gpt-oss-20b"),
             params={"temperature": 0},
         )
     elif provider == "bedrock":
         from strands.models import BedrockModel
 
         kwargs["model"] = BedrockModel(
-            model_id=os.environ.get(
+            model_id=model or os.environ.get(
                 "BEDROCK_MODEL_ID", "global.anthropic.claude-sonnet-4-6"
             ),
             temperature=0,
@@ -220,22 +225,32 @@ def _cache_key(query: str) -> str:
     return " ".join(query.lower().split())
 
 
-def _get_agent() -> Any:
-    """Lazily build the agent once; return None if unavailable."""
-    global _AGENT, _AGENT_ERROR
-    if _AGENT_ERROR is not None:
+# One agent per (provider, model, key) so a caller's own settings don't
+# disturb the server default, and neither is rebuilt on every request.
+_AGENTS: dict[tuple, Any] = {}
+_AGENT_ERRORS: dict[tuple, str] = {}
+
+
+def _get_agent(provider=None, model=None, api_key=None) -> Any:
+    """Lazily build an agent for this configuration; None if unavailable."""
+    key = (
+        (provider or os.environ.get("PARSE_MODEL_PROVIDER", "bedrock")).strip().lower(),
+        model or "",
+        # Only distinguishes callers; never logged or returned.
+        hash(api_key or ""),
+    )
+    if key in _AGENT_ERRORS:
         return None
-    if _AGENT is None:
+    if key not in _AGENTS:
         try:
-            _AGENT = _create_agent()
-        except Exception as exc:  # noqa: BLE001 - degrade gracefully on any setup issue
-            _AGENT_ERROR = str(exc)
+            _AGENTS[key] = _create_agent(provider, model, api_key)
+        except Exception as exc:  # noqa: BLE001 - degrade gracefully
+            _AGENT_ERRORS[key] = str(exc)
             logger.warning(
-                "Strands agent unavailable (%s); using deterministic fallback",
-                exc,
+                "Strands agent unavailable (%s); using deterministic fallback", exc
             )
-            _AGENT = None
-    return _AGENT
+            return None
+    return _AGENTS[key]
 
 
 # ---------------------------------------------------------------------------
@@ -432,16 +447,18 @@ def _reconcile_with_rules(query: str, filters: dict[str, Any]) -> dict[str, Any]
     return filters
 
 
-def parse_query(query: str) -> dict[str, Any]:
+def parse_query(query: str, provider=None, model=None, api_key=None) -> dict[str, Any]:
     """Return structured /parse filters for a free-text query."""
-    key = _cache_key(query)
+    # Model choice is part of the cache identity: the same words parsed by a
+    # different model can legitimately differ.
+    key = f"{provider or ''}|{model or ''}|{_cache_key(query)}"
     with _CACHE_LOCK:
         hit = _PARSE_CACHE.get(key)
     if hit is not None:
         logger.info("Parsed from cache -> %s", json.dumps(hit))
         return dict(hit)
 
-    filters = _parse_uncached(query)
+    filters = _parse_uncached(query, provider, model, api_key)
 
     with _CACHE_LOCK:
         if len(_PARSE_CACHE) >= _PARSE_CACHE_MAX:
@@ -450,8 +467,8 @@ def parse_query(query: str) -> dict[str, Any]:
     return filters
 
 
-def _parse_uncached(query: str) -> dict[str, Any]:
-    agent = _get_agent()
+def _parse_uncached(query: str, provider=None, model=None, api_key=None) -> dict[str, Any]:
+    agent = _get_agent(provider, model, api_key)
     schema = _build_output_schema()
 
     if agent is not None and schema is not None:
@@ -559,7 +576,13 @@ def lambda_handler(event: dict[str, Any], context: Any) -> dict[str, Any]:
         query = str(payload.get("query") or "").strip()
         if not query:
             return _respond(400, {"error": "missing field: query"})
-        filters = parse_query(query)
+        settings = payload.get("settings") or {}
+        filters = parse_query(
+            query,
+            provider=settings.get("provider") or None,
+            model=settings.get("model") or None,
+            api_key=settings.get("api_key") or None,
+        )
         return _respond(200, filters)
     except Exception as exc:  # noqa: BLE001 - never crash the endpoint
         logger.exception("Unhandled error in /parse")

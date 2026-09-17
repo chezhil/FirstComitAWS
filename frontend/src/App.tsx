@@ -6,6 +6,8 @@ import { SearchBar } from './components/SearchBar'
 import { FilterChips } from './components/FilterChips'
 import { LocationBar } from './components/LocationBar'
 import { LocationAsk } from './components/LocationAsk'
+import { SettingsPanel } from './components/SettingsPanel'
+import { useParserSettings } from './hooks/useParserSettings'
 import { ResultsList } from './components/ResultsList'
 import { LoadingState } from './components/LoadingState'
 import { MapView } from './components/MapView'
@@ -41,6 +43,8 @@ function App() {
   const [hasSearched, setHasSearched] = useState(false)
   const [mobileTab, setMobileTab] = useState<MobileTab>('list')
   const [picking, setPicking] = useState(false)
+  const [showSettings, setShowSettings] = useState(false)
+  const { settings, save: saveSettings } = useParserSettings()
   // When a search comes back empty, probe once at a wide radius so the empty
   // state can tell the difference between 'nothing nearby' and 'we simply
   // don't have anything like that'.
@@ -111,7 +115,7 @@ function App() {
     setLoading(true)
     setError(null)
     try {
-      const parsed = await parseQuery(query)
+      const parsed = await parseQuery(query, settings)
       const nextFilters: SearchFilters = { ...parsed, user_location: location }
       setFilters(nextFilters)
       await runSearch(nextFilters)
@@ -155,13 +159,39 @@ function App() {
             Aas-Paas <span className="text-slate-400">{'—'}</span>{' '}
             <span className="font-normal text-slate-500">what&apos;s nearby, right now</span>
           </h1>
-          {USE_MOCKS && (
-            <span className="shrink-0 rounded-full bg-amber-100 px-2 py-1 text-[11px] font-medium text-amber-700">
-              Mock data
-            </span>
-          )}
+          <div className="flex shrink-0 items-center gap-2">
+            {USE_MOCKS && (
+              <span className="rounded-full bg-amber-100 px-2 py-1 text-[11px] font-medium text-amber-700">
+                Mock data
+              </span>
+            )}
+            {settings.provider && (
+              <span className="rounded-full bg-slate-100 px-2 py-1 text-[11px] font-medium text-slate-600">
+                {settings.provider}
+              </span>
+            )}
+            <button
+              type="button"
+              onClick={() => setShowSettings(true)}
+              aria-label="Model settings"
+              className="rounded-lg border border-slate-200 px-2 py-1 text-sm text-slate-500 transition hover:border-emerald-300 hover:text-emerald-700"
+            >
+              {'\u2699'}
+            </button>
+          </div>
         </div>
       </header>
+
+      {showSettings && (
+        <SettingsPanel
+          settings={settings}
+          onSave={(next) => {
+            saveSettings(next)
+            setShowSettings(false)
+          }}
+          onClose={() => setShowSettings(false)}
+        />
+      )}
 
       <SearchBar onSearch={handleSearch} loading={loading} />
 
