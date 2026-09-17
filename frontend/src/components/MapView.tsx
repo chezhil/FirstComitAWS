@@ -1,5 +1,5 @@
 import L from 'leaflet'
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup, useMap, useMapEvents, Circle } from 'react-leaflet'
 import { useEffect, useRef } from 'react'
 import { CATEGORY_LABELS } from '../config'
 import type { ListingResult, UserLocation } from '../types'
@@ -42,23 +42,60 @@ interface Props {
   // measure a hidden container, so we nudge it with invalidateSize() when
   // it becomes visible again.
   visible?: boolean
+  // Click-to-place mode for choosing a search location.
+  picking?: boolean
+  onPickLocation?: (loc: UserLocation) => void
+  radiusKm?: number
 }
 
-export function MapView({ userLocation, results, selectedId, onSelect, visible = true }: Props) {
+export function MapView({
+  userLocation,
+  results,
+  selectedId,
+  onSelect,
+  visible = true,
+  picking = false,
+  onPickLocation,
+  radiusKm,
+}: Props) {
   return (
     <MapContainer
       center={[userLocation.lat, userLocation.lon]}
       zoom={15}
       scrollWheelZoom
-      className="h-full w-full rounded-xl"
+      className={`h-full w-full rounded-xl ${picking ? 'cursor-crosshair' : ''}`}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
-      <Marker position={[userLocation.lat, userLocation.lon]} icon={userIcon}>
-        <Popup>You are here</Popup>
+      {picking && onPickLocation && <ClickToPick onPick={onPickLocation} />}
+
+      {radiusKm != null && (
+        <Circle
+          center={[userLocation.lat, userLocation.lon]}
+          radius={radiusKm * 1000}
+          pathOptions={{ color: '#059669', weight: 1, fillColor: '#059669', fillOpacity: 0.06 }}
+        />
+      )}
+
+      <Marker
+        position={[userLocation.lat, userLocation.lon]}
+        icon={userIcon}
+        draggable={Boolean(onPickLocation)}
+        eventHandlers={
+          onPickLocation
+            ? {
+                dragend: (e) => {
+                  const { lat, lng } = (e.target as L.Marker).getLatLng()
+                  onPickLocation({ lat, lon: lng })
+                },
+              }
+            : undefined
+        }
+      >
+        <Popup>Searching from here{onPickLocation ? ' - drag to move' : ''}</Popup>
       </Marker>
 
       {results.map((r) => (
@@ -78,9 +115,34 @@ export function MapView({ userLocation, results, selectedId, onSelect, visible =
       ))}
 
       <RecenterOnSelect results={results} selectedId={selectedId} userLocation={userLocation} />
+      <FollowUserLocation userLocation={userLocation} />
       <InvalidateSizeOnVisible visible={visible} />
     </MapContainer>
   )
+}
+
+function FollowUserLocation({ userLocation }: { userLocation: UserLocation }) {
+  const map = useMap()
+  const isFirstRun = useRef(true)
+
+  useEffect(() => {
+    if (isFirstRun.current) {
+      isFirstRun.current = false
+      return
+    }
+    const size = map.getSize()
+    if (size.x === 0 || size.y === 0) return
+    map.panTo([userLocation.lat, userLocation.lon], { duration: 0.4 })
+  }, [userLocation.lat, userLocation.lon, map])
+
+  return null
+}
+
+function ClickToPick({ onPick }: { onPick: (loc: UserLocation) => void }) {
+  useMapEvents({
+    click: (e) => onPick({ lat: e.latlng.lat, lon: e.latlng.lng }),
+  })
+  return null
 }
 
 function InvalidateSizeOnVisible({ visible }: { visible: boolean }) {
