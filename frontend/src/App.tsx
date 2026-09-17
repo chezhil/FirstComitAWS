@@ -121,7 +121,13 @@ function App() {
             </div>
 
             <div className={`min-h-80 overflow-hidden rounded-xl ${mobileTab === 'map' ? 'block' : 'hidden'} sm:block`}>
-              <MapView userLocation={location} results={results} selectedId={selectedId} onSelect={setSelectedId} />
+              <MapView
+                userLocation={location}
+                results={results}
+                selectedId={selectedId}
+                onSelect={setSelectedId}
+                visible={mobileTab === 'map'}
+              />
             </div>
           </div>
         </>

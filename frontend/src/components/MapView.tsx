@@ -1,6 +1,6 @@
 import L from 'leaflet'
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { CATEGORY_LABELS } from '../config'
 import type { ListingResult, UserLocation } from '../types'
 
@@ -37,9 +37,14 @@ interface Props {
   results: ListingResult[]
   selectedId: string | null
   onSelect: (id: string) => void
+  // Whether this map is currently the visible one (it stays mounted but
+  // display:none'd behind the mobile List/Map tab switcher). Leaflet can't
+  // measure a hidden container, so we nudge it with invalidateSize() when
+  // it becomes visible again.
+  visible?: boolean
 }
 
-export function MapView({ userLocation, results, selectedId, onSelect }: Props) {
+export function MapView({ userLocation, results, selectedId, onSelect, visible = true }: Props) {
   return (
     <MapContainer
       center={[userLocation.lat, userLocation.lon]}
@@ -73,8 +78,30 @@ export function MapView({ userLocation, results, selectedId, onSelect }: Props) 
       ))}
 
       <RecenterOnSelect results={results} selectedId={selectedId} userLocation={userLocation} />
+      <InvalidateSizeOnVisible visible={visible} />
     </MapContainer>
   )
+}
+
+function InvalidateSizeOnVisible({ visible }: { visible: boolean }) {
+  const map = useMap()
+
+  // Always remeasure once after mount (covers desktop, where the map is
+  // shown via a `sm:` media query regardless of the mobile tab state).
+  useEffect(() => {
+    const id = requestAnimationFrame(() => map.invalidateSize())
+    return () => cancelAnimationFrame(id)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  // Remeasure again whenever the mobile tab switches the map into view.
+  useEffect(() => {
+    if (!visible) return
+    const id = requestAnimationFrame(() => map.invalidateSize())
+    return () => cancelAnimationFrame(id)
+  }, [visible, map])
+
+  return null
 }
 
 function RecenterOnSelect({
@@ -87,8 +114,23 @@ function RecenterOnSelect({
   userLocation: UserLocation
 }) {
   const map = useMap()
+  const isFirstRun = useRef(true)
 
   useEffect(() => {
+    // The map is already centered on mount via MapContainer's `center` prop,
+    // so there's nothing to animate to yet on the first run.
+    if (isFirstRun.current) {
+      isFirstRun.current = false
+      return
+    }
+    // Leaflet's flyTo() computes NaN if called before the container has a
+    // real, laid-out size (e.g. React 18 StrictMode double-invoking this
+    // effect before the browser's first paint) — skip the animated pan in
+    // that case rather than crashing; invalidateSize() + a later selection
+    // will trigger a correctly-sized recenter anyway.
+    const size = map.getSize()
+    if (size.x === 0 || size.y === 0) return
+
     const target = results.find((r) => r.id === selectedId)
     const center = target ? target.location : userLocation
     map.flyTo([center.lat, center.lon], target ? 16 : 15, { duration: 0.6 })
