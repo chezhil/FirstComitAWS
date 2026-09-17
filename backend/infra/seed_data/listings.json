@@ -1,159 +1,5 @@
 [
   {
-    "id": "50bd0f67-af8d-41c2-b3ab-9ebf2dfcbed2",
-    "name": "Zolo Stays - South Gate",
-    "category": "pg",
-    "description": "Quiet well-kept PG with easy campus access, frequently booked by returning students.",
-    "location": {
-      "lat": 12.98319,
-      "lon": 77.608554
-    },
-    "address": "Near Campus Gate 3, Bangalore",
-    "price": 8000,
-    "price_unit": "per_month",
-    "hours": [],
-    "phone": "+919876590760",
-    "tags": [
-      "pg",
-      "student",
-      "campus",
-      "budget"
-    ],
-    "rating": 4.5
-  },
-  {
-    "id": "fd6441e8-8e81-4a76-ab85-6d2125caa89a",
-    "name": "Balaji Luxury PG - Branch",
-    "category": "pg",
-    "description": "Well-maintained hostel-style PG near campus gates, known for well-kept facilities.",
-    "location": {
-      "lat": 12.95815,
-      "lon": 77.595266
-    },
-    "address": "Near Campus Gate 3, Bangalore",
-    "price": 15000,
-    "price_unit": "per_month",
-    "hours": [],
-    "phone": "+919876573476",
-    "tags": [
-      "pg",
-      "student",
-      "campus",
-      "budget"
-    ],
-    "rating": 4.4
-  },
-  {
-    "id": "05ee4361-dd3f-40cc-bfa8-4c6d90622637",
-    "name": "Comfort Stay - North Gate",
-    "category": "pg",
-    "description": "Quiet well-kept PG with easy campus access, frequently booked by returning students.",
-    "location": {
-      "lat": 12.971401,
-      "lon": 77.59408
-    },
-    "address": "Near Campus Gate 4, Bangalore",
-    "price": 6000,
-    "price_unit": "per_month",
-    "hours": [],
-    "phone": "+919876524928",
-    "tags": [
-      "pg",
-      "student",
-      "campus",
-      "budget"
-    ],
-    "rating": 4.9
-  },
-  {
-    "id": "cc10ecf2-f1f4-4267-8631-a06575764e99",
-    "name": "Zolo Stays - Campus Side",
-    "category": "pg",
-    "description": "Budget-friendly paying-guest accommodation a short walk from campus, well-kept rooms available.",
-    "location": {
-      "lat": 12.979401,
-      "lon": 77.606198
-    },
-    "address": "Near Campus Gate 3, Bangalore",
-    "price": 12000,
-    "price_unit": "per_month",
-    "hours": [],
-    "phone": "+919876583188",
-    "tags": [
-      "pg",
-      "student",
-      "campus",
-      "budget"
-    ],
-    "rating": 4.7
-  },
-  {
-    "id": "11e43ae7-738c-47aa-a513-f844f160c798",
-    "name": "Zolo Stays - South Gate 2",
-    "category": "pg",
-    "description": "Well-maintained hostel-style PG near campus gates, known for well-kept facilities.",
-    "location": {
-      "lat": 12.970332,
-      "lon": 77.593686
-    },
-    "address": "Near Campus Gate 1, Bangalore",
-    "price": 8000,
-    "price_unit": "per_month",
-    "hours": [],
-    "phone": "+919876584032",
-    "tags": [
-      "pg",
-      "student",
-      "campus",
-      "budget"
-    ],
-    "rating": 4.3
-  },
-  {
-    "id": "da536f9a-20c4-4cc4-a281-5962fe69fa2f",
-    "name": "Sunrise PG - North Gate",
-    "category": "pg",
-    "description": "Quiet well-kept PG with easy campus access, frequently booked by returning students.",
-    "location": {
-      "lat": 12.971401,
-      "lon": 77.607187
-    },
-    "address": "Near Campus Gate 2, Bangalore",
-    "price": 12000,
-    "price_unit": "per_month",
-    "hours": [],
-    "phone": "+919876564209",
-    "tags": [
-      "pg",
-      "student",
-      "campus",
-      "budget"
-    ],
-    "rating": 3.8
-  },
-  {
-    "id": "cf602297-d923-486e-8433-3cf943c12281",
-    "name": "Sunrise PG - Branch",
-    "category": "pg",
-    "description": "Furnished well-kept PG close to campus, popular with students for its location and upkeep.",
-    "location": {
-      "lat": 12.961763,
-      "lon": 77.602636
-    },
-    "address": "Near Campus Gate 4, Bangalore",
-    "price": 10000,
-    "price_unit": "per_month",
-    "hours": [],
-    "phone": "+919876581851",
-    "tags": [
-      "pg",
-      "student",
-      "campus",
-      "budget"
-    ],
-    "rating": 3.7
-  },
-  {
     "id": "b3f7cba0-7660-4a17-a553-956caa7301d3",
     "name": "Kerala Food Court - Annex",
     "category": "mess",
@@ -207,7 +53,8 @@
       "mess",
       "student",
       "campus",
-      "budget"
+      "budget",
+      "placeholder"
     ],
     "rating": 4.6
   },
@@ -265,7 +112,8 @@
       "mess",
       "student",
       "campus",
-      "budget"
+      "budget",
+      "placeholder"
     ],
     "rating": 3.6
   },
@@ -323,7 +171,8 @@
       "mess",
       "student",
       "campus",
-      "budget"
+      "budget",
+      "placeholder"
     ],
     "rating": 4.4
   },
@@ -381,7 +230,8 @@
       "mess",
       "student",
       "campus",
-      "budget"
+      "budget",
+      "placeholder"
     ],
     "rating": 4.4
   },
@@ -439,7 +289,8 @@
       "mess",
       "student",
       "campus",
-      "budget"
+      "budget",
+      "placeholder"
     ],
     "rating": 5.0
   },
@@ -497,7 +348,8 @@
       "mess",
       "student",
       "campus",
-      "budget"
+      "budget",
+      "placeholder"
     ],
     "rating": 4.9
   },
@@ -555,7 +407,8 @@
       "mess",
       "student",
       "campus",
-      "budget"
+      "budget",
+      "placeholder"
     ],
     "rating": 4.5
   },
@@ -613,7 +466,8 @@
       "tiffin",
       "student",
       "campus",
-      "budget"
+      "budget",
+      "placeholder"
     ],
     "rating": 4.5
   },
@@ -671,7 +525,8 @@
       "tiffin",
       "student",
       "campus",
-      "budget"
+      "budget",
+      "placeholder"
     ],
     "rating": 4.9
   },
@@ -729,7 +584,8 @@
       "tiffin",
       "student",
       "campus",
-      "budget"
+      "budget",
+      "placeholder"
     ],
     "rating": 3.6
   },
@@ -787,7 +643,8 @@
       "tiffin",
       "student",
       "campus",
-      "budget"
+      "budget",
+      "placeholder"
     ],
     "rating": 4.6
   },
@@ -845,7 +702,8 @@
       "tiffin",
       "student",
       "campus",
-      "budget"
+      "budget",
+      "placeholder"
     ],
     "rating": 4.5
   },
@@ -903,7 +761,8 @@
       "tiffin",
       "student",
       "campus",
-      "budget"
+      "budget",
+      "placeholder"
     ],
     "rating": 3.7
   },
@@ -961,974 +820,6079 @@
       "tiffin",
       "student",
       "campus",
-      "budget"
+      "budget",
+      "placeholder"
     ],
     "rating": 4.6
   },
   {
-    "id": "9622c311-f9c9-4eae-9e46-27882346c3ed",
-    "name": "Student Print Point - Annex",
-    "category": "print_shop",
-    "description": "Student-favorite printing and photostat shop, also does color copies and scans.",
-    "location": {
-      "lat": 12.978206,
-      "lon": 77.606212
-    },
-    "address": "Near Campus Gate 3, Bangalore",
-    "price": 2,
-    "price_unit": "per_page",
-    "hours": [
-      {
-        "day": "mon",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "tue",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "wed",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "thu",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "fri",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sat",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sun",
-        "open": "08:00",
-        "close": "22:00"
-      }
-    ],
-    "phone": "+919876525934",
-    "tags": [
-      "print shop",
-      "student",
-      "campus",
-      "budget"
-    ],
-    "rating": 4.0
-  },
-  {
-    "id": "5c243c3c-bc33-4440-9859-0b1778f8bc59",
-    "name": "Kiran Xerox - North Gate",
-    "category": "print_shop",
-    "description": "Reliable print & photocopy shop, handles printouts, xerox and binding for coursework.",
-    "location": {
-      "lat": 12.969447,
-      "lon": 77.607664
-    },
-    "address": "Near Campus Gate 4, Bangalore",
-    "price": 1,
-    "price_unit": "per_page",
-    "hours": [
-      {
-        "day": "mon",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "tue",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "wed",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "thu",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "fri",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sat",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sun",
-        "open": "08:00",
-        "close": "22:00"
-      }
-    ],
-    "phone": "+919876560239",
-    "tags": [
-      "print shop",
-      "student",
-      "campus",
-      "budget"
-    ],
-    "rating": 4.3
-  },
-  {
-    "id": "7bdaf9c5-7b27-44d2-975a-763ae7fdf18b",
-    "name": "A4 World - South Gate",
-    "category": "print_shop",
-    "description": "Reliable print & photocopy shop, handles printouts, xerox and binding for coursework.",
-    "location": {
-      "lat": 12.981413,
-      "lon": 77.58884
-    },
-    "address": "Near Campus Gate 4, Bangalore",
-    "price": 5,
-    "price_unit": "per_page",
-    "hours": [
-      {
-        "day": "mon",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "tue",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "wed",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "thu",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "fri",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sat",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sun",
-        "open": "08:00",
-        "close": "22:00"
-      }
-    ],
-    "phone": "+919876574314",
-    "tags": [
-      "print shop",
-      "student",
-      "campus",
-      "budget"
-    ],
-    "rating": 3.6
-  },
-  {
-    "id": "a5a7ee96-0606-4967-af44-d5a131e5aaa5",
-    "name": "Sri Venkateshwara Xerox - Annex",
-    "category": "print_shop",
-    "description": "Campus xerox point for printing, photocopy and scanning -- quick turnaround for students.",
-    "location": {
-      "lat": 12.971311,
-      "lon": 77.607038
-    },
-    "address": "Near Campus Gate 1, Bangalore",
-    "price": 2,
-    "price_unit": "per_page",
-    "hours": [
-      {
-        "day": "mon",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "tue",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "wed",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "thu",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "fri",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sat",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sun",
-        "open": "08:00",
-        "close": "22:00"
-      }
-    ],
-    "phone": "+919876591456",
-    "tags": [
-      "print shop",
-      "student",
-      "campus",
-      "budget"
-    ],
-    "rating": 4.7
-  },
-  {
-    "id": "d5e41ed7-8c0b-4248-a702-ed8f1ad0866b",
-    "name": "Kiran Xerox - Main",
-    "category": "print_shop",
-    "description": "Campus xerox point for printing, photocopy and scanning -- quick turnaround for students.",
-    "location": {
-      "lat": 12.957689,
-      "lon": 77.588494
-    },
-    "address": "Near Campus Gate 3, Bangalore",
-    "price": 5,
-    "price_unit": "per_page",
-    "hours": [
-      {
-        "day": "mon",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "tue",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "wed",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "thu",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "fri",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sat",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sun",
-        "open": "08:00",
-        "close": "22:00"
-      }
-    ],
-    "phone": "+919876594643",
-    "tags": [
-      "print shop",
-      "student",
-      "campus",
-      "budget"
-    ],
-    "rating": 4.2
-  },
-  {
-    "id": "9d9891fb-ac59-4b83-9885-7910a5e8e27b",
-    "name": "Smart Copiers - North Gate",
-    "category": "print_shop",
-    "description": "Campus xerox point for printing, photocopy and scanning -- quick turnaround for students.",
-    "location": {
-      "lat": 12.975842,
-      "lon": 77.583264
-    },
-    "address": "Near Campus Gate 1, Bangalore",
-    "price": 2,
-    "price_unit": "per_page",
-    "hours": [
-      {
-        "day": "mon",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "tue",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "wed",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "thu",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "fri",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sat",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sun",
-        "open": "08:00",
-        "close": "22:00"
-      }
-    ],
-    "phone": "+919876526869",
-    "tags": [
-      "print shop",
-      "student",
-      "campus",
-      "budget"
-    ],
-    "rating": 4.9
-  },
-  {
-    "id": "6cf16687-96bf-4ee2-898c-4109509ef704",
-    "name": "Sri Venkateshwara Xerox - Campus Side",
-    "category": "print_shop",
-    "description": "Reliable print & photocopy shop, handles printouts, xerox and binding for coursework.",
-    "location": {
-      "lat": 12.982743,
-      "lon": 77.601441
-    },
-    "address": "Near Campus Gate 1, Bangalore",
-    "price": 1,
-    "price_unit": "per_page",
-    "hours": [
-      {
-        "day": "mon",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "tue",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "wed",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "thu",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "fri",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sat",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sun",
-        "open": "08:00",
-        "close": "22:00"
-      }
-    ],
-    "phone": "+919876585169",
-    "tags": [
-      "print shop",
-      "student",
-      "campus",
-      "budget"
-    ],
-    "rating": 4.8
-  },
-  {
-    "id": "193b5c4b-c28d-4f8a-88e7-9e20229d094b",
-    "name": "Axis Bank ATM - Main",
+    "id": "aef809b2-9726-48fc-990b-0277c0bbbd29",
+    "name": "Canara Bank",
     "category": "atm",
-    "description": "Reliable ATM near student housing, rarely runs out of cash.",
+    "description": "Canara Bank \u2014 imported from OpenStreetMap.",
     "location": {
-      "lat": 12.97687,
-      "lon": 77.595322
+      "lat": 12.977709,
+      "lon": 77.572284
     },
-    "address": "Near Campus Gate 3, Bangalore",
+    "address": "",
     "price": null,
     "price_unit": null,
     "hours": [],
-    "phone": "+919876545826",
+    "phone": null,
     "tags": [
       "atm",
-      "student",
-      "campus",
-      "budget"
+      "osm",
+      "hours-unverified"
     ],
-    "rating": 4.8
+    "rating": null
   },
   {
-    "id": "bf89d142-d478-4912-9ebb-f931387e6862",
-    "name": "HDFC Bank ATM - Main",
+    "id": "52b32857-a798-4e3a-81bd-e8210f1fa5cd",
+    "name": "State Bank of India",
     "category": "atm",
-    "description": "Convenient cash withdrawal point a short walk from campus.",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
     "location": {
-      "lat": 12.974813,
-      "lon": 77.594497
+      "lat": 12.973021,
+      "lon": 77.580483
     },
-    "address": "Near Campus Gate 1, Bangalore",
+    "address": "",
     "price": null,
     "price_unit": null,
     "hours": [],
-    "phone": "+919876567621",
+    "phone": null,
     "tags": [
-      "atm",
-      "student",
-      "campus",
-      "budget"
+      "bank",
+      "osm",
+      "hours-unverified"
     ],
-    "rating": 3.8
+    "rating": null
   },
   {
-    "id": "a427b18f-f56f-487d-97ea-37c670f65d7b",
-    "name": "SBI ATM - North Gate",
+    "id": "12ee11ad-d851-42b1-995d-97adc6823cb6",
+    "name": "Bank of India",
     "category": "atm",
-    "description": "Reliable ATM near student housing, rarely runs out of cash.",
+    "description": "Bank of India \u2014 imported from OpenStreetMap.",
     "location": {
-      "lat": 12.981069,
-      "lon": 77.602167
+      "lat": 12.973844,
+      "lon": 77.578582
     },
-    "address": "Near Campus Gate 2, Bangalore",
+    "address": "Kempe Gowda Road",
     "price": null,
     "price_unit": null,
     "hours": [],
-    "phone": "+919876517745",
+    "phone": null,
     "tags": [
-      "atm",
-      "student",
-      "campus",
-      "budget"
+      "bank",
+      "osm",
+      "hours-unverified"
     ],
-    "rating": 4.1
+    "rating": null
   },
   {
-    "id": "4949aa17-75ce-4e21-a423-48ce07ef078e",
-    "name": "HDFC Bank ATM - Annex",
+    "id": "f7acfcdf-0839-4b4c-9d25-294c78ff7a0a",
+    "name": "Indian Bank",
     "category": "atm",
-    "description": "Bank ATM close to the main gate, usually stocked and working.",
+    "description": "Indian Bank \u2014 imported from OpenStreetMap.",
     "location": {
-      "lat": 12.961725,
-      "lon": 77.601271
+      "lat": 12.973729,
+      "lon": 77.578957
     },
-    "address": "Near Campus Gate 2, Bangalore",
+    "address": "Kempe Gowda Road",
     "price": null,
     "price_unit": null,
     "hours": [],
-    "phone": "+919876586945",
+    "phone": null,
     "tags": [
-      "atm",
-      "student",
-      "campus",
-      "budget"
+      "bank",
+      "osm",
+      "hours-unverified"
     ],
-    "rating": 4.5
+    "rating": null
   },
   {
-    "id": "b62d3857-8930-411f-a2b5-a711293e4869",
-    "name": "Axis Bank ATM - Main 2",
+    "id": "d72ba9f0-cc90-4a1c-aeff-e8a7575540fe",
+    "name": "Canara Bank",
     "category": "atm",
-    "description": "24x7 ATM near campus for quick cash withdrawal.",
+    "description": "Canara Bank \u2014 imported from OpenStreetMap.",
     "location": {
-      "lat": 12.958609,
-      "lon": 77.603307
+      "lat": 12.953252,
+      "lon": 77.57754
     },
-    "address": "Near Campus Gate 4, Bangalore",
+    "address": "",
     "price": null,
     "price_unit": null,
     "hours": [],
-    "phone": "+919876526811",
+    "phone": null,
     "tags": [
       "atm",
-      "student",
-      "campus",
-      "budget"
+      "osm",
+      "hours-unverified"
     ],
-    "rating": 3.6
+    "rating": null
   },
   {
-    "id": "1cfff005-d814-42da-ae6d-9b1beee7d7b0",
-    "name": "Kotak ATM - South Gate",
+    "id": "09e5b506-ed0a-47e5-b5d8-c0494d00c058",
+    "name": "Syndicate Bank",
     "category": "atm",
-    "description": "24x7 ATM near campus for quick cash withdrawal.",
+    "description": "Syndicate Bank \u2014 imported from OpenStreetMap.",
     "location": {
-      "lat": 12.98629,
-      "lon": 77.587107
+      "lat": 12.983615,
+      "lon": 77.594899
     },
-    "address": "Near Campus Gate 1, Bangalore",
+    "address": "",
     "price": null,
     "price_unit": null,
     "hours": [],
-    "phone": "+919876586399",
+    "phone": null,
     "tags": [
       "atm",
-      "student",
-      "campus",
-      "budget"
+      "osm",
+      "hours-unverified"
     ],
-    "rating": 3.6
+    "rating": null
   },
   {
-    "id": "abb72087-3be4-4977-82c6-c952a3abc5f9",
-    "name": "SBI ATM - Branch",
+    "id": "33ace074-87c8-4d78-bc21-bb948f34498b",
+    "name": "Canara Bank",
     "category": "atm",
-    "description": "Convenient cash withdrawal point a short walk from campus.",
+    "description": "Canara Bank \u2014 imported from OpenStreetMap.",
     "location": {
-      "lat": 12.975795,
-      "lon": 77.605463
+      "lat": 12.985511,
+      "lon": 77.588999
     },
-    "address": "Near Campus Gate 2, Bangalore",
+    "address": "",
     "price": null,
     "price_unit": null,
     "hours": [],
-    "phone": "+919876552020",
+    "phone": null,
     "tags": [
       "atm",
-      "student",
-      "campus",
-      "budget"
+      "osm",
+      "hours-unverified"
     ],
-    "rating": 4.5
+    "rating": null
   },
   {
-    "id": "d47f60d0-4a23-4ebb-bc06-c5524a347e1a",
-    "name": "Campus Pharmacy - Campus Side",
-    "category": "other",
-    "description": "Handy store near campus covering odds and ends students need.",
+    "id": "41af5728-3eaa-4daa-9e95-7efad17f8913",
+    "name": "State Bank of India",
+    "category": "atm",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
     "location": {
-      "lat": 12.96803,
-      "lon": 77.599723
+      "lat": 12.98194,
+      "lon": 77.595502
     },
-    "address": "Near Campus Gate 2, Bangalore",
+    "address": "Raj Bhavan Road, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b1733cce-0eeb-478f-864c-5f18ac4ba83c",
+    "name": "Kotak Mahindra Bank",
+    "category": "atm",
+    "description": "Kotak Mahindra Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.976218,
+      "lon": 77.599313
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "72a25c7b-cba9-4bf9-ba82-3da9ccfa001b",
+    "name": "HDFC Bank",
+    "category": "atm",
+    "description": "HDFC Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.988823,
+      "lon": 77.592415
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "50d652ea-61f0-43bf-8b42-2c8d9a1a52ac",
+    "name": "Karnataka Bank",
+    "category": "atm",
+    "description": "Karnataka Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.968662,
+      "lon": 77.587513
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "f95caccb-7581-4168-940e-b1b661f7dbee",
+    "name": "YMCA Hostel",
+    "category": "pg",
+    "description": "YMCA Hostel \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.973383,
+      "lon": 77.587281
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "hostel",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "0bf361d5-c15b-4599-9463-e4c83b101c7e",
+    "name": "Legislatures' Home",
+    "category": "pg",
+    "description": "Legislatures' Home \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.983448,
+      "lon": 77.589959
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "guest_house",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "dfa0ee35-ed04-44b6-9897-953a787b1448",
+    "name": "State Bank of India",
+    "category": "atm",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.973329,
+      "lon": 77.582459
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "4f84a143-4015-4580-9d1e-f262c826fc64",
+    "name": "Canara Bank",
+    "category": "atm",
+    "description": "Canara Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.98693,
+      "lon": 77.595197
+    },
+    "address": "Cunningham Road",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "8a1a34f8-c052-446d-b2e2-42f4ba30ebb6",
+    "name": "S. S. Pharma",
+    "category": "other",
+    "description": "S. S. Pharma \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.996579,
+      "lon": 77.604555
+    },
+    "address": "Benson Cross Road",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "1179c37e-165f-4079-bd47-338dd912f59a",
+    "name": "ICICI Bank",
+    "category": "atm",
+    "description": "ICICI Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.970682,
+      "lon": 77.599609
+    },
+    "address": "Lavelle Road, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "aac7b9f7-0817-4582-bc92-245b847558f8",
+    "name": "Bank of India",
+    "category": "atm",
+    "description": "Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.970863,
+      "lon": 77.60104
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "46a9fbb1-fcaf-4c6a-9262-54f817a08c08",
+    "name": "Canara Bank",
+    "category": "atm",
+    "description": "Canara Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.978473,
+      "lon": 77.569676
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "bf8eb2dc-f6a3-46a5-a0c4-56412840e5d8",
+    "name": "Axis Bank",
+    "category": "atm",
+    "description": "Axis Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.980905,
+      "lon": 77.575439
+    },
+    "address": "Sheshadri Road",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e660f1c7-e877-4304-bc9b-9b3ddbbefef8",
+    "name": "The Cash Pharmacy",
+    "category": "other",
+    "description": "The Cash Pharmacy \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.968315,
+      "lon": 77.600437
+    },
+    "address": "74/5, Saint Mark's Road, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "080 3361 8456",
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "880b391b-5a50-4031-b0ee-9ec35bd8c300",
+    "name": "Residency Pharmacy",
+    "category": "other",
+    "description": "Residency Pharmacy \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.966891,
+      "lon": 77.598627
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "bf608d4f-1115-4497-84c1-1aa31f4d2b2c",
+    "name": "Punjab National Bank",
+    "category": "atm",
+    "description": "Punjab National Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.980597,
+      "lon": 77.607431
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b5f60a3e-3b3a-436f-add2-c3e475b837d1",
+    "name": "ICICI Bank",
+    "category": "atm",
+    "description": "ICICI Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.973051,
+      "lon": 77.611044
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "39b83abd-2489-4759-9ded-b2b22645ef1b",
+    "name": "Union Bank of India",
+    "category": "atm",
+    "description": "Union Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.991813,
+      "lon": 77.611669
+    },
+    "address": "ST JOHNS CHURCH ROAD",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "271f8332-37c7-4206-ad16-57e559c0460b",
+    "name": "ICICI Bank",
+    "category": "atm",
+    "description": "ICICI Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.981448,
+      "lon": 77.61036
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "576fa113-a812-4220-8e91-a3e6e1bbfcab",
+    "name": "Corp Bank",
+    "category": "atm",
+    "description": "Corp Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.98265,
+      "lon": 77.61042
+    },
+    "address": "Commercial Street",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5fe74ab4-6785-4693-bc18-e51442222429",
+    "name": "Corporation Bank",
+    "category": "atm",
+    "description": "Corporation Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.94817,
+      "lon": 77.598693
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e75814ca-92c0-450a-8e4c-c5f7be74e357",
+    "name": "Karnataka Bank",
+    "category": "atm",
+    "description": "Karnataka Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.948872,
+      "lon": 77.597763
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b44acab3-1b70-4ebc-8ef5-402f22574bdb",
+    "name": "Canara Bank",
+    "category": "atm",
+    "description": "Canara Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.98699,
+      "lon": 77.578611
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d56a9363-49c9-4335-a048-6a119073ce74",
+    "name": "ICICI Bank",
+    "category": "atm",
+    "description": "ICICI Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.987651,
+      "lon": 77.579919
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "958c611b-8c8d-411b-8783-7c12c9ddd0db",
+    "name": "Citibank",
+    "category": "atm",
+    "description": "Citibank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.987941,
+      "lon": 77.576849
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "4650baa4-5f96-4b72-a509-7a217b58dc6b",
+    "name": "Canara Bank",
+    "category": "atm",
+    "description": "Canara Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.945679,
+      "lon": 77.596081
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d737b492-8df1-4564-98ee-f769b5ab0a21",
+    "name": "Madhwa Yuvaka Sangha",
+    "category": "pg",
+    "description": "Madhwa Yuvaka Sangha \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.954741,
+      "lon": 77.573255
+    },
+    "address": "Krishna Rajendra Road",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "hostel",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "61ffda21-a479-46f8-b2ec-79db06a6ce7b",
+    "name": "Corporation Bank",
+    "category": "atm",
+    "description": "Corporation Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.954458,
+      "lon": 77.573357
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "fe93b52a-201f-4a7e-b248-91723ec7b69b",
+    "name": "State Bank of India",
+    "category": "atm",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.957377,
+      "lon": 77.571708
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "f463f873-8fdb-4e41-b6f1-62fe56b78b95",
+    "name": "HDFC Bank",
+    "category": "atm",
+    "description": "HDFC Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.972578,
+      "lon": 77.570207
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "bd4eed1f-fe1a-4fe3-8454-293c809b99f2",
+    "name": "Union Bank of India",
+    "category": "atm",
+    "description": "Union Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.972321,
+      "lon": 77.570374
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "85b50f6e-e39a-4c84-9cc5-f980b9bce2e1",
+    "name": "Corporation Bank",
+    "category": "atm",
+    "description": "Corporation Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.971281,
+      "lon": 77.570105
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "fb51db9a-5c06-4291-8d0b-b75aca99d4bf",
+    "name": "IDFC First Bank",
+    "category": "atm",
+    "description": "IDFC First Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.961616,
+      "lon": 77.598635
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "3db35fb0-123c-47ba-a9af-38e0d2144b75",
+    "name": "Print Express",
+    "category": "print_shop",
+    "description": "Print Express \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.96564,
+      "lon": 77.601761
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "copyshop",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "9b49fb04-3fb3-45e9-a991-fb8ab1148ccc",
+    "name": "HDFC Bank",
+    "category": "atm",
+    "description": "HDFC Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.965545,
+      "lon": 77.601164
+    },
+    "address": "8/24, Richmond Road, Bengaluru",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "61a88023-bf90-48c0-a3c1-2ed18afe9b05",
+    "name": "Kasturi Medicals",
+    "category": "other",
+    "description": "Kasturi Medicals \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.953522,
+      "lon": 77.578061
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "22e05be5-763a-4320-94e6-25eeba158850",
+    "name": "ING",
+    "category": "atm",
+    "description": "ING \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.970025,
+      "lon": 77.579959
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "7cb030d6-186e-4f9a-9733-f1a7c7125135",
+    "name": "ICICI Bank",
+    "category": "atm",
+    "description": "ICICI Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.973201,
+      "lon": 77.578927
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "808b035a-8f85-41d0-b7f0-53ba36294dee",
+    "name": "State Bank of India",
+    "category": "atm",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.967902,
+      "lon": 77.585151
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "292bebb8-d66d-439b-8bc3-a9904951655c",
+    "name": "Vaidya Ratnam Ayurvedic Center",
+    "category": "other",
+    "description": "Vaidya Ratnam Ayurvedic Center \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.978589,
+      "lon": 77.573637
+    },
+    "address": "4th Cross, Gandhi Nagar, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "7efbc73e-cfcd-43f5-a9fe-a91a24572708",
+    "name": "Canara Bank",
+    "category": "atm",
+    "description": "Canara Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.994353,
+      "lon": 77.594681
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm"
+    ],
+    "rating": null
+  },
+  {
+    "id": "208dee15-362a-403f-9d55-417033577018",
+    "name": "HDFC Bank",
+    "category": "atm",
+    "description": "HDFC Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.965271,
+      "lon": 77.598521
+    },
+    "address": "Richmond Road",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "fb86b92b-e6a1-4c06-ac53-b49b7b907c93",
+    "name": "Dena Bank",
+    "category": "atm",
+    "description": "Dena Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.957393,
+      "lon": 77.582077
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e5ea67da-b0ee-4b36-9223-02a42dcba4d5",
+    "name": "Air Force Officers' Mess",
+    "category": "pg",
+    "description": "Air Force Officers' Mess \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.970705,
+      "lon": 77.619981
+    },
+    "address": "Trinity Church Road",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "guest_house",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e07daec9-1e48-4cf1-8a5b-f388dc56907c",
+    "name": "Karnataka Bank",
+    "category": "atm",
+    "description": "Karnataka Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.954004,
+      "lon": 77.580126
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "2a5e6e9a-c31c-4fa3-8fde-0d48616417b2",
+    "name": "ICICI Bank",
+    "category": "atm",
+    "description": "ICICI Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.965118,
+      "lon": 77.589746
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "6febf1e5-76ca-46b2-a2e4-2f64a88d9462",
+    "name": "Apollo Pharmacy",
+    "category": "other",
+    "description": "Apollo Pharmacy \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.966414,
+      "lon": 77.59254
+    },
+    "address": "Chidananda Maharashi Ashram Road, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "437aba3a-d255-4080-8d26-004fc9bcf7c5",
+    "name": "Axis Bank",
+    "category": "atm",
+    "description": "Axis Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.965942,
+      "lon": 77.592573
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "1b579373-d420-43ef-8408-a61df7c8e538",
+    "name": "Manjula Medicals",
+    "category": "other",
+    "description": "Manjula Medicals \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.966808,
+      "lon": 77.592647
+    },
+    "address": "Chidananda Maharashi Ashram Road, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5c1c2320-d1fc-4f01-9b39-f9a7147489b2",
+    "name": "Citibank",
+    "category": "atm",
+    "description": "Citibank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.981888,
+      "lon": 77.610465
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm"
+    ],
+    "rating": null
+  },
+  {
+    "id": "7ec450f5-fd74-4a9c-94f9-dab6e3eff4db",
+    "name": "Corporation Bank",
+    "category": "atm",
+    "description": "Corporation Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.981859,
+      "lon": 77.61028
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "7271b203-9e4e-4787-9aab-3e201d9fc392",
+    "name": "Bharatiya Mahila Bank",
+    "category": "atm",
+    "description": "Bharatiya Mahila Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.966954,
+      "lon": 77.586941
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "7a16b9ec-7ec5-4dc3-8fa0-542750468000",
+    "name": "Punjab National Bank",
+    "category": "atm",
+    "description": "Punjab National Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.967302,
+      "lon": 77.587113
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "38cb9e73-d292-445f-9570-613b37f32ade",
+    "name": "State Bank of India",
+    "category": "atm",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.975798,
+      "lon": 77.604485
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "bcca45eb-2611-485c-8082-9aaf396c0f05",
+    "name": "Federal Bank",
+    "category": "atm",
+    "description": "Federal Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.974958,
+      "lon": 77.570315
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "c5ce9cf2-2042-4aef-b717-bfa63bb19226",
+    "name": "Citibank",
+    "category": "atm",
+    "description": "Citibank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.97362,
+      "lon": 77.615526
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "464ffd6a-04f8-4d82-bad9-bded5344fe14",
+    "name": "Sri Manjunatha Medical & General Stores",
+    "category": "other",
+    "description": "Sri Manjunatha Medical & General Stores \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.960685,
+      "lon": 77.571551
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "7e613925-702a-4832-9261-249c6776b409",
+    "name": "Punjab National Bank",
+    "category": "atm",
+    "description": "Punjab National Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.967159,
+      "lon": 77.589173
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "631823be-c504-425f-a91d-96a26cf4042a",
+    "name": "Citibank",
+    "category": "atm",
+    "description": "Citibank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.971861,
+      "lon": 77.59573
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b269a068-2996-46e3-bfbf-5a800c8facb2",
+    "name": "Bank of Baroda",
+    "category": "atm",
+    "description": "Bank of Baroda \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.972765,
+      "lon": 77.619026
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "91b17511-78be-4e87-9f48-f76bc758a6df",
+    "name": "ICICI Bank",
+    "category": "atm",
+    "description": "ICICI Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.952201,
+      "lon": 77.577322
+    },
+    "address": "Sajjan Rao Circle, Bengaluru",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "874e6a8e-420a-42d5-9e9f-282d44c5254e",
+    "name": "Canara Bank",
+    "category": "atm",
+    "description": "Canara Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.979172,
+      "lon": 77.593426
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "84c2efb0-e5b6-4d42-ade8-936f06d6e936",
+    "name": "ICICI Bank",
+    "category": "atm",
+    "description": "ICICI Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.947224,
+      "lon": 77.598734
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "4c6070cb-fd74-4ae5-83a4-3c0350773782",
+    "name": "Padmavathi Medicals",
+    "category": "other",
+    "description": "Padmavathi Medicals \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.948348,
+      "lon": 77.600055
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "939b434d-9352-45b8-a715-b4d63ceb27b9",
+    "name": "Sanjana Medicals",
+    "category": "other",
+    "description": "Sanjana Medicals \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.948665,
+      "lon": 77.600171
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e4fb6254-1685-407c-a958-a4dffd2b3817",
+    "name": "Canara Bank",
+    "category": "atm",
+    "description": "Canara Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.983361,
+      "lon": 77.603323
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "8fe6fa7c-5247-4300-a9d7-c4a7f769ef95",
+    "name": "Yes Bank",
+    "category": "atm",
+    "description": "Yes Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.972917,
+      "lon": 77.617214
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "3ed7e23b-1fce-47ed-bc8c-f239b92cd4a6",
+    "name": "Canara Bank",
+    "category": "atm",
+    "description": "Canara Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.975421,
+      "lon": 77.604577
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "12edd8f2-6f1d-4326-bfd4-5349fcd7b547",
+    "name": "UCO Bank",
+    "category": "atm",
+    "description": "UCO Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.97558,
+      "lon": 77.605326
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "a622e3ee-c3b9-47c6-a56f-58c736dfcb55",
+    "name": "Union Bank of India",
+    "category": "atm",
+    "description": "Union Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.976184,
+      "lon": 77.602631
+    },
+    "address": "Mahatma Gandhi Road",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "a41e4283-a469-41cc-aa44-77da16d6499a",
+    "name": "Syndicate Bank",
+    "category": "atm",
+    "description": "Syndicate Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.977501,
+      "lon": 77.588358
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ee8f1814-69a8-4f52-87ee-1ea8c245787d",
+    "name": "Punjab National Bank",
+    "category": "atm",
+    "description": "Punjab National Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.975213,
+      "lon": 77.608645
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e059b992-96fa-4d01-aba4-5f99796eaa78",
+    "name": "Axis Bank",
+    "category": "atm",
+    "description": "Axis Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.973329,
+      "lon": 77.616776
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "67ef5133-fa15-4605-bb8e-aeb18a1a034d",
+    "name": "State Bank of India",
+    "category": "atm",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.973365,
+      "lon": 77.616484
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "60b5d094-6839-4d61-a312-df0dd8f9ab61",
+    "name": "Tamil Nadu Marcantile Bank",
+    "category": "atm",
+    "description": "Tamil Nadu Marcantile Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.973406,
+      "lon": 77.616331
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "23fe7880-3782-4406-b181-4017b1e7e001",
+    "name": "Canara Bank",
+    "category": "atm",
+    "description": "Canara Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.965056,
+      "lon": 77.589737
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "fc44c598-adfe-4aed-86ba-cf0d7f55f178",
+    "name": "Karnataka Bank",
+    "category": "atm",
+    "description": "Karnataka Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.966624,
+      "lon": 77.591965
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b96861c0-a0a3-450d-af06-b1c859f9cfef",
+    "name": "Canara Bank",
+    "category": "atm",
+    "description": "Canara Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.965982,
+      "lon": 77.592631
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ea221cd3-a363-4f2e-81af-adee2b00a9b1",
+    "name": "Citibank",
+    "category": "atm",
+    "description": "Citibank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.975203,
+      "lon": 77.614757
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "670e583e-79dc-4dbc-83f5-0ef35daa1b68",
+    "name": "ICICI Bank",
+    "category": "atm",
+    "description": "ICICI Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.967787,
+      "lon": 77.600251
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b5e8f7c0-d81c-4c4f-a0d1-277c9d2e4ae1",
+    "name": "Indian Overseas Bank",
+    "category": "atm",
+    "description": "Indian Overseas Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.96688,
+      "lon": 77.599278
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "013f75c0-9ded-46b4-a8cb-20666a468d18",
+    "name": "Balaji Pharma",
+    "category": "other",
+    "description": "Balaji Pharma \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.967419,
+      "lon": 77.599753
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "3edb6a8a-280a-4a1c-8145-d118448be544",
+    "name": "Chetak Pharmacy",
+    "category": "other",
+    "description": "Chetak Pharmacy \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.967805,
+      "lon": 77.600286
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "4dc5c520-1dcf-437c-a406-761c6a5d90e6",
+    "name": "Axis Bank",
+    "category": "atm",
+    "description": "Axis Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.948933,
+      "lon": 77.600104
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "587dd483-9702-4263-9a0d-23a49fe645cb",
+    "name": "State Bank of India",
+    "category": "atm",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.948463,
+      "lon": 77.59897
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "aa01dfb3-e16a-4e68-893c-f3c51b7c2c46",
+    "name": "Kotak Mahindra Bank",
+    "category": "atm",
+    "description": "Kotak Mahindra Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.974844,
+      "lon": 77.608354
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "062af7f6-3a8d-4747-bbdf-7e553b708923",
+    "name": "State Bank ATM",
+    "category": "atm",
+    "description": "State Bank ATM \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.966447,
+      "lon": 77.594571
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "cc9af7f2-e5d9-4dc6-9376-4dd1fb343d48",
+    "name": "Karnataka Bank",
+    "category": "atm",
+    "description": "Karnataka Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.977238,
+      "lon": 77.575299
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "6d134b3e-2abe-4882-8fe2-500766039438",
+    "name": "Kotak Mahindra Bank",
+    "category": "atm",
+    "description": "Kotak Mahindra Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.977364,
+      "lon": 77.574753
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b5f6c8a6-8c81-4f1f-aafb-a03a90f11473",
+    "name": "State Bank of India",
+    "category": "atm",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.96802,
+      "lon": 77.578772
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "0bf52d11-dfdc-4694-abeb-6275b151371d",
+    "name": "Sundeep Medical Shop",
+    "category": "other",
+    "description": "Sundeep Medical Shop \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.967613,
+      "lon": 77.606184
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d6afec85-5d95-438d-85f7-3ef37cd4b5cc",
+    "name": "Model Medical Stores",
+    "category": "other",
+    "description": "Model Medical Stores \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.968793,
+      "lon": 77.606368
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "8590d94a-bf1a-4a13-adce-b7f87d0e4b5c",
+    "name": "Green Apple",
+    "category": "other",
+    "description": "Green Apple \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.981408,
+      "lon": 77.601268
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "fd6f199d-3b4d-4649-972c-c4acaf106ff9",
+    "name": "Bank of Baroda",
+    "category": "atm",
+    "description": "Bank of Baroda \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.981231,
+      "lon": 77.601719
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "75def125-76b2-499e-9d9a-52f7b332db2b",
+    "name": "Stationery shop",
+    "category": "print_shop",
+    "description": "Stationery shop \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.981777,
+      "lon": 77.601394
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "stationery",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "92bf43cd-9d78-43f4-8393-efad24da3469",
+    "name": "Lakshmi Vilasa Bank Ltd",
+    "category": "atm",
+    "description": "Lakshmi Vilasa Bank Ltd \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.981108,
+      "lon": 77.601428
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d9a7da5f-05d1-4697-bb39-c274b26ba29a",
+    "name": "Green Apple",
+    "category": "other",
+    "description": "Green Apple \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.968374,
+      "lon": 77.594881
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b9b64c2f-65b3-4ddb-9147-e0f93c79ca1c",
+    "name": "CSB Bank",
+    "category": "atm",
+    "description": "CSB Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.974005,
+      "lon": 77.579463
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "494a6ea9-50cb-4b39-aecb-db8a7f7f9339",
+    "name": "Bank of Baroda",
+    "category": "atm",
+    "description": "Bank of Baroda \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.974068,
+      "lon": 77.579292
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "735663f1-1611-40eb-b361-4ec7ef696c43",
+    "name": "Wiliam Penn",
+    "category": "print_shop",
+    "description": "Wiliam Penn \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.970294,
+      "lon": 77.609785
+    },
+    "address": "Ashok Nagar, 15 Magrath Road, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "08041127993",
+    "tags": [
+      "stationery",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "37884133-3d02-4d8c-9bf5-fbea4fc9b2de",
+    "name": "Citibank",
+    "category": "atm",
+    "description": "Citibank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.970233,
+      "lon": 77.609832
+    },
+    "address": "Ashok Nagar,, Magrath Road, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "a3838b95-7bcd-47e0-9c00-cb916b1c4985",
+    "name": "HSBC",
+    "category": "atm",
+    "description": "HSBC \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.970335,
+      "lon": 77.609358
+    },
+    "address": "Ashoknagar, Magrath Road, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "f83b83de-8470-45d0-99f7-a161ad238908",
+    "name": "J S Homoeo House",
+    "category": "other",
+    "description": "J S Homoeo House \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.982224,
+      "lon": 77.602928
+    },
+    "address": "Near Bowring Hospital , hospital Road , 22/2, Central St, Shivaji Nagar, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "+9198802 46426",
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "9590c375-7acb-4be5-8f85-5c531555fd28",
+    "name": "V L Nathan & Co",
+    "category": "other",
+    "description": "V L Nathan & Co \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.985581,
+      "lon": 77.607109
+    },
+    "address": "33, Quadrant Road, Sulthangunta, Shivaji Nagar, bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "080 2551 2993",
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "2b12632a-a497-4b79-bb64-55b109fc922a",
+    "name": "Nathans Vet Pharma Centre",
+    "category": "other",
+    "description": "Nathans Vet Pharma Centre \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.976282,
+      "lon": 77.599102
+    },
+    "address": "32, Quadrant Road, Shivaji Nagar, Near Taj Hotel, Shanthala Nagar, Ashok Nagar, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "080 2286 1740",
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "790fdaba-f369-4d45-8966-6fa79ec84132",
+    "name": "Mahaveer Ayur & Homoeo",
+    "category": "other",
+    "description": "Mahaveer Ayur & Homoeo \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.981332,
+      "lon": 77.604106
+    },
+    "address": "23, Opposite Bowring Hospital, Lady Curzon Rd, Tasker Town, Shivaji Nagar, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "080 2559 3299",
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e4db51f2-69d7-4996-becd-edfb48f3074d",
+    "name": "Gururaja Pharmacy",
+    "category": "other",
+    "description": "Gururaja Pharmacy \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.978112,
+      "lon": 77.573959
+    },
+    "address": "15, Tank Bund Rd, RK Puram, Gandhi Nagar, Gandhi Nagar, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "080 2235 0038",
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "cf4e3153-10de-43db-b9d1-7ac6ef57edf9",
+    "name": "Balaji Vaidyasala",
+    "category": "other",
+    "description": "Balaji Vaidyasala \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.98138,
+      "lon": 77.602996
+    },
+    "address": "4/5, Central Square Complex, 47, Central Street, Tasker Town, Shivaji Nagar, Tasker Town, Shivaji Nagar, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "+9198455 01642",
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "7652a4a2-3f33-4fad-9880-b7f1624e2988",
+    "name": "T. K. Diagnostic Centre",
+    "category": "other",
+    "description": "T. K. Diagnostic Centre \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.984324,
+      "lon": 77.598475
+    },
+    "address": "22, 1st Floor, NG Chambers, Venkataswamy Naidu Rd, Shivaji Nagar, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "080 2286 0567",
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "725b97cd-c37b-4a11-9435-5e720d714ca8",
+    "name": "elbitdiagnostics",
+    "category": "other",
+    "description": "elbitdiagnostics \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.983367,
+      "lon": 77.596664
+    },
+    "address": "1 1/2, Indian Express Building, 3rd Floor,, Queens Rd, Vasanth Nagar, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "080 4057 0000",
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d84e203e-28d8-4f8a-92e8-44592350ffbd",
+    "name": "Al Shifa Unani & Ayurvedic Dawa Khana",
+    "category": "other",
+    "description": "Al Shifa Unani & Ayurvedic Dawa Khana \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.987316,
+      "lon": 77.605987
+    },
+    "address": "28, Charminar Masjid Road, Near-Russel Market, Shivaji Nagar, Sulthangunta, Shivaji Nagar, bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "080 2530 2786",
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e7b32005-5c1e-4e47-b7e1-6c580df3b567",
+    "name": "Medinova",
+    "category": "other",
+    "description": "Medinova \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.981604,
+      "lon": 77.601106
+    },
+    "address": "55, Infantry Road, Shivaji Nagar, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "080 2286 8423",
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e2e0d3be-b8a2-486c-b65e-b54c90753e0e",
+    "name": "Sundeep Medicals",
+    "category": "other",
+    "description": "Sundeep Medicals \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.967421,
+      "lon": 77.605845
+    },
+    "address": "137, Brigade Road, Richmond Town, Shanthala Nagar, Ashok Nagar, Shanthala Nagar, Ashok Nagar, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "080 2221 2968",
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "3c1cd594-2901-4a89-a2cb-9c44472c82a9",
+    "name": "Hitesh Medicals & General Stor",
+    "category": "other",
+    "description": "Hitesh Medicals & General Stor \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.971362,
+      "lon": 77.606244
+    },
+    "address": "C007, Ashok Nagar, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "+91 80 2558 4302",
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "0c6f3b4c-143a-4e65-8215-364105615d2b",
+    "name": "Bangalore Fetal Medicine Centre",
+    "category": "other",
+    "description": "Bangalore Fetal Medicine Centre \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.965863,
+      "lon": 77.599881
+    },
+    "address": "5/1, 2nd Floor, Rich Homes, Richmond Road, Shanthala Nagar, Ashok Nagar, Shanthala Nagar, Ashok Nagar, Bengaluru",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "080 2221 0540",
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "763aaf7a-6877-485d-a524-ffd591e79529",
+    "name": "Brindhavan pharma",
+    "category": "other",
+    "description": "Brindhavan pharma \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.985346,
+      "lon": 77.57081
+    },
+    "address": "30, 1st Main Road, Jai Bheema Nagar, Seshadripuram, bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "+91 98456 79745",
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "891299d4-4d7e-4f44-9583-36c8484cffb1",
+    "name": "Fair Deal Pharma (Medkart)",
+    "category": "other",
+    "description": "Fair Deal Pharma (Medkart) \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.967196,
+      "lon": 77.573683
+    },
+    "address": "164, P.o box 7182,1st floor, sultanpet,, bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "080 2234 1736",
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "23ff539f-bd9d-407e-97dd-c8babdccf3a1",
+    "name": "Central Lab",
+    "category": "other",
+    "description": "Central Lab \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.964424,
+      "lon": 77.596879
+    },
+    "address": "Lalbagh Road, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "+9180 222 37370",
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "3dab85e6-c1ab-4cf6-b010-5c1bb3fcab7e",
+    "name": "Nisarga Ayurvedic Medicine Research Centre",
+    "category": "other",
+    "description": "Nisarga Ayurvedic Medicine Research Centre \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.946938,
+      "lon": 77.598135
+    },
+    "address": "466/1, 10th Main, 13th Cross, Near-Brand Factory, Wilson Garden, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "+9180 2212 6994",
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "bbda93f4-d1a0-48a8-b6b6-316ac36fe5e6",
+    "name": "State Bank of India",
+    "category": "atm",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.971335,
+      "lon": 77.584547
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm"
+    ],
+    "rating": null
+  },
+  {
+    "id": "95d86fa1-df2e-4fb6-872c-b342ce2fbcdd",
+    "name": "TR Vysya Hostel and Choultry",
+    "category": "pg",
+    "description": "TR Vysya Hostel and Choultry \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.982693,
+      "lon": 77.609844
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "hostel",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "2d67a66a-8f23-4c31-a824-59f9c5ab2a68",
+    "name": "Cauvery hostel",
+    "category": "pg",
+    "description": "Cauvery hostel \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.975453,
+      "lon": 77.570544
+    },
+    "address": "Gubbi Thotadappa Road",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "hostel",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "3e40d7cb-59fd-4f71-8d39-5649c7ffc706",
+    "name": "Nandi",
+    "category": "pg",
+    "description": "Nandi \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.975285,
+      "lon": 77.570152
+    },
+    "address": "Gubbi Thotadappa Road",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "hostel",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "2f1632ec-e9ac-4a17-b09f-0742f2a6d4dc",
+    "name": "Punjab National Bank",
+    "category": "atm",
+    "description": "Punjab National Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.977148,
+      "lon": 77.570044
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e842b959-bf01-4c46-b2bb-b83802b7be59",
+    "name": "State Bank of India",
+    "category": "atm",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.97738,
+      "lon": 77.569807
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm"
+    ],
+    "rating": null
+  },
+  {
+    "id": "0f95d081-0681-4708-885f-ab6f2be0600a",
+    "name": "Indian Bank",
+    "category": "atm",
+    "description": "Indian Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.977214,
+      "lon": 77.570043
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm"
+    ],
+    "rating": null
+  },
+  {
+    "id": "c15b29e2-55ce-4785-a0b4-cdea4aa2d995",
+    "name": "Chamundy Hostel",
+    "category": "pg",
+    "description": "Chamundy Hostel \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.976232,
+      "lon": 77.570428
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "hostel",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5d52a141-83af-42ab-97f7-e404b610d522",
+    "name": "Sri Ganesha Lodge",
+    "category": "pg",
+    "description": "Sri Ganesha Lodge \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.97916,
+      "lon": 77.57573
+    },
+    "address": "72, 6th Cross Road",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "41128117",
+    "tags": [
+      "guest_house",
+      "osm"
+    ],
+    "rating": null
+  },
+  {
+    "id": "83ea7772-58ae-4c93-bd8c-b8a7d3960b91",
+    "name": "Allahabad Bank",
+    "category": "atm",
+    "description": "Allahabad Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.973336,
+      "lon": 77.579937
+    },
+    "address": "2, Kempegowda Road, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "080-22262064",
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "a417aa33-a537-498b-8fb6-6e59f9bceeb2",
+    "name": "Allahabad Bank",
+    "category": "atm",
+    "description": "Allahabad Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.984811,
+      "lon": 77.601649
+    },
+    "address": "180, Shivaji Road, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "080-22865251",
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d505113d-65d0-488b-ad81-c92329a2bb33",
+    "name": "Karnataka Bank",
+    "category": "atm",
+    "description": "Karnataka Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.976739,
+      "lon": 77.570744
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "749a9869-a530-4518-ae7a-4bd40624cb12",
+    "name": "State Bank of India",
+    "category": "atm",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.954989,
+      "lon": 77.591591
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "532f3e9f-b2e1-4e83-b247-8fd101aaa0d4",
+    "name": "Central Bank of India",
+    "category": "atm",
+    "description": "Central Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.969692,
+      "lon": 77.606642
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "61a7c5bf-19e6-4e66-8903-354198a14461",
+    "name": "Corporation Bank",
+    "category": "atm",
+    "description": "Corporation Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.967999,
+      "lon": 77.600787
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "c08d97cc-9a40-437d-9ec4-56907f553c45",
+    "name": "Axis Bank",
+    "category": "atm",
+    "description": "Axis Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.965655,
+      "lon": 77.601892
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ee649e88-1ec4-4f39-83c9-407075e7f35a",
+    "name": "Royal guest house",
+    "category": "pg",
+    "description": "Royal guest house \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.945005,
+      "lon": 77.59482
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "guest_house",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ea2cb07f-9441-4dad-8ca4-882d867c1999",
+    "name": "Axis Bank",
+    "category": "atm",
+    "description": "Axis Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.945194,
+      "lon": 77.594969
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "2e613e65-2fbd-4432-8aec-dce6cfccc65e",
+    "name": "Karnataka Bank",
+    "category": "atm",
+    "description": "Karnataka Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.97771,
+      "lon": 77.572247
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "7bcdc480-1735-4c7b-b3f2-a002228cd3a5",
+    "name": "Corporation Bank",
+    "category": "atm",
+    "description": "Corporation Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.987974,
+      "lon": 77.57645
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b177f833-7a12-4426-af89-a68d3649442a",
+    "name": "Hosmat Pharmacy",
+    "category": "other",
+    "description": "Hosmat Pharmacy \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.967146,
+      "lon": 77.610396
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "7e3c303e-9fdf-4142-9e55-f8db8b84cdc9",
+    "name": "Axis Bank",
+    "category": "atm",
+    "description": "Axis Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.96594,
+      "lon": 77.614409
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "0cf43c69-a141-4e4a-9874-7bd66598b3ee",
+    "name": "Axis Bank",
+    "category": "atm",
+    "description": "Axis Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.964714,
+      "lon": 77.605667
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "6c1c92bd-f3bb-40c2-8329-4fd2fd9fb068",
+    "name": "Reeta Enterprises",
+    "category": "print_shop",
+    "description": "Reeta Enterprises \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.964672,
+      "lon": 77.614358
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "stationery",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ea500b96-f3b3-4db2-91e4-3dc9ec47b311",
+    "name": "Sai Stores",
+    "category": "print_shop",
+    "description": "Sai Stores \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.964666,
+      "lon": 77.614324
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "stationery",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "299c9070-8545-4d4e-800f-6f717f610fb2",
+    "name": "Mustafai Unani Pharmacy",
+    "category": "other",
+    "description": "Mustafai Unani Pharmacy \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.994196,
+      "lon": 77.607601
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "cc756569-a9ad-4000-8f25-0190feafdf0a",
+    "name": "Zar Digital Prints",
+    "category": "print_shop",
+    "description": "Zar Digital Prints \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.992015,
+      "lon": 77.604258
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "copyshop",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "12739a6d-f08a-4392-acaf-74a1054b8fce",
+    "name": "Bangalore YWCA",
+    "category": "pg",
+    "description": "Bangalore YWCA \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.979209,
+      "lon": 77.606751
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "hostel",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "d6bc2b5d-0182-4274-a67a-a150dbca5abf",
+    "name": "Apollo Pharmacy",
+    "category": "other",
+    "description": "Apollo Pharmacy \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.986707,
+      "lon": 77.579603
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "87b40479-f484-4aa9-a57d-bce6aae36a42",
+    "name": "Trust Medicals",
+    "category": "other",
+    "description": "Trust Medicals \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.948031,
+      "lon": 77.597235
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "1b848b1a-7c10-4ee6-aa86-e1a0cf1cea5e",
+    "name": "Sree Subramanya Co-Operative Bank",
+    "category": "atm",
+    "description": "Sree Subramanya Co-Operative Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.950174,
+      "lon": 77.579816
+    },
+    "address": "106",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "4a9f78a3-1ae3-4bf0-b632-0702ed364e76",
+    "name": "State Bank of India",
+    "category": "atm",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.974359,
+      "lon": 77.571161
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5a86d4fd-3786-4e28-93c4-ad8d37d75b44",
+    "name": "HDFC Bank",
+    "category": "atm",
+    "description": "HDFC Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.949542,
+      "lon": 77.579827
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "02e93cb3-91aa-4c38-897f-34489388b9b0",
+    "name": "Canara Bank",
+    "category": "atm",
+    "description": "Canara Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.949537,
+      "lon": 77.580231
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "345094c5-6295-4d47-a01f-8b9ab36a2984",
+    "name": "New Point Stationery World",
+    "category": "print_shop",
+    "description": "New Point Stationery World \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.952247,
+      "lon": 77.577375
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "stationery",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e66db124-5525-4a39-be75-a1b49d069270",
+    "name": "Nagashri Medicals",
+    "category": "other",
+    "description": "Nagashri Medicals \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.95249,
+      "lon": 77.577325
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "708cbc75-9454-4d72-8e7c-8da3c388d529",
+    "name": "LoCul.Uptown",
+    "category": "pg",
+    "description": "LoCul.Uptown \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.992555,
+      "lon": 77.586065
+    },
+    "address": "40, Sankey Cross Road, Abshot Layout, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "+918073488380",
+    "tags": [
+      "hostel",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "76f8b08c-eb78-493c-ba8c-13a731623885",
+    "name": "Punjab National Bank",
+    "category": "atm",
+    "description": "Punjab National Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.964987,
+      "lon": 77.599633
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b088b10e-3d64-495e-83ac-90512d0310d6",
+    "name": "Sainath Office Needs",
+    "category": "print_shop",
+    "description": "Sainath Office Needs \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.97422,
+      "lon": 77.575193
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "stationery",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "1acf7fb5-607f-49de-a456-7ae51c32dad0",
+    "name": "Kotak Mahindra Bank",
+    "category": "atm",
+    "description": "Kotak Mahindra Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.974032,
+      "lon": 77.575513
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "898c9b1c-c09c-4f8f-9fca-5c503e13f866",
+    "name": "Monissh Novelities",
+    "category": "print_shop",
+    "description": "Monissh Novelities \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.974945,
+      "lon": 77.57582
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "stationery",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "15e8391a-cfd1-4530-b34c-a0294049d053",
+    "name": "Central Bank of India",
+    "category": "atm",
+    "description": "Central Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.975049,
+      "lon": 77.576145
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "4b3b5361-2434-4f55-b960-867b3b7cd0da",
+    "name": "State Bank of India",
+    "category": "atm",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.975594,
+      "lon": 77.5753
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "42722438-f5e3-41e6-96c9-ca421e8d753b",
+    "name": "ICICI Bank",
+    "category": "atm",
+    "description": "ICICI Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.977201,
+      "lon": 77.573337
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "347efdb6-9ee5-4e96-af0f-1eaa93fe1386",
+    "name": "Danveer Sheth kapurchand rajmalji Jain shwetamber dharmshala",
+    "category": "pg",
+    "description": "Danveer Sheth kapurchand rajmalji Jain shwetamber dharmshala \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.969371,
+      "lon": 77.576915
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "guest_house",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "62f6a981-3d00-4f77-b85a-e86f46b65928",
+    "name": "ICICI Bank",
+    "category": "atm",
+    "description": "ICICI Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.968882,
+      "lon": 77.579193
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ce665f45-341c-4c43-8a3f-9e0d95de5707",
+    "name": "IDFC First Bank",
+    "category": "atm",
+    "description": "IDFC First Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.969249,
+      "lon": 77.579449
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "96270a8f-3abd-47b4-bf24-7c555c63e16d",
+    "name": "Canara Bank",
+    "category": "atm",
+    "description": "Canara Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.969273,
+      "lon": 77.579469
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ec4d32cc-05cf-40a8-bb87-d01da35b4e9b",
+    "name": "United Bank of India",
+    "category": "atm",
+    "description": "United Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.97377,
+      "lon": 77.607655
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "a030a2d8-3de4-4a48-b95c-2a7d31810b8d",
+    "name": "CSB Bank",
+    "category": "atm",
+    "description": "CSB Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.971352,
+      "lon": 77.606545
+    },
+    "address": "A020, Ashok Nagar, Bangalore",
     "price": null,
     "price_unit": null,
     "hours": [
       {
         "day": "mon",
-        "open": "08:00",
-        "close": "22:00"
+        "open": "09:30",
+        "close": "16:00"
       },
       {
         "day": "tue",
-        "open": "08:00",
-        "close": "22:00"
+        "open": "09:30",
+        "close": "16:00"
       },
       {
         "day": "wed",
-        "open": "08:00",
-        "close": "22:00"
+        "open": "09:30",
+        "close": "16:00"
       },
       {
         "day": "thu",
-        "open": "08:00",
-        "close": "22:00"
+        "open": "09:30",
+        "close": "16:00"
       },
       {
         "day": "fri",
-        "open": "08:00",
-        "close": "22:00"
+        "open": "09:30",
+        "close": "16:00"
       },
       {
         "day": "sat",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sun",
-        "open": "08:00",
-        "close": "22:00"
+        "open": "09:30",
+        "close": "16:00"
       }
     ],
-    "phone": "+919876557381",
+    "phone": null,
     "tags": [
-      "other",
-      "student",
-      "campus",
-      "budget"
+      "bank",
+      "osm",
+      "hours-unverified"
     ],
-    "rating": 3.6
+    "rating": null
   },
   {
-    "id": "204f294c-a78d-422a-8bad-a4d43a52ccb5",
-    "name": "Snack Corner - Branch",
-    "category": "other",
-    "description": "Small campus-side shop, convenient for students in a hurry.",
+    "id": "ab482629-ce2b-42fa-bb23-f73bf50e7742",
+    "name": "Syndicate Bank",
+    "category": "atm",
+    "description": "Syndicate Bank \u2014 imported from OpenStreetMap.",
     "location": {
-      "lat": 12.960786,
-      "lon": 77.59909
+      "lat": 12.974218,
+      "lon": 77.579346
     },
-    "address": "Near Campus Gate 4, Bangalore",
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "167c0c70-ffc1-477a-bd1b-4b834f85a4fe",
+    "name": "Bank of India",
+    "category": "atm",
+    "description": "Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.966117,
+      "lon": 77.60517
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ab617888-2d1a-4174-85f3-b246f9ae19f9",
+    "name": "Utse Suites",
+    "category": "pg",
+    "description": "Utse Suites \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.984914,
+      "lon": 77.611589
+    },
+    "address": "73, Kamaraj Road, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "guest_house",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "031fc63d-135c-4fc5-a90e-6331a7cde842",
+    "name": "JK Tyre & Industries Limited - Transit House",
+    "category": "pg",
+    "description": "JK Tyre & Industries Limited - Transit House \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.987687,
+      "lon": 77.592982
+    },
+    "address": "65, Cunningham Road Cross",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "08022260331",
+    "tags": [
+      "guest_house",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "81e6c89d-c2ab-4e57-be25-58255537e6c3",
+    "name": "Sapthagiri Medicals",
+    "category": "other",
+    "description": "Sapthagiri Medicals \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.955372,
+      "lon": 77.585542
+    },
+    "address": "120/1, Lalbagh Road",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "10814aee-7bef-48e7-bfc2-e1598618b39a",
+    "name": "ICICI Bank",
+    "category": "atm",
+    "description": "ICICI Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.994234,
+      "lon": 77.60786
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "c521b149-d734-40fc-a807-7d234e5b78a0",
+    "name": "State Bank of India",
+    "category": "atm",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.977466,
+      "lon": 77.591814
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "a1e07ac0-7da0-42b7-9d05-7fae7d13aa89",
+    "name": "Bank of Baroda",
+    "category": "atm",
+    "description": "Bank of Baroda \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.99156,
+      "lon": 77.594236
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "296cccac-f785-43cd-ae2e-452e81963c6d",
+    "name": "Punjab National Bank",
+    "category": "atm",
+    "description": "Punjab National Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.992268,
+      "lon": 77.594974
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e4d5cc71-3e2f-4318-82a8-cdf6747a3c51",
+    "name": "Corporation Bank",
+    "category": "atm",
+    "description": "Corporation Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.983537,
+      "lon": 77.58585
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e35ef54d-fbd6-4f75-8c6a-c243e7bf3f07",
+    "name": "State Bank of India",
+    "category": "atm",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.982408,
+      "lon": 77.574771
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ee4d04ba-69af-402a-a37e-6b1c9f74cabe",
+    "name": "South Indian Bank",
+    "category": "atm",
+    "description": "South Indian Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.971336,
+      "lon": 77.586755
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "2817a23c-0c09-4488-9761-28ccd023e8cb",
+    "name": "Axis Bank",
+    "category": "atm",
+    "description": "Axis Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.972042,
+      "lon": 77.583232
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "eaa52d13-9d99-4748-95a9-e663af47a4d8",
+    "name": "Canara Bank",
+    "category": "atm",
+    "description": "Canara Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.972158,
+      "lon": 77.583065
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e81637b1-93cd-436c-84b9-d927c966b20f",
+    "name": "State Bank of India",
+    "category": "atm",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.972294,
+      "lon": 77.582917
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "311749ad-261f-48b6-941e-7fa50b960ac0",
+    "name": "Kotak Mahindra Bank",
+    "category": "atm",
+    "description": "Kotak Mahindra Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.973267,
+      "lon": 77.580081
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "944ad8f8-d143-4774-88b7-3d936340994a",
+    "name": "South Indian Bank",
+    "category": "atm",
+    "description": "South Indian Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.974093,
+      "lon": 77.578238
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "6fe9ff50-3587-4576-b308-985e2efacd80",
+    "name": "State Bank of India",
+    "category": "atm",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.958155,
+      "lon": 77.60537
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "bfc00f91-61b0-478f-a582-ee05cea6e783",
+    "name": "Union Bank of India",
+    "category": "atm",
+    "description": "Union Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.963038,
+      "lon": 77.604944
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "6d2cd27b-c36e-4d32-8413-cc3b027ccf09",
+    "name": "State Bank of India",
+    "category": "atm",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.96204,
+      "lon": 77.593714
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "49fa0bf7-bec1-4677-a4b4-5671f8d07fb1",
+    "name": "Max Medicals",
+    "category": "other",
+    "description": "Max Medicals \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.95648,
+      "lon": 77.582874
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b56ac565-7f3f-489d-8677-356eb247bd99",
+    "name": "Corporation Bank",
+    "category": "atm",
+    "description": "Corporation Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.992896,
+      "lon": 77.58978
+    },
+    "address": "8th Main Rd, Vasanth Nagar, Bengaluru, Karnataka",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "f9755762-1ae6-4c4c-867a-12b94ea8c316",
+    "name": "Casa Cottage",
+    "category": "pg",
+    "description": "Casa Cottage \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.96436,
+      "lon": 77.60418
+    },
+    "address": "2, Clapham Street",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "+91 98440 19710",
+    "tags": [
+      "guest_house",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "8b95b1d1-fbec-46f4-a473-eca4380ef7a3",
+    "name": "State Bank of India",
+    "category": "atm",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.984063,
+      "lon": 77.580813
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "aaf94ebe-af9c-46c6-9561-b6e4322e6b02",
+    "name": "HDFC Bank",
+    "category": "atm",
+    "description": "HDFC Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.984414,
+      "lon": 77.578281
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "68564138-d9b2-4e9b-97af-c22f597ef8f4",
+    "name": "Sapthagiri Xerox",
+    "category": "print_shop",
+    "description": "Sapthagiri Xerox \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.986731,
+      "lon": 77.579726
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "copyshop",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "c9322d6b-1b19-4ade-b4d5-9ca931f4bf01",
+    "name": "Megha Xerox",
+    "category": "print_shop",
+    "description": "Megha Xerox \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.987331,
+      "lon": 77.578872
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "copyshop",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5b78920e-8cbb-4664-b079-73fc1db0c343",
+    "name": "HDFC Bank",
+    "category": "atm",
+    "description": "HDFC Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.964297,
+      "lon": 77.614632
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "149d4434-56d0-47fc-a29b-134ad05d2815",
+    "name": "Canara Bank",
+    "category": "atm",
+    "description": "Canara Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.981565,
+      "lon": 77.597449
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "18d3248b-4b6b-4a12-8660-0f4585893c9e",
+    "name": "Canara Bank",
+    "category": "atm",
+    "description": "Canara Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.959653,
+      "lon": 77.593832
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5195438d-b4cd-4cd5-a840-bd982202517c",
+    "name": "Karnataka Bank",
+    "category": "atm",
+    "description": "Karnataka Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.959085,
+      "lon": 77.593637
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5a0bd3eb-1f7e-44c7-b527-52a36f6c75ce",
+    "name": "Karnataka Bank",
+    "category": "atm",
+    "description": "Karnataka Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.968906,
+      "lon": 77.600286
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "df0925a0-a00e-44c5-afc4-3b1277361df7",
+    "name": "Canara Bank",
+    "category": "atm",
+    "description": "Canara Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.970798,
+      "lon": 77.597319
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5639b264-45a0-47fd-b2aa-28a3cd3db3a6",
+    "name": "AU Small Finance Bank",
+    "category": "atm",
+    "description": "AU Small Finance Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.971738,
+      "lon": 77.606402
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "acf3f8e8-6af8-4e19-ab3e-10124bb28959",
+    "name": "Kotak Mahindra Bank",
+    "category": "atm",
+    "description": "Kotak Mahindra Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.982233,
+      "lon": 77.599225
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "6605bf53-f759-438f-92cc-27620c2579bf",
+    "name": "HDFC Bank",
+    "category": "atm",
+    "description": "HDFC Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.982126,
+      "lon": 77.599468
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "831d1951-c69f-4459-8980-68d615709aef",
+    "name": "HDFC Bank",
+    "category": "atm",
+    "description": "HDFC Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.980793,
+      "lon": 77.601355
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "483d32f1-f13e-4273-876a-eaf5a390ad17",
+    "name": "Union Bank of India",
+    "category": "atm",
+    "description": "Union Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.974589,
+      "lon": 77.619645
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "81374fae-7266-4f6a-b7a8-8376dcfde150",
+    "name": "Artzo",
+    "category": "print_shop",
+    "description": "Artzo \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.975746,
+      "lon": 77.602259
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "stationery",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "fdf573b6-f8e2-4934-ad0a-8ce8f9892ec9",
+    "name": "HDFC Bank",
+    "category": "atm",
+    "description": "HDFC Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.983459,
+      "lon": 77.607366
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "52df5580-29bd-4f09-9bd9-54177f4c9e6e",
+    "name": "HDFC Bank",
+    "category": "atm",
+    "description": "HDFC Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.968645,
+      "lon": 77.57492
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "95769731-cc28-4445-b8bc-899ca13fb7ef",
+    "name": "Indian Overseas Bank",
+    "category": "atm",
+    "description": "Indian Overseas Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.982688,
+      "lon": 77.597775
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "1f34824f-5c06-4924-81f6-6d57071f679e",
+    "name": "Xerox & Mobile Shop",
+    "category": "print_shop",
+    "description": "Xerox & Mobile Shop \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.981171,
+      "lon": 77.605978
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "copyshop",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5db6a030-3826-425e-b389-4bc3896423ea",
+    "name": "Jain Medicals",
+    "category": "other",
+    "description": "Jain Medicals \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.981878,
+      "lon": 77.604078
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "4b7407d3-bac4-44c6-9674-f99f9e0d846f",
+    "name": "Panchavati Chemists and Druggists",
+    "category": "other",
+    "description": "Panchavati Chemists and Druggists \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.98669,
+      "lon": 77.579697
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5070da23-3c60-4a38-9a83-3e8eae8178ed",
+    "name": "Forster Pharma",
+    "category": "other",
+    "description": "Forster Pharma \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.972088,
+      "lon": 77.60094
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "9c928aae-2cce-4617-8f8c-a2766b1aba58",
+    "name": "IDFC First Bank",
+    "category": "atm",
+    "description": "IDFC First Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.984966,
+      "lon": 77.596342
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "0749cc12-4de9-4f51-a134-be090f88cfc3",
+    "name": "Kolorkode",
+    "category": "print_shop",
+    "description": "Kolorkode \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.965574,
+      "lon": 77.603229
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "copyshop",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "80d3b9fc-0cc9-497b-9126-280b82715631",
+    "name": "Punjab National Bank",
+    "category": "atm",
+    "description": "Punjab National Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.982369,
+      "lon": 77.608219
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "4b829ba9-1a1e-4a28-a19c-ad7791955813",
+    "name": "Union Bank",
+    "category": "atm",
+    "description": "Union Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.963426,
+      "lon": 77.584214
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "c7dfcc2f-126d-4be8-9f1e-f60295de447d",
+    "name": "ICICI Bank",
+    "category": "atm",
+    "description": "ICICI Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.957859,
+      "lon": 77.592699
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "4713b39d-49f0-46b6-ab56-9e0d03e724e8",
+    "name": "Locul Hostel Central",
+    "category": "pg",
+    "description": "Locul Hostel Central \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.975715,
+      "lon": 77.602405
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "hostel",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "1c0d9f6b-55bb-4424-a283-307494a5ac88",
+    "name": "State Bank of India",
+    "category": "atm",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.99447,
+      "lon": 77.593655
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "6cc77645-1a0b-4684-8eda-09af2031b937",
+    "name": "Bank of Maharashtra",
+    "category": "atm",
+    "description": "Bank of Maharashtra \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.971032,
+      "lon": 77.606781
+    },
+    "address": "1, Brigade Road, Ashok Nagar, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "4411c5db-98f0-4f12-b04a-1b9e4053b10c",
+    "name": "Hafiz Pharma",
+    "category": "other",
+    "description": "Hafiz Pharma \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.959701,
+      "lon": 77.601563
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "7898f8f9-e1b0-4942-b4aa-050b63adcb9b",
+    "name": "HKGN Medicals",
+    "category": "other",
+    "description": "HKGN Medicals \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.960025,
+      "lon": 77.601628
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "8191e029-0837-49b7-8712-b984a3faf6f6",
+    "name": "Sri Lakshminarasimha Drug Centre",
+    "category": "other",
+    "description": "Sri Lakshminarasimha Drug Centre \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.957158,
+      "lon": 77.571877
+    },
+    "address": "38/1, Pampa Mahakavi Road",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "fc029559-e67b-40c6-b8e2-24f76bcb0e29",
+    "name": "Bank of Baroda",
+    "category": "atm",
+    "description": "Bank of Baroda \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.984269,
+      "lon": 77.586576
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "62f47f67-a72d-42a3-9022-a000e43ee3de",
+    "name": "IndusInd Bank",
+    "category": "atm",
+    "description": "IndusInd Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.975185,
+      "lon": 77.602822
+    },
+    "address": "Museum Road, Shanthala Nagar",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "579e5400-d4fb-404e-a569-1d14ec276407",
+    "name": "Davadost",
+    "category": "other",
+    "description": "Davadost \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.977627,
+      "lon": 77.56959
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "4fae149f-37fd-44a5-96b6-d17c31b5bc7a",
+    "name": "Primecare Pharma",
+    "category": "other",
+    "description": "Primecare Pharma \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.951904,
+      "lon": 77.594407
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b6f67e08-e219-4392-8f73-ee807ccd9864",
+    "name": "Kamaldeep Medicals",
+    "category": "other",
+    "description": "Kamaldeep Medicals \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.950034,
+      "lon": 77.596534
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e0f24e60-b71d-4b8b-b095-7f24afcb6a06",
+    "name": "Amruth Medicals",
+    "category": "other",
+    "description": "Amruth Medicals \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.949974,
+      "lon": 77.596603
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5b9ce0c6-87c7-467e-becb-7c4d81969140",
+    "name": "Rajalakshmi Medicals",
+    "category": "other",
+    "description": "Rajalakshmi Medicals \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.951474,
+      "lon": 77.595132
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "2788c3f6-e315-44f9-9e71-b98db854a845",
+    "name": "Apollo Pharmacy",
+    "category": "other",
+    "description": "Apollo Pharmacy \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.94961,
+      "lon": 77.596226
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "dc150727-6602-4758-8c73-0d0625f0f79e",
+    "name": "Susheela Medicals",
+    "category": "other",
+    "description": "Susheela Medicals \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.949408,
+      "lon": 77.59618
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "3b0ebf93-bb51-4d53-a397-55cfb0144567",
+    "name": "The Hosteller Bangalore, Brigade Road",
+    "category": "pg",
+    "description": "The Hosteller Bangalore, Brigade Road \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.967272,
+      "lon": 77.60673
+    },
+    "address": "124, Brigade Road",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "09810187717",
+    "tags": [
+      "hostel",
+      "osm"
+    ],
+    "rating": null
+  },
+  {
+    "id": "576b11f4-2a9c-46b4-af8c-601c5a748928",
+    "name": "Prolink",
+    "category": "print_shop",
+    "description": "Prolink \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.949248,
+      "lon": 77.593434
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "copyshop",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "470928ac-1202-43f8-863d-369e378f8bc7",
+    "name": "LIC VIP Guest House",
+    "category": "pg",
+    "description": "LIC VIP Guest House \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.966594,
+      "lon": 77.594814
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "guest_house",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "2d86eab0-50bd-4374-83e6-6604602bfd10",
+    "name": "Yes Bank",
+    "category": "atm",
+    "description": "Yes Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.965314,
+      "lon": 77.595315
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "68a346c3-6ff4-458a-950f-dc3968155324",
+    "name": "Amber",
+    "category": "pg",
+    "description": "Amber \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.993312,
+      "lon": 77.590595
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "hostel",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5457d6f4-a2a8-4910-ba2d-59116330ef9f",
+    "name": "Blue bells clover",
+    "category": "pg",
+    "description": "Blue bells clover \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.992125,
+      "lon": 77.590062
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "hostel",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "34d08dd4-fbce-43f7-8a59-6c4defe6b844",
+    "name": "Shivam Stationery world",
+    "category": "print_shop",
+    "description": "Shivam Stationery world \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.992575,
+      "lon": 77.592371
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "stationery",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ff6a9260-cf38-4882-a7e3-8180479ae427",
+    "name": "Indian Bank",
+    "category": "atm",
+    "description": "Indian Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.964359,
+      "lon": 77.596852
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "c3cbb6b1-fda5-4d89-964f-2e60b7be4bf1",
+    "name": "Alpha Suites",
+    "category": "pg",
+    "description": "Alpha Suites \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.988555,
+      "lon": 77.593065
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "hostel",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "823a242d-f62d-4b96-a72e-9f104bcc7a40",
+    "name": "Sri Krishna Medicals",
+    "category": "other",
+    "description": "Sri Krishna Medicals \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.978102,
+      "lon": 77.575215
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "36a3d2dc-a723-4cc5-91bf-daa1e3f778ce",
+    "name": "Amogh Medical",
+    "category": "other",
+    "description": "Amogh Medical \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.978341,
+      "lon": 77.575127
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "a65bb0bb-dda9-4e8e-994e-7e8320884394",
+    "name": "State Bank of India",
+    "category": "atm",
+    "description": "State Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.983282,
+      "lon": 77.610038
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "e9c73cbb-0494-456b-a732-36319c0e4d47",
+    "name": "Axis Bank",
+    "category": "atm",
+    "description": "Axis Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.983282,
+      "lon": 77.610019
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "atm",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "2ae7fec3-ccd1-46f1-bd16-acf78689db1e",
+    "name": "HDFC Bank",
+    "category": "atm",
+    "description": "HDFC Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.974414,
+      "lon": 77.606824
+    },
+    "address": "Church Street",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "205e3398-747e-45cc-b0d6-bc4733d2071d",
+    "name": "Indian Overseas Bank",
+    "category": "atm",
+    "description": "Indian Overseas Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.961364,
+      "lon": 77.594481
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b1f3c1bf-f015-4d4c-bf77-cefebea83de9",
+    "name": "Yes Bank",
+    "category": "atm",
+    "description": "Yes Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.959495,
+      "lon": 77.603648
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "6ebe8ac9-6ffd-40ef-b233-28c75f9e44ab",
+    "name": "Olympus Xerox",
+    "category": "print_shop",
+    "description": "Olympus Xerox \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.98342,
+      "lon": 77.595825
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "copyshop",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "c781aefe-8f22-48e4-8863-dfaa7bc284b1",
+    "name": "Printo",
+    "category": "print_shop",
+    "description": "Printo \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.967512,
+      "lon": 77.606632
+    },
+    "address": "",
     "price": null,
     "price_unit": null,
     "hours": [
       {
         "day": "mon",
-        "open": "08:00",
-        "close": "22:00"
+        "open": "10:00",
+        "close": "20:00"
       },
       {
         "day": "tue",
-        "open": "08:00",
-        "close": "22:00"
+        "open": "10:00",
+        "close": "20:00"
       },
       {
         "day": "wed",
-        "open": "08:00",
-        "close": "22:00"
+        "open": "10:00",
+        "close": "20:00"
       },
       {
         "day": "thu",
-        "open": "08:00",
-        "close": "22:00"
+        "open": "10:00",
+        "close": "20:00"
       },
       {
         "day": "fri",
-        "open": "08:00",
-        "close": "22:00"
+        "open": "10:00",
+        "close": "20:00"
       },
       {
         "day": "sat",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sun",
-        "open": "08:00",
-        "close": "22:00"
+        "open": "10:00",
+        "close": "20:00"
       }
     ],
-    "phone": "+919876532855",
+    "phone": null,
     "tags": [
-      "other",
-      "student",
-      "campus",
-      "budget"
+      "printing",
+      "osm",
+      "hours-unverified"
     ],
-    "rating": 4.1
+    "rating": null
   },
   {
-    "id": "42364af3-57f5-482c-a60b-cc502a050927",
-    "name": "Laundry Point - Annex",
+    "id": "57a78171-dee0-475c-9c10-8e385aabd489",
+    "name": "MedPlus",
     "category": "other",
-    "description": "Handy store near campus covering odds and ends students need.",
+    "description": "MedPlus \u2014 imported from OpenStreetMap.",
     "location": {
-      "lat": 12.972897,
-      "lon": 77.597273
+      "lat": 12.948206,
+      "lon": 77.598716
     },
-    "address": "Near Campus Gate 4, Bangalore",
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "72578b02-a3be-4a2f-813b-8493c59a13fb",
+    "name": "ThinkCare Pharma",
+    "category": "other",
+    "description": "ThinkCare Pharma \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.985793,
+      "lon": 77.595749
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "65c6c8f5-7083-44cb-8369-ea4132e7869e",
+    "name": "Prabhu Photos",
+    "category": "print_shop",
+    "description": "Prabhu Photos \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.973611,
+      "lon": 77.607701
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "copyshop",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "069c6b8f-a584-47ed-947b-4ebf879ece33",
+    "name": "Canara Bank",
+    "category": "atm",
+    "description": "Canara Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.971289,
+      "lon": 77.60594
+    },
+    "address": "Residency Road, Ashok Nagar, Bangalore",
     "price": null,
     "price_unit": null,
     "hours": [
       {
         "day": "mon",
-        "open": "08:00",
-        "close": "22:00"
+        "open": "10:00",
+        "close": "16:00"
       },
       {
         "day": "tue",
-        "open": "08:00",
-        "close": "22:00"
+        "open": "10:00",
+        "close": "16:00"
       },
       {
         "day": "wed",
-        "open": "08:00",
-        "close": "22:00"
+        "open": "10:00",
+        "close": "16:00"
       },
       {
         "day": "thu",
-        "open": "08:00",
-        "close": "22:00"
+        "open": "10:00",
+        "close": "16:00"
       },
       {
         "day": "fri",
-        "open": "08:00",
-        "close": "22:00"
+        "open": "10:00",
+        "close": "16:00"
       },
       {
         "day": "sat",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sun",
-        "open": "08:00",
-        "close": "22:00"
+        "open": "10:00",
+        "close": "16:00"
       }
     ],
-    "phone": "+919876568026",
+    "phone": null,
     "tags": [
-      "other",
-      "student",
-      "campus",
-      "budget"
+      "bank",
+      "osm",
+      "hours-unverified"
     ],
-    "rating": 4.1
+    "rating": null
   },
   {
-    "id": "5fab1efc-3cb3-44eb-811f-132ad20bd805",
-    "name": "Campus Barber - South Gate",
-    "category": "other",
-    "description": "Small campus-side shop, convenient for students in a hurry.",
+    "id": "3509867c-38ae-40bc-ac4b-b850787c714f",
+    "name": "Adler Stays",
+    "category": "pg",
+    "description": "Adler Stays \u2014 imported from OpenStreetMap.",
     "location": {
-      "lat": 12.960916,
-      "lon": 77.586502
+      "lat": 12.986342,
+      "lon": 77.59824
     },
-    "address": "Near Campus Gate 4, Bangalore",
+    "address": "",
     "price": null,
     "price_unit": null,
-    "hours": [
-      {
-        "day": "mon",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "tue",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "wed",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "thu",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "fri",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sat",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sun",
-        "open": "08:00",
-        "close": "22:00"
-      }
-    ],
-    "phone": "+919876537773",
+    "hours": [],
+    "phone": null,
     "tags": [
-      "other",
-      "student",
-      "campus",
-      "budget"
+      "hostel",
+      "osm",
+      "hours-unverified"
     ],
-    "rating": 4.6
+    "rating": null
   },
   {
-    "id": "d61fc1c1-190c-47b4-b3e4-4c25a0878ab6",
-    "name": "Laundry Point - Annex 2",
-    "category": "other",
-    "description": "Campus-adjacent shop useful for everyday student errands.",
+    "id": "cd71d3f5-20d2-42b2-88ca-e239fdf95537",
+    "name": "Kotak Mahindra Bank ATM",
+    "category": "atm",
+    "description": "Kotak Mahindra Bank ATM \u2014 imported from OpenStreetMap.",
     "location": {
-      "lat": 12.967557,
-      "lon": 77.593563
+      "lat": 12.955293,
+      "lon": 77.580024
     },
-    "address": "Near Campus Gate 2, Bangalore",
+    "address": "",
     "price": null,
     "price_unit": null,
-    "hours": [
-      {
-        "day": "mon",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "tue",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "wed",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "thu",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "fri",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sat",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sun",
-        "open": "08:00",
-        "close": "22:00"
-      }
-    ],
-    "phone": "+919876556152",
+    "hours": [],
+    "phone": null,
     "tags": [
-      "other",
-      "student",
-      "campus",
-      "budget"
+      "atm",
+      "osm",
+      "hours-unverified"
     ],
-    "rating": 3.6
+    "rating": null
   },
   {
-    "id": "1c979e38-f323-48d6-a71e-13d1d30288b3",
-    "name": "Laundry Point - South Gate",
-    "category": "other",
-    "description": "Handy store near campus covering odds and ends students need.",
+    "id": "fddf090c-6477-4267-9405-a1020c32889a",
+    "name": "Sunil Raj Printers",
+    "category": "print_shop",
+    "description": "Sunil Raj Printers \u2014 imported from OpenStreetMap.",
     "location": {
-      "lat": 12.973814,
-      "lon": 77.589909
+      "lat": 12.949565,
+      "lon": 77.596274
     },
-    "address": "Near Campus Gate 1, Bangalore",
+    "address": "",
     "price": null,
     "price_unit": null,
-    "hours": [
-      {
-        "day": "mon",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "tue",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "wed",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "thu",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "fri",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sat",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sun",
-        "open": "08:00",
-        "close": "22:00"
-      }
-    ],
-    "phone": "+919876588244",
+    "hours": [],
+    "phone": null,
     "tags": [
-      "other",
-      "student",
-      "campus",
-      "budget"
+      "copyshop",
+      "osm",
+      "hours-unverified"
     ],
-    "rating": 4.6
+    "rating": null
   },
   {
-    "id": "55cc214b-087c-4f8e-87b4-548f799cfb29",
-    "name": "Laundry Point - Branch",
-    "category": "other",
-    "description": "Campus-adjacent shop useful for everyday student errands.",
+    "id": "1ffb81e3-c8ff-4f1c-95b2-34d6d52f43e0",
+    "name": "HDFC Bank",
+    "category": "atm",
+    "description": "HDFC Bank \u2014 imported from OpenStreetMap.",
     "location": {
-      "lat": 12.969187,
-      "lon": 77.595753
+      "lat": 12.957396,
+      "lon": 77.592581
     },
-    "address": "Near Campus Gate 2, Bangalore",
+    "address": "",
     "price": null,
     "price_unit": null,
-    "hours": [
-      {
-        "day": "mon",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "tue",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "wed",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "thu",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "fri",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sat",
-        "open": "08:00",
-        "close": "22:00"
-      },
-      {
-        "day": "sun",
-        "open": "08:00",
-        "close": "22:00"
-      }
-    ],
-    "phone": "+919876599096",
+    "hours": [],
+    "phone": null,
     "tags": [
-      "other",
-      "student",
-      "campus",
-      "budget"
+      "bank",
+      "osm",
+      "hours-unverified"
     ],
-    "rating": 3.5
+    "rating": null
+  },
+  {
+    "id": "a24305ca-0740-4b0a-9027-86c0a1b45df2",
+    "name": "Kotak Mahindra Bank",
+    "category": "atm",
+    "description": "Kotak Mahindra Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.957078,
+      "lon": 77.592441
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "479ff03e-c1d3-4076-a6a3-d3870fb59471",
+    "name": "Wave Tech",
+    "category": "print_shop",
+    "description": "Xerox and Stationery",
+    "location": {
+      "lat": 12.9712,
+      "lon": 77.606841
+    },
+    "address": "A005, Brigade Road, Ashok Nagar, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "stationery",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "f9e89101-52ef-4949-8c63-b742052d39eb",
+    "name": "Unity Center",
+    "category": "print_shop",
+    "description": "Unity Center \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.970414,
+      "lon": 77.606543
+    },
+    "address": "G007, Brigade Road, Ashok Nagar, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "stationery",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ebce5cf8-b675-4082-b2da-3b8ac91a8fa9",
+    "name": "Patel Medicals",
+    "category": "other",
+    "description": "Patel Medicals \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.949753,
+      "lon": 77.597061
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "504bea49-72df-4715-9db4-a74e27c2a450",
+    "name": "Aditya Medicals",
+    "category": "other",
+    "description": "Aditya Medicals \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.947352,
+      "lon": 77.598322
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "pharmacy",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "f2bdf940-8ccb-459b-8cfb-6cec0cfb9b40",
+    "name": "HDFC Bank",
+    "category": "atm",
+    "description": "HDFC Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.973396,
+      "lon": 77.595562
+    },
+    "address": "24/3, 51, Kasturba Road, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "3c5635cd-7d7b-481c-a595-29158494b1ca",
+    "name": "Canara Bank",
+    "category": "atm",
+    "description": "Canara Bank \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.964379,
+      "lon": 77.585325
+    },
+    "address": "Silver Jubilee Park Road, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "740256b0-ac41-48bc-a57f-4c123327689c",
+    "name": "Karnataka Judicial Academy Hostel",
+    "category": "pg",
+    "description": "Karnataka Judicial Academy Hostel \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.985607,
+      "lon": 77.582305
+    },
+    "address": "Crescent Road, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "+918022382894/96",
+    "tags": [
+      "hostel",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b576cac0-8b97-488a-b8ec-b8f59e41df7d",
+    "name": "Casa 29",
+    "category": "pg",
+    "description": "Casa 29 \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.991622,
+      "lon": 77.591965
+    },
+    "address": "29, 7th Cross Road, Vasanth Nagar, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "hostel",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "94cda61a-fb0c-4b5b-bb77-d50de4a53614",
+    "name": "Rajput Sabha",
+    "category": "pg",
+    "description": "Rajput Sabha \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.991808,
+      "lon": 77.593599
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "hostel",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "80b890ad-5193-4899-888c-7d7c84badccd",
+    "name": "Casa 39",
+    "category": "pg",
+    "description": "Casa 39 \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.991792,
+      "lon": 77.591711
+    },
+    "address": "39, 7th Cross Road, Bengaluru",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "+91 88610 62760",
+    "tags": [
+      "hostel",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "71c45edd-0d78-4577-80ed-63402c059da9",
+    "name": "Central Bank of India",
+    "category": "atm",
+    "description": "Central Bank of India \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.977192,
+      "lon": 77.576108
+    },
+    "address": "2nd Cross Road, Bengaluru",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "bank",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "81a2f08f-3a77-4664-b593-d921eab5b267",
+    "name": "Balabrooie Guest House",
+    "category": "pg",
+    "description": "Balabrooie Guest House \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.987715,
+      "lon": 77.588221
+    },
+    "address": "Sankey Road",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "guest_house",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "b2f099b9-6470-4af7-82d4-c97eed1785d8",
+    "name": "Official Residence of Chief Minister of Karnataka",
+    "category": "pg",
+    "description": "Official Residence of Chief Minister of Karnataka \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.99284,
+      "lon": 77.583233
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "guest_house",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "8777263c-aa19-49a8-be5d-5aa679f0afc5",
+    "name": "Chief Minister's Guesthouse",
+    "category": "pg",
+    "description": "Chief Minister's Guesthouse \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.99339,
+      "lon": 77.583754
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "guest_house",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "5a0e461d-fd79-48aa-a343-0ff263f4a0ac",
+    "name": "Government Arts College Boys Hostel",
+    "category": "pg",
+    "description": "Government Arts College Boys Hostel \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.970736,
+      "lon": 77.611758
+    },
+    "address": "",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "hostel",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
+  },
+  {
+    "id": "ce75ce1c-6403-4fee-9a92-c01b65519d30",
+    "name": "Blue Bells PG",
+    "category": "pg",
+    "description": "Blue Bells PG \u2014 imported from OpenStreetMap.",
+    "location": {
+      "lat": 12.962133,
+      "lon": 77.597614
+    },
+    "address": "Langford Road, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": null,
+    "tags": [
+      "hostel",
+      "osm",
+      "hours-unverified"
+    ],
+    "rating": null
   }
 ]

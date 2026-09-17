@@ -8,6 +8,11 @@ interface Props {
 }
 
 export function ResultCard({ listing, selected, onSelect }: Props) {
+  // Imported places often have no opening_hours in OSM. An empty hours list
+  // means "always open" to the search code, so without this they would all
+  // claim to be open right now.
+  const hoursUnknown = listing.tags.includes('hours-unverified')
+
   return (
     <button
       type="button"
@@ -25,10 +30,14 @@ export function ResultCard({ listing, selected, onSelect }: Props) {
         </div>
         <span
           className={`shrink-0 rounded-full px-2 py-0.5 text-[11px] font-medium ${
-            listing.is_open_now ? 'bg-emerald-100 text-emerald-700' : 'bg-slate-100 text-slate-500'
+            hoursUnknown
+              ? 'bg-slate-100 text-slate-500'
+              : listing.is_open_now
+                ? 'bg-emerald-100 text-emerald-700'
+                : 'bg-slate-100 text-slate-500'
           }`}
         >
-          {listing.is_open_now ? 'Open now' : 'Closed'}
+          {hoursUnknown ? 'Hours unknown' : listing.is_open_now ? 'Open now' : 'Closed'}
         </span>
       </div>
 
@@ -41,7 +50,9 @@ export function ResultCard({ listing, selected, onSelect }: Props) {
           </span>
         )}
         {listing.rating != null && <span>{'⭐'} {listing.rating.toFixed(1)}</span>}
-        {listing.tags.map((t) => (
+        {listing.tags
+          .filter((t) => t !== 'hours-unverified' && t !== 'osm' && t !== 'placeholder')
+          .map((t) => (
           <span key={t} className="rounded-full bg-slate-100 px-2 py-0.5 text-slate-500">
             {t}
           </span>
