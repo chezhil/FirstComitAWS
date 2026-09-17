@@ -1,0 +1,93 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Aas-Paas backend infrastructure - First Commit Hackathon
+
+Globals:
+  Function:
+    Timeout: 30
+    MemorySize: 256
+    Runtime: python3.11
+  Api:
+    Cors:
+      AllowMethods: "'GET,POST,OPTIONS'"
+      AllowHeaders: "'Content-Type'"
+      AllowOrigin: "'*'"
+
+Resources:
+  AasPaasOpenSearch:
+    Type: AWS::OpenSearchService::Domain
+    Properties:
+      DomainName: aas-paas-domain
+      EngineVersion: 'OpenSearch_2.11'
+      ClusterConfig:
+        InstanceType: t3.small.search
+        InstanceCount: 1
+      EBSOptions:
+        EBSEnabled: true
+        VolumeSize: 10
+        VolumeType: gp2
+      NodeToNodeEncryptionOptions:
+        Enabled: true
+      EncryptionAtRestOptions:
+        Enabled: true
+      DomainEndpointOptions:
+        EnforceHTTPS: true
+      AccessPolicies:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS: '*'
+            Action: 'es:*'
+            Resource: !Sub "arn:aws:es:${AWS::Region}:${AWS::AccountId}:domain/aas-paas-domain/*"
+
+  ParserFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ../parser/
+      Handler: app.lambda_handler
+      Events:
+        ParseApi:
+          Type: Api
+          Properties:
+            Path: /parse
+            Method: post
+
+  SearchFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ../search/
+      Handler: app.lambda_handler
+      Environment:
+        Variables:
+          OPENSEARCH_ENDPOINT: !GetAtt AasPaasOpenSearch.DomainEndpoint
+      Policies:
+        - Statement:
+            - Effect: Allow
+              Action:
+                - es:ESHttpGet
+                - es:ESHttpPost
+                - es:ESHttpPut
+                - es:ESHttpDelete
+              Resource: !Sub "${AasPaasOpenSearch.Arn}/*"
+      Events:
+        SearchApi:
+          Type: Api
+          Properties:
+            Path: /search
+            Method: post
+
+Outputs:
+  ApiUrl:
+    Description: "API Gateway endpoint URL"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
+  ParserFunctionUrl:
+    Description: "Parser API Endpoint"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/parse"
+  SearchFunctionUrl:
+    Description: "Search API Endpoint"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/search"
+  OpenSearchEndpoint:
+    Description: "OpenSearch Domain Endpoint"
+    Value: !GetAtt AasPaasOpenSearch.DomainEndpoint

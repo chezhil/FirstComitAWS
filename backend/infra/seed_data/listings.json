@@ -1,0 +1,1934 @@
+[
+  {
+    "id": "50bd0f67-af8d-41c2-b3ab-9ebf2dfcbed2",
+    "name": "Zolo Stays - South Gate",
+    "category": "pg",
+    "description": "Reliable pg around the campus. Great for students.",
+    "location": {
+      "lat": 12.98319,
+      "lon": 77.608554
+    },
+    "address": "Near Campus Gate 3, Bangalore",
+    "price": 8000,
+    "price_unit": "per_month",
+    "hours": [],
+    "phone": "+919876590760",
+    "tags": [
+      "pg",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.5
+  },
+  {
+    "id": "fd6441e8-8e81-4a76-ab85-6d2125caa89a",
+    "name": "Balaji Luxury PG - Branch",
+    "category": "pg",
+    "description": "Reliable pg around the campus. Great for students.",
+    "location": {
+      "lat": 12.95815,
+      "lon": 77.595266
+    },
+    "address": "Near Campus Gate 3, Bangalore",
+    "price": 15000,
+    "price_unit": "per_month",
+    "hours": [],
+    "phone": "+919876573476",
+    "tags": [
+      "pg",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.4
+  },
+  {
+    "id": "05ee4361-dd3f-40cc-bfa8-4c6d90622637",
+    "name": "Comfort Stay - North Gate",
+    "category": "pg",
+    "description": "Reliable pg around the campus. Great for students.",
+    "location": {
+      "lat": 12.971401,
+      "lon": 77.59408
+    },
+    "address": "Near Campus Gate 4, Bangalore",
+    "price": 6000,
+    "price_unit": "per_month",
+    "hours": [],
+    "phone": "+919876524928",
+    "tags": [
+      "pg",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "cc10ecf2-f1f4-4267-8631-a06575764e99",
+    "name": "Zolo Stays - Campus Side",
+    "category": "pg",
+    "description": "Reliable pg around the campus. Great for students.",
+    "location": {
+      "lat": 12.979401,
+      "lon": 77.606198
+    },
+    "address": "Near Campus Gate 3, Bangalore",
+    "price": 12000,
+    "price_unit": "per_month",
+    "hours": [],
+    "phone": "+919876583188",
+    "tags": [
+      "pg",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "11e43ae7-738c-47aa-a513-f844f160c798",
+    "name": "Zolo Stays - South Gate",
+    "category": "pg",
+    "description": "Reliable pg around the campus. Great for students.",
+    "location": {
+      "lat": 12.970332,
+      "lon": 77.593686
+    },
+    "address": "Near Campus Gate 1, Bangalore",
+    "price": 8000,
+    "price_unit": "per_month",
+    "hours": [],
+    "phone": "+919876584032",
+    "tags": [
+      "pg",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.3
+  },
+  {
+    "id": "da536f9a-20c4-4cc4-a281-5962fe69fa2f",
+    "name": "Sunrise PG - North Gate",
+    "category": "pg",
+    "description": "Reliable pg around the campus. Great for students.",
+    "location": {
+      "lat": 12.971401,
+      "lon": 77.607187
+    },
+    "address": "Near Campus Gate 2, Bangalore",
+    "price": 12000,
+    "price_unit": "per_month",
+    "hours": [],
+    "phone": "+919876564209",
+    "tags": [
+      "pg",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 3.8
+  },
+  {
+    "id": "cf602297-d923-486e-8433-3cf943c12281",
+    "name": "Sunrise PG - Branch",
+    "category": "pg",
+    "description": "Reliable pg around the campus. Great for students.",
+    "location": {
+      "lat": 12.961763,
+      "lon": 77.602636
+    },
+    "address": "Near Campus Gate 4, Bangalore",
+    "price": 10000,
+    "price_unit": "per_month",
+    "hours": [],
+    "phone": "+919876581851",
+    "tags": [
+      "pg",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 3.7
+  },
+  {
+    "id": "b3f7cba0-7660-4a17-a553-956caa7301d3",
+    "name": "Kerala Food Court - Annex",
+    "category": "mess",
+    "description": "Reliable mess around the campus. Great for students.",
+    "location": {
+      "lat": 12.981705,
+      "lon": 77.600364
+    },
+    "address": "Near Campus Gate 3, Bangalore",
+    "price": 80,
+    "price_unit": "per_meal",
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876572446",
+    "tags": [
+      "mess",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "cc8858ea-1c67-426a-b268-929b9bbe00ae",
+    "name": "Kerala Food Court - Annex",
+    "category": "mess",
+    "description": "Reliable mess around the campus. Great for students.",
+    "location": {
+      "lat": 12.96546,
+      "lon": 77.584239
+    },
+    "address": "Near Campus Gate 3, Bangalore",
+    "price": 80,
+    "price_unit": "per_meal",
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876547016",
+    "tags": [
+      "mess",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 3.6
+  },
+  {
+    "id": "881ffef0-3b1c-42fd-8528-387d71da2527",
+    "name": "Andhra Meals - Campus Side",
+    "category": "mess",
+    "description": "Reliable mess around the campus. Great for students.",
+    "location": {
+      "lat": 12.973976,
+      "lon": 77.58867
+    },
+    "address": "Near Campus Gate 1, Bangalore",
+    "price": 100,
+    "price_unit": "per_meal",
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876530063",
+    "tags": [
+      "mess",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.4
+  },
+  {
+    "id": "8205f826-db7b-4a23-9bc9-f04ba4b3d942",
+    "name": "Maa Vaishno Mess - Annex",
+    "category": "mess",
+    "description": "Reliable mess around the campus. Great for students.",
+    "location": {
+      "lat": 12.981939,
+      "lon": 77.581353
+    },
+    "address": "Near Campus Gate 4, Bangalore",
+    "price": 60,
+    "price_unit": "per_meal",
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876547467",
+    "tags": [
+      "mess",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.4
+  },
+  {
+    "id": "0a053e7c-2e76-4109-a856-684e050b7140",
+    "name": "Home Taste Mess - North Gate",
+    "category": "mess",
+    "description": "Reliable mess around the campus. Great for students.",
+    "location": {
+      "lat": 12.97555,
+      "lon": 77.58669
+    },
+    "address": "Near Campus Gate 3, Bangalore",
+    "price": 60,
+    "price_unit": "per_meal",
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876523132",
+    "tags": [
+      "mess",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 5.0
+  },
+  {
+    "id": "70fecf61-a3f2-4826-b047-34b3e8a2d461",
+    "name": "Home Taste Mess - Annex",
+    "category": "mess",
+    "description": "Reliable mess around the campus. Great for students.",
+    "location": {
+      "lat": 12.967516,
+      "lon": 77.607939
+    },
+    "address": "Near Campus Gate 2, Bangalore",
+    "price": 100,
+    "price_unit": "per_meal",
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876527083",
+    "tags": [
+      "mess",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "aabf325d-8eeb-446c-9e32-f80354d38803",
+    "name": "Kerala Food Court - Main",
+    "category": "mess",
+    "description": "Reliable mess around the campus. Great for students.",
+    "location": {
+      "lat": 12.980065,
+      "lon": 77.6026
+    },
+    "address": "Near Campus Gate 2, Bangalore",
+    "price": 100,
+    "price_unit": "per_meal",
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876524758",
+    "tags": [
+      "mess",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.5
+  },
+  {
+    "id": "22984913-62b5-4a80-a086-47846f3c1ce1",
+    "name": "Srinivasa Tiffin Center - South Gate",
+    "category": "tiffin",
+    "description": "Reliable tiffin around the campus. Great for students.",
+    "location": {
+      "lat": 12.963096,
+      "lon": 77.590963
+    },
+    "address": "Near Campus Gate 4, Bangalore",
+    "price": 40,
+    "price_unit": "per_meal",
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876557685",
+    "tags": [
+      "tiffin",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.5
+  },
+  {
+    "id": "ab216e87-8451-49e9-94a3-017afdf3394a",
+    "name": "Udupi Upahar - Branch",
+    "category": "tiffin",
+    "description": "Reliable tiffin around the campus. Great for students.",
+    "location": {
+      "lat": 12.985669,
+      "lon": 77.604077
+    },
+    "address": "Near Campus Gate 3, Bangalore",
+    "price": 60,
+    "price_unit": "per_meal",
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876571186",
+    "tags": [
+      "tiffin",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "88ff0230-3f74-41cf-a303-bbd11ea79c22",
+    "name": "Asha Tiffins - Branch",
+    "category": "tiffin",
+    "description": "Reliable tiffin around the campus. Great for students.",
+    "location": {
+      "lat": 12.985584,
+      "lon": 77.60317
+    },
+    "address": "Near Campus Gate 1, Bangalore",
+    "price": 40,
+    "price_unit": "per_meal",
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876556478",
+    "tags": [
+      "tiffin",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 3.6
+  },
+  {
+    "id": "8cd3db11-b6ab-46ff-848d-735e38df59e2",
+    "name": "Asha Tiffins - Campus Side",
+    "category": "tiffin",
+    "description": "Reliable tiffin around the campus. Great for students.",
+    "location": {
+      "lat": 12.969206,
+      "lon": 77.601535
+    },
+    "address": "Near Campus Gate 4, Bangalore",
+    "price": 100,
+    "price_unit": "per_meal",
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876567111",
+    "tags": [
+      "tiffin",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "283e2b5b-ef58-42ef-8c39-21c34ed901aa",
+    "name": "Quick Bite Tiffins - Branch",
+    "category": "tiffin",
+    "description": "Reliable tiffin around the campus. Great for students.",
+    "location": {
+      "lat": 12.980984,
+      "lon": 77.580441
+    },
+    "address": "Near Campus Gate 3, Bangalore",
+    "price": 100,
+    "price_unit": "per_meal",
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876534254",
+    "tags": [
+      "tiffin",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.5
+  },
+  {
+    "id": "62196a29-ec0d-4d19-aafa-ecf78866b9e0",
+    "name": "Srinivasa Tiffin Center - South Gate",
+    "category": "tiffin",
+    "description": "Reliable tiffin around the campus. Great for students.",
+    "location": {
+      "lat": 12.96449,
+      "lon": 77.584931
+    },
+    "address": "Near Campus Gate 1, Bangalore",
+    "price": 50,
+    "price_unit": "per_meal",
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876558771",
+    "tags": [
+      "tiffin",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 3.7
+  },
+  {
+    "id": "201c3184-045d-4601-9291-6f6373a12a16",
+    "name": "Srinivasa Tiffin Center - South Gate",
+    "category": "tiffin",
+    "description": "Reliable tiffin around the campus. Great for students.",
+    "location": {
+      "lat": 12.966412,
+      "lon": 77.594889
+    },
+    "address": "Near Campus Gate 3, Bangalore",
+    "price": 50,
+    "price_unit": "per_meal",
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876545389",
+    "tags": [
+      "tiffin",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "9622c311-f9c9-4eae-9e46-27882346c3ed",
+    "name": "Student Print Point - Annex",
+    "category": "print_shop",
+    "description": "Reliable print shop around the campus. Great for students.",
+    "location": {
+      "lat": 12.978206,
+      "lon": 77.606212
+    },
+    "address": "Near Campus Gate 3, Bangalore",
+    "price": 2,
+    "price_unit": "per_page",
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876525934",
+    "tags": [
+      "print shop",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.0
+  },
+  {
+    "id": "5c243c3c-bc33-4440-9859-0b1778f8bc59",
+    "name": "Kiran Xerox - North Gate",
+    "category": "print_shop",
+    "description": "Reliable print shop around the campus. Great for students.",
+    "location": {
+      "lat": 12.969447,
+      "lon": 77.607664
+    },
+    "address": "Near Campus Gate 4, Bangalore",
+    "price": 1,
+    "price_unit": "per_page",
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876560239",
+    "tags": [
+      "print shop",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.3
+  },
+  {
+    "id": "7bdaf9c5-7b27-44d2-975a-763ae7fdf18b",
+    "name": "A4 World - South Gate",
+    "category": "print_shop",
+    "description": "Reliable print shop around the campus. Great for students.",
+    "location": {
+      "lat": 12.981413,
+      "lon": 77.58884
+    },
+    "address": "Near Campus Gate 4, Bangalore",
+    "price": 5,
+    "price_unit": "per_page",
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876574314",
+    "tags": [
+      "print shop",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 3.6
+  },
+  {
+    "id": "a5a7ee96-0606-4967-af44-d5a131e5aaa5",
+    "name": "Sri Venkateshwara Xerox - Annex",
+    "category": "print_shop",
+    "description": "Reliable print shop around the campus. Great for students.",
+    "location": {
+      "lat": 12.971311,
+      "lon": 77.607038
+    },
+    "address": "Near Campus Gate 1, Bangalore",
+    "price": 2,
+    "price_unit": "per_page",
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876591456",
+    "tags": [
+      "print shop",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "d5e41ed7-8c0b-4248-a702-ed8f1ad0866b",
+    "name": "Kiran Xerox - Main",
+    "category": "print_shop",
+    "description": "Reliable print shop around the campus. Great for students.",
+    "location": {
+      "lat": 12.957689,
+      "lon": 77.588494
+    },
+    "address": "Near Campus Gate 3, Bangalore",
+    "price": 5,
+    "price_unit": "per_page",
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876594643",
+    "tags": [
+      "print shop",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.2
+  },
+  {
+    "id": "9d9891fb-ac59-4b83-9885-7910a5e8e27b",
+    "name": "Smart Copiers - North Gate",
+    "category": "print_shop",
+    "description": "Reliable print shop around the campus. Great for students.",
+    "location": {
+      "lat": 12.975842,
+      "lon": 77.583264
+    },
+    "address": "Near Campus Gate 1, Bangalore",
+    "price": 2,
+    "price_unit": "per_page",
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876526869",
+    "tags": [
+      "print shop",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "6cf16687-96bf-4ee2-898c-4109509ef704",
+    "name": "Sri Venkateshwara Xerox - Campus Side",
+    "category": "print_shop",
+    "description": "Reliable print shop around the campus. Great for students.",
+    "location": {
+      "lat": 12.982743,
+      "lon": 77.601441
+    },
+    "address": "Near Campus Gate 1, Bangalore",
+    "price": 1,
+    "price_unit": "per_page",
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876585169",
+    "tags": [
+      "print shop",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "193b5c4b-c28d-4f8a-88e7-9e20229d094b",
+    "name": "Axis Bank ATM - Main",
+    "category": "atm",
+    "description": "Reliable atm around the campus. Great for students.",
+    "location": {
+      "lat": 12.97687,
+      "lon": 77.595322
+    },
+    "address": "Near Campus Gate 3, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "+919876545826",
+    "tags": [
+      "atm",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "bf89d142-d478-4912-9ebb-f931387e6862",
+    "name": "HDFC Bank ATM - Main",
+    "category": "atm",
+    "description": "Reliable atm around the campus. Great for students.",
+    "location": {
+      "lat": 12.974813,
+      "lon": 77.594497
+    },
+    "address": "Near Campus Gate 1, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "+919876567621",
+    "tags": [
+      "atm",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 3.8
+  },
+  {
+    "id": "a427b18f-f56f-487d-97ea-37c670f65d7b",
+    "name": "SBI ATM - North Gate",
+    "category": "atm",
+    "description": "Reliable atm around the campus. Great for students.",
+    "location": {
+      "lat": 12.981069,
+      "lon": 77.602167
+    },
+    "address": "Near Campus Gate 2, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "+919876517745",
+    "tags": [
+      "atm",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.1
+  },
+  {
+    "id": "4949aa17-75ce-4e21-a423-48ce07ef078e",
+    "name": "HDFC Bank ATM - Annex",
+    "category": "atm",
+    "description": "Reliable atm around the campus. Great for students.",
+    "location": {
+      "lat": 12.961725,
+      "lon": 77.601271
+    },
+    "address": "Near Campus Gate 2, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "+919876586945",
+    "tags": [
+      "atm",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.5
+  },
+  {
+    "id": "b62d3857-8930-411f-a2b5-a711293e4869",
+    "name": "Axis Bank ATM - Main",
+    "category": "atm",
+    "description": "Reliable atm around the campus. Great for students.",
+    "location": {
+      "lat": 12.958609,
+      "lon": 77.603307
+    },
+    "address": "Near Campus Gate 4, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "+919876526811",
+    "tags": [
+      "atm",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 3.6
+  },
+  {
+    "id": "1cfff005-d814-42da-ae6d-9b1beee7d7b0",
+    "name": "Kotak ATM - South Gate",
+    "category": "atm",
+    "description": "Reliable atm around the campus. Great for students.",
+    "location": {
+      "lat": 12.98629,
+      "lon": 77.587107
+    },
+    "address": "Near Campus Gate 1, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "+919876586399",
+    "tags": [
+      "atm",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 3.6
+  },
+  {
+    "id": "abb72087-3be4-4977-82c6-c952a3abc5f9",
+    "name": "SBI ATM - Branch",
+    "category": "atm",
+    "description": "Reliable atm around the campus. Great for students.",
+    "location": {
+      "lat": 12.975795,
+      "lon": 77.605463
+    },
+    "address": "Near Campus Gate 2, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [],
+    "phone": "+919876552020",
+    "tags": [
+      "atm",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.5
+  },
+  {
+    "id": "d47f60d0-4a23-4ebb-bc06-c5524a347e1a",
+    "name": "Campus Pharmacy - Campus Side",
+    "category": "other",
+    "description": "Reliable other around the campus. Great for students.",
+    "location": {
+      "lat": 12.96803,
+      "lon": 77.599723
+    },
+    "address": "Near Campus Gate 2, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876557381",
+    "tags": [
+      "other",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 3.6
+  },
+  {
+    "id": "204f294c-a78d-422a-8bad-a4d43a52ccb5",
+    "name": "Snack Corner - Branch",
+    "category": "other",
+    "description": "Reliable other around the campus. Great for students.",
+    "location": {
+      "lat": 12.960786,
+      "lon": 77.59909
+    },
+    "address": "Near Campus Gate 4, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876532855",
+    "tags": [
+      "other",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.1
+  },
+  {
+    "id": "42364af3-57f5-482c-a60b-cc502a050927",
+    "name": "Laundry Point - Annex",
+    "category": "other",
+    "description": "Reliable other around the campus. Great for students.",
+    "location": {
+      "lat": 12.972897,
+      "lon": 77.597273
+    },
+    "address": "Near Campus Gate 4, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876568026",
+    "tags": [
+      "other",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.1
+  },
+  {
+    "id": "5fab1efc-3cb3-44eb-811f-132ad20bd805",
+    "name": "Campus Barber - South Gate",
+    "category": "other",
+    "description": "Reliable other around the campus. Great for students.",
+    "location": {
+      "lat": 12.960916,
+      "lon": 77.586502
+    },
+    "address": "Near Campus Gate 4, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876537773",
+    "tags": [
+      "other",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "d61fc1c1-190c-47b4-b3e4-4c25a0878ab6",
+    "name": "Laundry Point - Annex",
+    "category": "other",
+    "description": "Reliable other around the campus. Great for students.",
+    "location": {
+      "lat": 12.967557,
+      "lon": 77.593563
+    },
+    "address": "Near Campus Gate 2, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876556152",
+    "tags": [
+      "other",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 3.6
+  },
+  {
+    "id": "1c979e38-f323-48d6-a71e-13d1d30288b3",
+    "name": "Laundry Point - South Gate",
+    "category": "other",
+    "description": "Reliable other around the campus. Great for students.",
+    "location": {
+      "lat": 12.973814,
+      "lon": 77.589909
+    },
+    "address": "Near Campus Gate 1, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876588244",
+    "tags": [
+      "other",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "55cc214b-087c-4f8e-87b4-548f799cfb29",
+    "name": "Laundry Point - Branch",
+    "category": "other",
+    "description": "Reliable other around the campus. Great for students.",
+    "location": {
+      "lat": 12.969187,
+      "lon": 77.595753
+    },
+    "address": "Near Campus Gate 2, Bangalore",
+    "price": null,
+    "price_unit": null,
+    "hours": [
+      {
+        "day": "mon",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "tue",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "wed",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "thu",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "fri",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sat",
+        "open": "08:00",
+        "close": "22:00"
+      },
+      {
+        "day": "sun",
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "phone": "+919876599096",
+    "tags": [
+      "other",
+      "student",
+      "campus",
+      "budget"
+    ],
+    "rating": 3.5
+  }
+]
